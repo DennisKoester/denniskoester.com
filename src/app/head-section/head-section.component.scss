@@ -1,0 +1,51 @@
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    left: 0;
+    right: 0;
+    // margin: 0 100px 0 100px;
+
+    p {
+        font-size: 128px;
+        font-weight: 800;
+    }
+}
+
+.subheadline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        font-family: 'Overpass';
+        font-weight: 700;
+        font-size: 48px;
+        color: #FF9900;
+    }
+
+    .underline {
+        width: 628px;
+        border: 3px solid #000000;
+        margin-right: 15px;
+    }
+}
+
+.address-scroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 300;
+    font-size: 23px;
+    position: relative;
+    top: 350px;
+}
+
+.email-address {
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
