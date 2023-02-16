@@ -1,11 +1,16 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Syne', sans-serif;
 }
 
-body{
+body {
     background-image: url(.//assets/img/pattern.svg);
     background-position: center;
     margin: 0 100px 0 100px;
+}
+
+@font-face {
+    font-family: 'Syne';
+    src: url('.//assets/syne-v15-latin-regular.ttf');
 }
