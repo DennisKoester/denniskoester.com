@@ -7,7 +7,11 @@
 body {
     background-image: url(.//assets/img/pattern.svg);
     background-position: center;
-    margin: 0 100px 0 100px;
+    // margin: 0 100px 0 100px;
+}
+
+.d-none{
+    display: none;
 }
 
 // @font-face {

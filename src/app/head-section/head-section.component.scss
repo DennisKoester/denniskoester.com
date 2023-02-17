@@ -1,3 +1,8 @@
+.head-section{
+    width: 85%;
+    margin: 0 auto;
+}
+
 .headline {
     display: flex;
     flex-direction: column;
@@ -6,8 +11,8 @@
     text-align: center;
     position: relative;
     top: 50px;
-    left: 0;
-    right: 0;
+    // left: 0;
+    // right: 0;
     // margin: 0 100px 0 100px;
 
     p {
@@ -20,6 +25,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     p {
         font-family: 'Overpass';
@@ -29,7 +35,8 @@
     }
 
     .underline {
-        width: 628px;
+        max-width: 628px;
+        width: 100%;
         border: 3px solid #000000;
         margin-right: 15px;
     }
@@ -48,4 +55,39 @@
 .email-address {
     transform-origin: 0 0;
     transform: rotate(-90deg);
+}
+
+.scroll-down-container {
+    text-align: center;
+
+}
+
+.arrow-down-container {
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.arrow-down-container img {
+    position: absolute;
+    top: -220px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: -1;
+    animation: arrowScroll 2600ms linear infinite;
+}
+
+@keyframes arrowScroll {
+    0% {
+        top: -220px;
+    }
+
+    50% {
+        top: 220px;
+    }
+
+    100% {
+        top: 220px;
+    }
 }

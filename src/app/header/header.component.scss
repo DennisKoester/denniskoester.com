@@ -1,17 +1,45 @@
-.header{
-    width: 100%;
+.header {
+    // width: 100%;
+    width: 85%;
     height: 92px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 
-    .logo{
+    .logo {
         height: 30px;
         width: auto;
     }
 
-    .burger-menu{
+    .burger-menu {
         height: 30px;
         width: 30px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        list-style: none;
+        font-size: 23px;
+
+        li {
+            display: inline-block;
+            margin-left: 40px;
+
+            a {
+                text-decoration: none;
+                color: unset;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
     }
 }
