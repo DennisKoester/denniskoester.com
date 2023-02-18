@@ -1,0 +1,24 @@
+.arrow-right {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    width: 85%;
+    padding-left: 50px;
+    cursor: pointer;
+
+    img {
+        transform: rotate(-90deg);
+    }
+
+    &:hover img {
+        transition: all 125ms ease-in-out;
+        transform: translateX(80px) translateY(80px) rotate(-90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .arrow-right {
+        justify-content: center;
+        margin: 76px auto;
+    }
+}
