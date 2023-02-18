@@ -1,10 +1,21 @@
 #about-me {
     width: 85%;
     margin: 0 auto;
+    padding-top: 148px;
+
+    margin-bottom: 150px;
 }
 
 h2 {
-    font-size: 78px;
+    font-weight: 800;
+    font-size: 8vw;
+    line-height: 100%;
+    transition: 125ms;
+    cursor: default;
+
+    &:hover {
+        color: var(--text-orange);
+    }
 }
 
 .row {
@@ -22,28 +33,68 @@ h2 {
         margin-top: 58px;
         align-self: center;
         font-size: 23px;
+        line-height: 120%;
         border: 4px solid #000000;
         padding: 20px 60px;
         text-align: center;
         width: 220px;
         transition: 125ms ease-in-out;
+        white-space: nowrap;
         cursor: pointer;
 
-        &:hover{
-            width: 280px;
+        &:hover {
+            width: 260px;
             font-weight: bold;
+        }
+
+        &:active {
+            background-color: black;
+            color: white;
         }
     }
 }
 
 .about-col-2 {
     flex-basis: 50%;
+    position: relative;
 }
 
 .about-col-2 img {
     width: 100%;
+    height: 100%;
+}
+
+.img-border {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 15px;
+    right: 0;
+    top: 15px;
+    bottom: 0;
+    transition: 225ms;
+    outline: 4px solid #000000;
+    opacity: 0;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .about-me-container {
     margin-top: 52px;
+}
+
+@media (max-width: 600px) {
+    .about-col-1 {
+        margin-bottom: 138px;
+
+        .talk-button {
+            display: none;
+        }
+    }
+
+    .row {
+        flex-direction: column;
+    }
 }

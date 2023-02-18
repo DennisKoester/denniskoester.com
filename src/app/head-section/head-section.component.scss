@@ -1,5 +1,8 @@
-.head-section{
+.head-section {
+    height: 100vh;
+    height: calc(100svh - 92px);
     width: 85%;
+    padding-top: 112px;
     margin: 0 auto;
 }
 
@@ -9,14 +12,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: relative;
-    top: 50px;
-    // left: 0;
-    // right: 0;
-    // margin: 0 100px 0 100px;
 
     p {
-        font-size: 128px;
+        font-size: 10vw;
         font-weight: 800;
     }
 }
@@ -25,13 +23,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 85%;
+    white-space: nowrap;
 
     p {
-        font-family: 'Overpass';
+        font-family: "Overpass";
         font-weight: 700;
-        font-size: 48px;
-        color: #FF9900;
+        font-size: 5vw;
+        color: var(--text-orange);
     }
 
     .underline {
@@ -42,33 +41,57 @@
     }
 }
 
-.address-scroll {
+.message-btn {
+    justify-content: center;
+    margin: 107px auto;
+    font-size: 23px;
+    line-height: 120%;
+    border: 4px solid #000000;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+    padding: 20px 0px;
+    width: 247px;
+    height: 68px;
+    transition: 125ms ease-in-out;
+    cursor: pointer;
+
+    a {
+        font-family: "Overpass";
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+    }
+}
+
+.address-scroll-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     font-weight: 300;
     font-size: 23px;
-    position: relative;
-    top: 350px;
+    line-height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 85%;
+    margin-bottom: 20px;
 }
 
 .email-address {
-    transform-origin: 0 0;
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
 }
 
 .scroll-down-container {
     text-align: center;
-
 }
 
-.arrow-down-container {
+.arrow-down {
     height: 150px;
     position: relative;
     overflow: hidden;
 }
 
-.arrow-down-container img {
+.arrow-down img {
     position: absolute;
     top: -220px;
     left: 0;
@@ -89,5 +112,11 @@
 
     100% {
         top: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .message-btn {
+        display: flex;
     }
 }

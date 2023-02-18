@@ -1,7 +1,14 @@
+:root{
+    --header-height: 92px;
+
+    --text-orange: #ff9900;
+
+}
+
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Syne', sans-serif;
+    font-family: "Syne", sans-serif;
 }
 
 body {
@@ -10,7 +17,7 @@ body {
     // margin: 0 100px 0 100px;
 }
 
-.d-none{
+.d-none {
     display: none;
 }
 
@@ -20,6 +27,6 @@ body {
 // }
 
 @font-face {
-    font-family: 'Syne';
-    src: url('./assets/syne-v15-latin-regular.ttf');
+    font-family: "Syne";
+    src: url("./assets/syne-v15-latin-regular.ttf");
 }
