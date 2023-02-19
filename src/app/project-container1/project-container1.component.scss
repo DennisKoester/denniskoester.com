@@ -16,10 +16,6 @@
         top: -28px;
         right: 0;
     }
-}
-
-.project-container {
-    position: relative;
 
     img {
         filter: grayscale(100%);
@@ -30,7 +26,11 @@
     }
 }
 
-.project-border {
+.project-image {
+    position: relative;
+}
+
+.project-wrapper:hover .project-border {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -38,22 +38,34 @@
     right: 0;
     top: 25px;
     bottom: 0;
-    transition: 225ms;
+    transition: 75ms;
     outline: 4px solid #000000;
-    opacity: 0;
-
-    &:hover {
-        opacity: 1;
-    }
+    // opacity: 1;
 }
 
-.project-arrow{
+// .project-border {
+//     height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     left: 25px;
+//     right: 0;
+//     top: 25px;
+//     bottom: 0;
+//     transition: 225ms;
+//     outline: 4px solid #000000;
+//     opacity: 0;
+
+//     &:hover {
+//         opacity: 1;
+//     }
+// }
+
+.project-arrow {
     position: absolute;
     top: 186px;
     right: -63px;
     opacity: 0;
 }
-
 
 .description-card {
     display: flex;
