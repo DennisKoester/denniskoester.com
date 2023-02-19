@@ -77,7 +77,7 @@
 }
 
 .project-wrapper:hover .project-arrow {
-    animation: project-arrow 225ms forwards;
+    animation: project-arrow 225ms forwards ease-in-out;
 }
 
 @keyframes project-arrow {
@@ -137,15 +137,24 @@
 }
 
 .project-wrapper:hover .description-card {
-    animation: descSlideIn 225ms forwards;
+    animation: descSlideRight 225ms forwards ease-in-out;
 }
 
-@keyframes descSlideIn {
+@keyframes descSlideRight {
     0% {
         transform: translateX(-1200px);
     }
     100% {
         transform: translateX(0px);
+    }
+}
+
+@keyframes descSlideDown {
+    0% {
+        transform: translateY(-1200px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
@@ -159,17 +168,12 @@
             top: -84px;
         }
     }
-}
 
-.description-card {
-    transform: translateY(-1200px);
-}
-
-@keyframes descSlideIn {
-    0% {
+    .description-card {
         transform: translateY(-1200px);
     }
-    100% {
-        transform: translateY(0px);
+
+    .project-wrapper:hover .description-card {
+        animation: descSlideDown 225ms forwards ease-in-out;
     }
 }
