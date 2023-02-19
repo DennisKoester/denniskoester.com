@@ -94,6 +94,7 @@
 .desc-wrapper {
     position: relative;
     overflow: hidden;
+    margin-top: 50px;
 }
 
 .description-card {
@@ -102,7 +103,6 @@
     justify-content: center;
     flex-basis: 35%;
     gap: 15px;
-    margin-top: 50px;
     transform: translateX(-1200px);
 
     h3 {
@@ -158,5 +158,18 @@
         P {
             top: -84px;
         }
+    }
+}
+
+.description-card {
+    transform: translateY(-1200px);
+}
+
+@keyframes descSlideIn {
+    0% {
+        transform: translateY(-1200px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

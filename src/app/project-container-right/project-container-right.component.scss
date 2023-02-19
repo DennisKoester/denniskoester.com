@@ -94,6 +94,7 @@
 
 .desc-wrapper {
     position: relative;
+    margin-top: 50px;
     overflow: hidden;
 }
 
@@ -103,7 +104,6 @@
     justify-content: center;
     flex-basis: 35%;
     gap: 15px;
-    margin-top: 50px;
     transform: translateX(1200px);
 
     h3 {
