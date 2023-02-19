@@ -3,6 +3,7 @@
     margin: 135px auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     position: relative;
     gap: 100px;
 
@@ -26,8 +27,15 @@
     }
 }
 
-.project-image {
+.project-image-container {
     position: relative;
+
+}
+
+.project-image-container .project-image {
+    // width: 100%;
+    // max-width: 620px;
+    // height: auto;
 }
 
 .project-wrapper:hover .project-border {
@@ -89,6 +97,7 @@
     justify-content: center;
     flex-basis: 35%;
     gap: 15px;
+    margin-top: 50px;
 
     h3 {
         font-family: "Syne";
@@ -118,5 +127,16 @@
         align-self: flex-start;
         position: unset;
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 1200px){
+    .project-wrapper {
+        flex-direction: column;
+        gap: 0;
+
+        P{
+            top: -84px;
+        }
     }
 }
