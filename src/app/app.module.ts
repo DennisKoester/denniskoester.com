@@ -11,6 +11,7 @@ import { ArrowRightComponent } from './arrow-right/arrow-right.component';
 import { ArrowLeftComponent } from './arrow-left/arrow-left.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
 import { ProjectContainer1Component } from './project-container1/project-container1.component';
+import { ProjectContainerRightComponent } from './project-container-right/project-container-right.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { ProjectContainer1Component } from './project-container1/project-contain
         ArrowLeftComponent,
         PortfolioSectionComponent,
         ProjectContainer1Component,
+        ProjectContainerRightComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],

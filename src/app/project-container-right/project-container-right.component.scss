@@ -2,6 +2,7 @@
     width: 85%;
     margin: 135px auto;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
@@ -15,7 +16,7 @@
         font-feature-settings: "pnum" on, "lnum" on;
         position: absolute;
         top: -28px;
-        right: 0;
+        left: 0;
     }
 
     img {
@@ -41,7 +42,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    left: 25px;
+    left: -25px;
     right: 0;
     top: 25px;
     bottom: 0;
@@ -70,9 +71,9 @@
 .project-arrow {
     position: absolute;
     top: 186px;
-    right: -63px;
+    left: -63px;
     border-radius: 50%;
-    transform: rotate(135deg) scale(0.5);
+    transform: rotate(-225deg) scale(0.5);
     opacity: 0;
 }
 
@@ -83,11 +84,11 @@
 @keyframes project-arrow {
     0% {
         opacity: 1;
-        transform: rotate(135deg) scale(0.5);
+        transform: rotate(-225deg) scale(0.5);
     }
     100% {
         opacity: 1;
-        transform: rotate(0deg) scale(1);
+        transform: rotate(-90deg) scale(1);
     }
 }
 
@@ -103,7 +104,7 @@
     flex-basis: 35%;
     gap: 15px;
     margin-top: 50px;
-    transform: translateX(-1200px);
+    transform: translateX(1200px);
 
     h3 {
         font-family: "Syne";
@@ -142,7 +143,7 @@
 
 @keyframes descSlideIn {
     0% {
-        transform: translateX(-1200px);
+        transform: translateX(1200px);
     }
     100% {
         transform: translateX(0px);
