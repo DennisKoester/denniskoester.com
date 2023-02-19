@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ArrowRightComponent } from './arrow-right.component';
+import { ContactSectionComponent } from './contact-section.component';
 
-describe('ArrowRightComponent', () => {
-  let component: ArrowRightComponent;
-  let fixture: ComponentFixture<ArrowRightComponent>;
+describe('ContactSectionComponent', () => {
+  let component: ContactSectionComponent;
+  let fixture: ComponentFixture<ContactSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArrowRightComponent ]
+      declarations: [ ContactSectionComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ArrowRightComponent);
+    fixture = TestBed.createComponent(ContactSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

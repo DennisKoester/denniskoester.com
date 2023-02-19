@@ -1,0 +1,21 @@
+.arrow-left {
+    display: flex;
+    justify-content: flex-end;
+    // margin-top: 30px;
+    margin: 0 auto;
+    padding-right: 50px;
+    width: 85%;
+    cursor: pointer;
+    
+    &:hover img {
+        transition: all 125ms ease-in-out;
+        transform: translateX(-80px) translateY(80px);
+    }
+}
+
+@media (max-width: 600px) {
+    .arrow-left {
+        justify-content: center;
+        margin: 76px auto;
+    }
+}
