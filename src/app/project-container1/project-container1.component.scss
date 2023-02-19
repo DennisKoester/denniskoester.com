@@ -29,7 +29,6 @@
 
 .project-image-container {
     position: relative;
-
 }
 
 .project-image-container .project-image {
@@ -91,6 +90,11 @@
     }
 }
 
+.desc-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
 .description-card {
     display: flex;
     flex-direction: column;
@@ -98,6 +102,7 @@
     flex-basis: 35%;
     gap: 15px;
     margin-top: 50px;
+    transform: translateX(-700px);
 
     h3 {
         font-family: "Syne";
@@ -130,12 +135,25 @@
     }
 }
 
-@media (max-width: 1200px){
+.project-wrapper:hover .description-card{
+    animation: descSlideIn 225ms forwards;
+}
+
+@keyframes descSlideIn {
+    0% {
+        transform: translateX(-700px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 1200px) {
     .project-wrapper {
         flex-direction: column;
         gap: 0;
 
-        P{
+        P {
             top: -84px;
         }
     }

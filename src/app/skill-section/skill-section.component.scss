@@ -28,6 +28,11 @@
         letter-spacing: 0.01em;
         background-color: white;
         white-space: nowrap;
+        cursor: default;
+
+        &:hover {
+            color: var(--text-orange);
+        }
     }
 }
 
