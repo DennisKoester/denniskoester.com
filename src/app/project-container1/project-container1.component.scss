@@ -64,7 +64,23 @@
     position: absolute;
     top: 186px;
     right: -63px;
+    border-radius: 50%;
     opacity: 0;
+}
+
+.project-wrapper:hover .project-arrow {
+    animation: project-arrow 225ms forwards;
+}
+
+@keyframes project-arrow {
+    0% {
+        opacity: 1;
+        transform: rotate(135deg) scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
 }
 
 .description-card {
