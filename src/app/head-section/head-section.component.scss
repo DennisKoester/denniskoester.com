@@ -2,7 +2,7 @@
     height: 100vh;
     height: calc(100svh - 92px);
     width: 85%;
-    padding-top: 112px;
+    padding-top: calc(112px + var(--header-height));
     margin: 0 auto;
 }
 
@@ -53,6 +53,12 @@
     height: 68px;
     transition: 125ms ease-in-out;
     cursor: pointer;
+
+    &:active {
+        background-color: black;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        color: white;
+    }
 
     a {
         font-family: "Overpass";

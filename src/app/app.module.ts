@@ -10,6 +10,7 @@ import { SkillSectionComponent } from './skill-section/skill-section.component';
 import { ArrowRightComponent } from './arrow-right/arrow-right.component';
 import { ArrowLeftComponent } from './arrow-left/arrow-left.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
+import { ProjectContainer1Component } from './project-container1/project-container1.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { PortfolioSectionComponent } from './portfolio-section/portfolio-section
         ArrowRightComponent,
         ArrowLeftComponent,
         PortfolioSectionComponent,
+        ProjectContainer1Component,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],

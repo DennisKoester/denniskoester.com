@@ -60,6 +60,10 @@
         line-height: 120%;
         text-align: center;
     }
+
+    &:hover {
+        color: var(--text-orange);
+    }
 }
 
 @media (max-width: 768px) {
