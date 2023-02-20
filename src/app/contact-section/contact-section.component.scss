@@ -2,6 +2,8 @@
     width: 100%;
     height: 1082px;
     background-image: url(/assets/img/bg_contact.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contact-wrapper {
@@ -23,10 +25,29 @@
     flex-direction: column;
     align-items: center;
     margin-top: 58px;
+    text-align: center;
+
+    p:first-child {
+        font-family: "Overpass";
+        font-weight: 700;
+        line-height: 120%;
+        font-size: 32px;
+        color: var(--text-orange);
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+        margin-bottom: 52px;
+    }
 
     form {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         width: 60%;
         gap: 35px;
     }
@@ -41,13 +62,79 @@ textarea {
     border: unset;
     border-bottom: 2px solid #fffcf3;
     resize: vertical;
-}
-
-::placeholder {
+    outline: none;
+    padding-left: 25px;
     font-family: "Overpass";
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
+
+    // &:hover {
+    //     border: 4px solid #fffcf3;
+    // }
+}
+
+textarea {
+    padding: 15px 25px;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+        border: 4px solid #fffcf3;
+    }
+}
+
+.floating-label-group {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 25px;
+
+    .floating-label {
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 120%;
+        color: white;
+        background-color: black;
+        margin-left: 25px;
+        position: absolute;
+        pointer-events: none;
+        top: 17px;
+        left: 0px;
+        width: max-content;
+        transition: all 0.1s ease;
+    }
+
+    input:focus ~ .floating-label,
+    input:not(:focus):valid ~ .floating-label {
+        top: -8.5px;
+        left: 0px;
+        opacity: 1;
+        color: white;
+    }
+
+    textarea:focus ~ .floating-label,
+    textarea:not(:focus):valid ~ .floating-label {
+        top: -8.5px;
+        left: 0px;
+        opacity: 1;
+        color: white;
+    }
+
+    ::-webkit-resizer {
+        background-image: url(/assets/img/resize_grabber.svg);
+    }
+}
+
+.button {
+    position: unset;
     color: white;
-    padding-left: 25px;
+    background-color: black;
+    border: 4px solid #fffcf3;
 }

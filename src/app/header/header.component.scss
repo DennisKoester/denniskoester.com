@@ -33,7 +33,12 @@
 
             a {
                 text-decoration: none;
+                font-weight: bold;
                 color: unset;
+
+                &:hover {
+                    color: var(--text-orange);
+                }
             }
         }
     }

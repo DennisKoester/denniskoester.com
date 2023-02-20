@@ -33,13 +33,15 @@ body {
     line-height: 120%;
     border: 4px solid #000000;
     padding: 20px 60px;
-    width: 220px;
-    transition: 1s ease-in-out;
+    // width: 220px;
+    transition: 225ms ease-in-out;
     white-space: nowrap;
     cursor: pointer;
 
     &:hover {
-        width: 260px;
+        // width: 260px;
+        padding: 20px 80px;
+
         font-weight: bold;
         filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
     }
@@ -47,6 +49,6 @@ body {
     &:active {
         background-color: black;
         color: white;
-        transition: none;
+        transition: ease-out;
     }
 }

@@ -3,30 +3,32 @@
         <h2>Say Hi!</h2>
         <div class="contact-form">
             <p>Want to discuss a new project?</p>
-            <p>Say hello! let's discuss your ideas and make it happen</p>
+            <p>Say hello! Let's discuss your ideas and make it happen!</p>
             <form action="">
-                <label for="fname"></label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name.."
-                />
-                <label for="email"></label>
-                <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    placeholder="Your email.."
-                />
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Your message.."
-                    style="height: 200px"
-                ></textarea>
-
-                <input type="submit" value="Submit" />
+                <div class="floating-label-group">
+                    <div class="border"></div>
+                    <input type="text" id="name" name="name" required />
+                    <label class="floating-label">Your name</label>
+                </div>
+                <div class="floating-label-group">
+                    <div class="border"></div>
+                    <input type="text" id="email" name="email" required />
+                    <label class="floating-label">Your email</label>
+                </div>
+                <div class="floating-label-group">
+                    <div class="border"></div>
+                    <textarea
+                        id="message"
+                        name="message"
+                        style="height: 200px"
+                        autocomplete="off"
+                        required
+                    ></textarea>
+                    <label class="floating-label">Your message</label>
+                </div>
+                <button class="button" type="submit" value="Send message">
+                    Send message
+                </button>
             </form>
         </div>
     </div>
