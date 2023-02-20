@@ -123,6 +123,6 @@
 
 @media (max-width: 600px) {
     .message-btn {
-        display: flex;
+        display: flex !important;
     }
 }
