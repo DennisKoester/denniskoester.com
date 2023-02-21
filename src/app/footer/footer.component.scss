@@ -37,7 +37,7 @@
     gap: 20px;
 }
 
-a {
+.legal-notice {
     color: #fffcf3;
     font-family: "Overpass";
     font-weight: 400;
@@ -50,11 +50,11 @@ a {
     overflow: hidden;
 }
 
-a:hover {
+.legal-notice:hover {
     font-weight: 700;
 }
 
-a::before {
+.legal-notice::before {
     content: "";
     position: absolute;
     display: block;
@@ -64,24 +64,21 @@ a::before {
     left: 40px;
     background-color: var(--text-orange);
     transform: translateX(-200px) scale(0);
-    transition: transform 225ms ease-in-out;
+    transition: transform 225ms ease-in;
 }
 
-a:hover::before {
+.legal-notice:hover::before {
     transform: translateX(0) scale(1);
 }
 
 .social-links {
     display: flex;
-    // align-items: center;
-    // justify-content: space-between;
-    // width: 100%;
-    // gap: 50px;
-    flex-wrap: wrap;
-    padding-left: 0;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px;
+    gap: 50px;
 
-    img {
-        flex: 1;
+    a img {
         width: 30px;
     }
 }
