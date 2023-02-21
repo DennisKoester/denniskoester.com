@@ -7,6 +7,7 @@
 h2 {
     font-weight: 800;
     font-size: 8vw;
+    font-size: clamp(28px, 8vw, 78px);
     line-height: 100%;
     transition: 125ms;
     cursor: default;
@@ -27,6 +28,18 @@ h2 {
     flex-direction: column;
     flex-basis: 35%;
     position: relative;
+
+    p {
+        font-family: "Overpass";
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 120%;
+    }
+
+    .button {
+        position: relative;
+        top: 58px;
+    }
 }
 
 .about-col-2 {
@@ -65,7 +78,7 @@ h2 {
         margin-bottom: 138px;
 
         .button {
-            display: none;
+            display: none !important;
         }
     }
 
