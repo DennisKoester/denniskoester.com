@@ -15,6 +15,7 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
 import { ArrowLeftSkillsComponent } from './arrow-left-skills/arrow-left-skills.component';
 import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-right-portfolio.component';
 import { FooterComponent } from './footer/footer.component';
+import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
         ArrowLeftSkillsComponent,
         ArrowRightPortfolioComponent,
         FooterComponent,
+        BurgerMenuComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
