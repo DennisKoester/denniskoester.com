@@ -14,6 +14,7 @@ import { ArrowLeftContactComponent } from './arrow-left-contact/arrow-left-conta
 import { ContactSectionComponent } from './contact-section/contact-section.component';
 import { ArrowLeftSkillsComponent } from './arrow-left-skills/arrow-left-skills.component';
 import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-right-portfolio.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-righ
         ContactSectionComponent,
         ArrowLeftSkillsComponent,
         ArrowRightPortfolioComponent,
+        FooterComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],

@@ -1,7 +1,9 @@
 :root {
     --header-height: 92px;
 
+    --text-cream: #fffcf3;
     --text-orange: #ff9900;
+    --text-red: #e61c40;
 }
 
 * {
@@ -48,7 +50,7 @@ body {
 
     &:active {
         background-color: black;
-        color: white;
+        color: #fffcf3;
         transition: ease-out;
     }
 }

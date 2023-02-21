@@ -1,0 +1,21 @@
+#footer {
+    color: #fffcf3;
+    background-color: black;
+    height: 120px;
+    width: 100%;
+}
+
+.footer-wrapper {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    .arrow-pageUp {
+        position: absolute;
+        right: 0;
+        top: -90px;
+    }
+}
+
+
