@@ -50,10 +50,10 @@ h2 {
     transition: 225ms;
     outline: 4px solid #000000;
     opacity: 0;
+}
 
-    &:hover {
-        opacity: 1;
-    }
+.about-col-2:hover > .img-border {
+    opacity: 1;
 }
 
 .about-me-container {

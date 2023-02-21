@@ -31,13 +31,7 @@
     position: relative;
 }
 
-.project-image-container .project-image {
-    // width: 100%;
-    // max-width: 620px;
-    // height: auto;
-}
-
-.project-wrapper:hover .project-border {
+.project-border {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -47,25 +41,12 @@
     bottom: 0;
     transition: 225ms;
     outline: 4px solid #000000;
-    // opacity: 0;
+    opacity: 0;
 }
 
-// .project-border {
-//     height: 100%;
-//     width: 100%;
-//     position: absolute;
-//     left: 25px;
-//     right: 0;
-//     top: 25px;
-//     bottom: 0;
-//     transition: 225ms;
-//     outline: 4px solid #000000;
-//     opacity: 0;
-
-//     &:hover {
-//         opacity: 1;
-//     }
-// }
+.project-wrapper:hover .project-border {
+    opacity: 1;
+}
 
 .project-arrow {
     position: absolute;
