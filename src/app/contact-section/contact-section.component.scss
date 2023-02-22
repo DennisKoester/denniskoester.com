@@ -10,7 +10,7 @@
     width: 85%;
     margin: 0 auto;
     padding-top: 150px;
-    color: #FFFCF3;
+    color: #fffcf3;
 
     h2 {
         font-family: "Syne";
@@ -55,11 +55,12 @@
 
 input[type="text"],
 textarea {
-    color: #FFFCF3;
+    color: #fffcf3;
     background-color: black;
     width: 100%;
     height: 50px;
     border: unset;
+    border: solid 4px transparent; //! Try this
     border-bottom: 2px solid #fffcf3;
     resize: vertical;
     outline: none;
@@ -130,7 +131,7 @@ input[data-autocompleted] {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
-        color: #FFFCF3;
+        color: #fffcf3;
         background-color: black;
         margin-left: 25px;
         position: absolute;
@@ -146,7 +147,7 @@ input[data-autocompleted] {
         top: -8.5px;
         left: 0px;
         opacity: 1;
-        color: #FFFCF3;
+        color: #fffcf3;
     }
 
     textarea:focus ~ .floating-label,
@@ -154,7 +155,7 @@ input[data-autocompleted] {
         top: -8.5px;
         left: 0px;
         opacity: 1;
-        color: #FFFCF3;
+        color: #fffcf3;
     }
 
     ::-webkit-resizer {
@@ -164,7 +165,7 @@ input[data-autocompleted] {
 
 .button {
     position: unset;
-    color: #FFFCF3;
+    color: #fffcf3;
     background-color: black;
     border: 4px solid #fffcf3;
     margin-bottom: 17px;

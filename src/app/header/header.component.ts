@@ -15,12 +15,11 @@ export class HeaderComponent implements OnInit {
                     header.classList.add('shadow');
                     console.log('at top');
                     console.log(header.offsetTop);
-                    
                 }
             } else {
                 header.classList.remove('shadow');
                 console.log('not at top');
-                    console.log(header.offsetTop);
+                console.log(header.offsetTop);
             }
         };
     }

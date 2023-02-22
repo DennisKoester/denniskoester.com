@@ -131,14 +131,14 @@
     }
 }
 
-@keyframes descSlideDown {
-    0% {
-        transform: translateY(-1200px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
+// @keyframes descSlideDown {
+//     0% {
+//         transform: translateY(-1200px);
+//     }
+//     100% {
+//         transform: translateY(0px);
+//     }
+// }
 
 @media (max-width: 1200px) {
     .project-wrapper {
@@ -157,5 +157,14 @@
 
     .project-wrapper:hover .description-card {
         animation: descSlideDown 225ms forwards ease-in-out;
+    }
+
+    @keyframes descSlideDown {
+        0% {
+            transform: translateY(-1200px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
     }
 }
