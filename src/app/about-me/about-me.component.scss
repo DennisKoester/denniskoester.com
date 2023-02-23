@@ -13,7 +13,7 @@ h2 {
     cursor: default;
 
     &:hover {
-        color: var(--text-orange);
+        color: var(--orange);
     }
 }
 
@@ -26,7 +26,7 @@ h2 {
 .about-col-1 {
     display: flex;
     flex-direction: column;
-    flex-basis: 35%;
+    flex-basis: 40%;
     position: relative;
 
     p {

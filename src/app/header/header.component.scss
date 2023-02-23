@@ -5,7 +5,7 @@
     right: 0;
     width: 100%;
     height: var(--header-height);
-    background-color: white;
+    background-color: var(--cream);
     z-index: 2;
 
     .header-wrapper {
@@ -45,7 +45,7 @@
                 transition: 125ms;
 
                 &:hover {
-                    color: var(--text-orange);
+                    color: var(--orange);
                 }
             }
         }

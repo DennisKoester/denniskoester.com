@@ -10,7 +10,7 @@
     width: 85%;
     margin: 0 auto;
     padding-top: 150px;
-    color: #fffcf3;
+    color: var(--cream);
 
     h2 {
         font-family: "Syne";
@@ -32,7 +32,7 @@
         font-weight: 700;
         line-height: 120%;
         font-size: clamp(23px, 4vw, 32px);
-        color: var(--text-orange);
+        color: var(--orange);
         margin-bottom: 18px;
     }
 
@@ -55,13 +55,13 @@
 
 input[type="text"],
 textarea {
-    color: #fffcf3;
+    color: var(--cream);
     background-color: black;
     width: 100%;
     height: 50px;
     border: unset;
     // border: solid 4px transparent; //! Try this
-    border-bottom: 2px solid #fffcf3;
+    border-bottom: 2px solid var(--cream);
     resize: vertical;
     outline: none;
     padding-left: 25px;
@@ -71,11 +71,11 @@ textarea {
     line-height: 120%;
 
     &:hover {
-        border: 4px solid #fffcf3;
+        border: 4px solid var(--cream);
     }
 
     &:focus {
-        border: 2px solid #fffcf3;
+        border: 2px solid var(--cream);
     }
 }
 
@@ -91,7 +91,7 @@ textarea {
 //     width: 100%;
 
 //     &:hover {
-//         border: 4px solid #fffcf3;
+//         border: 4px solid #var(--cream);
 //     }
 // }
 
@@ -116,7 +116,7 @@ input[data-autocompleted] {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
-        color: var(--text-red);
+        color: var(--red);
         margin-top: 10px;
     }
 
@@ -131,7 +131,7 @@ input[data-autocompleted] {
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
-        color: #fffcf3;
+        color: var(--cream);
         background-color: black;
         margin-left: 25px;
         position: absolute;
@@ -147,7 +147,7 @@ input[data-autocompleted] {
         top: -8.5px;
         left: 0px;
         opacity: 1;
-        color: #fffcf3;
+        color: var(--cream);
     }
 
     textarea:focus ~ .floating-label,
@@ -155,7 +155,7 @@ input[data-autocompleted] {
         top: -8.5px;
         left: 0px;
         opacity: 1;
-        color: #fffcf3;
+        color: var(--cream);
     }
 
     ::-webkit-resizer {
@@ -165,8 +165,8 @@ input[data-autocompleted] {
 
 .button {
     position: unset;
-    color: #fffcf3;
+    color: var(--cream);
     background-color: black;
-    border: 4px solid #fffcf3;
+    border: 4px solid var(--cream);
     margin-bottom: 17px;
 }

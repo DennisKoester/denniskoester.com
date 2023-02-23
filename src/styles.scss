@@ -1,9 +1,9 @@
 :root {
     --header-height: 92px;
 
-    --text-cream: #fffcf3;
-    --text-orange: #ff9900;
-    --text-red: #e61c40;
+    --cream: #fffcf3;
+    --orange: #ff9900;
+    --red: #e61c40;
 }
 
 * {
@@ -14,7 +14,8 @@
 }
 
 body {
-    background-image: url(.//assets/img/pattern.svg);
+    background-color: var(--cream);
+    // background-image: url(.//assets/img/pattern.svg);
     background-position: center;
 }
 
@@ -48,7 +49,7 @@ body {
 
     &:active {
         background-color: black;
-        color: #fffcf3;
+        color: var(--cream);
         transition: ease-out;
     }
 }

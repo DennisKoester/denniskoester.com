@@ -1,5 +1,5 @@
 #footer {
-    color: #fffcf3;
+    color: var(--cream);
     background-color: black;
     height: 120px;
     width: 100%;
@@ -38,7 +38,7 @@
 }
 
 .legal-notice {
-    color: #fffcf3;
+    color: var(--cream);
     font-family: "Overpass";
     font-weight: 400;
     font-size: 16px;
@@ -62,7 +62,7 @@
     height: 2px;
     bottom: 0;
     left: 40px;
-    background-color: var(--text-orange);
+    background-color: var(--orange);
     transform: translateX(-200px) scale(0);
     transition: transform 225ms ease-in;
 }

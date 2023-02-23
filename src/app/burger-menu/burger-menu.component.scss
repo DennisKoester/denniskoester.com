@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fffcf3;
+    background-color: var(--cream);
     z-index: 2;
 }
 
@@ -35,7 +35,7 @@ nav ul {
             transition: 125ms;
 
             &:hover {
-                color: var(--text-orange);
+                color: var(--orange);
             }
         }
     }

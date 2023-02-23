@@ -30,7 +30,7 @@
         font-family: "Overpass";
         font-weight: 700;
         font-size: clamp(22px, 4vw, 48px);
-        color: var(--text-orange);
+        color: var(--orange);
         margin-top: 6px;
     }
 
@@ -58,7 +58,7 @@
     &:active {
         background-color: black;
         filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-        color: #fffcf3;
+        color: var(--cream);
     }
 
     a {
