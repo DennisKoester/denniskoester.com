@@ -9,7 +9,6 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: "Syne", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -17,6 +16,20 @@ body {
     background-color: var(--cream);
     // background-image: url(.//assets/img/pattern.svg);
     background-position: center;
+}
+
+h2 {
+    font-family: "Syne";
+    line-height: 100%;
+    font-weight: 800;
+    font-size: clamp(28px, 8vw, 78px);
+    letter-spacing: 0.01em;
+    transition: 125ms;
+    cursor: default;
+
+    &:hover {
+        color: var(--orange);
+    }
 }
 
 .d-none {

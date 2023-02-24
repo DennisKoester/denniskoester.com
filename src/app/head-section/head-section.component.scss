@@ -14,6 +14,10 @@
     text-align: center;
 
     h1 {
+        font-family: "Syne";
+        font-weight: 800;
+        font-size: 128px;
+        line-height: 100%;
         font-size: clamp(32px, 10vw, 128px);
         font-weight: 800;
     }
@@ -73,6 +77,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    font-family: "Overpass";
     font-weight: 300;
     font-size: 23px;
     line-height: 100%;
@@ -86,6 +91,8 @@
     transform: rotate(-180deg);
     writing-mode: vertical-lr;
     text-orientation: mixed;
+    text-decoration: none;
+    color: black;
 }
 
 .scroll-down-container {

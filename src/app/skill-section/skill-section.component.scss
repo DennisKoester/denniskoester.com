@@ -16,24 +16,13 @@
     border: 4px solid #000000;
 
     h2 {
-        padding: 0 20px;
         position: absolute;
         top: -42px;
+        padding: 0 20px;
         margin: 0 auto;
-        font-family: "Syne";
-        font-style: normal;
-        font-weight: 800;
-        font-size: clamp(28px, 8vw, 78px);
-        line-height: 100%;
         text-align: center;
-        letter-spacing: 0.01em;
         background-color: var(--cream);
         white-space: nowrap;
-        cursor: default;
-
-        &:hover {
-            color: var(--orange);
-        }
     }
 }
 
