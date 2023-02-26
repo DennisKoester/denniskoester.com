@@ -16,6 +16,7 @@ import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-righ
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
 import { ProjectContainerLeftComponent } from './project-container-left/project-container-left.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,12 @@ import { ProjectContainerLeftComponent } from './project-container-left/project-
         BurgerMenuComponent,
         ProjectContainerLeftComponent,
     ],
-    imports: [BrowserModule, AppRoutingModule],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })

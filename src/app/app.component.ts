@@ -14,7 +14,7 @@ export class AppComponent {
         document.body.classList.remove('hideScrollbar');
         console.log('visiable');
 
-        // this.timer && clearTimeout(this.timer);
+        this.timer && clearTimeout(this.timer);
 
         this.timer = setTimeout(() => {
             document.body.classList.add('hideScrollbar');
