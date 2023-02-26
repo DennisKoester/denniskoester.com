@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -6,21 +6,19 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    ngOnInit() {
-        var header = document.getElementById('header');
+    ngOnInit() {}
 
-        onscroll = (event) => {
-            if (header.offsetTop !== 0) {
-                if (!header.classList.contains('shadow')) {
-                    header.classList.add('shadow');
-                    console.log('at top');
-                    console.log(header.offsetTop);
-                }
-            } else {
-                header.classList.remove('shadow');
-                console.log('not at top');
-                console.log(header.offsetTop);
-            }
-        };
+    @HostListener('window:scroll', []) onWindowScroll() {
+        const header = document.getElementById('header') as HTMLDivElement;
+        const verticalOffset: number =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop ||
+            0;
+        if (verticalOffset > 0) {
+            header.classList.add('shadow');
+        } else {
+            header.classList.remove('shadow');
+        }
     }
 }
