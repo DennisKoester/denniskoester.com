@@ -6,8 +6,6 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
     styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
-    validation = false;
-
     @ViewChild('contactForm') contactForm: ElementRef;
     @ViewChild('nameField') nameField: ElementRef;
     @ViewChild('emailField') emailField: ElementRef;
@@ -15,9 +13,7 @@ export class ContactSectionComponent {
     @ViewChild('sendButton') sendButton: ElementRef;
 
     async sendMail() {
-        if (this.validation === true) {
-            console.log('sending mail', this.contactForm);
-
+        if (this.submitValidation() === true) {
             let nameField = this.nameField.nativeElement;
             let emailField = this.emailField.nativeElement;
             let messageField = this.messageField.nativeElement;
@@ -51,10 +47,6 @@ export class ContactSectionComponent {
             nameField.value = '';
             emailField.value = '';
             messageField.value = '';
-
-            this.resetValidation();
-        } else {
-            console.log('Email not send');
         }
     }
 
@@ -68,6 +60,7 @@ export class ContactSectionComponent {
         let nameField = this.nameField.nativeElement;
         let emailField = this.emailField.nativeElement;
         let messageField = this.messageField.nativeElement;
+        let validation = true;
 
         let allData = [nameField.value, emailField.value, messageField.value];
 
@@ -76,33 +69,24 @@ export class ContactSectionComponent {
             let required = document.getElementById(`required${i}`);
             if (value == 0) {
                 required.classList.remove('hidden');
-                this.validation = false;
+                validation = false;
             } else {
                 required.classList.add('hidden');
             }
         }
-        return this.validation;
+        return validation;
     }
 
-    validationContactForm(id, input) {
+    validationContactForm(id: number, input: string) {
         let required = document.getElementById(`required${id}`);
         let inputValue = (<HTMLInputElement | null>(
             document.getElementById(input)
         ))?.value;
 
-        console.log(inputValue);
-
         if (inputValue == '') {
             required.classList.remove('hidden');
         } else {
             required.classList.add('hidden');
-        }
-    }
-
-    resetValidation() {
-        for (let i = 0; i < 6; i++) {
-            let text = document.getElementById(`required${i}`);
-            text.classList.add('hidden');
         }
     }
 }
