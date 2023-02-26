@@ -20,7 +20,8 @@
     }
 
     img {
-        filter: grayscale(100%);
+        // filter: grayscale(100%);
+        filter: sepia(50%);
     }
 
     &:hover img {
@@ -76,6 +77,7 @@
 .desc-wrapper {
     position: relative;
     margin-top: 50px;
+    max-width: 550px;
     overflow: hidden;
 }
 

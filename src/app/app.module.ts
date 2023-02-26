@@ -8,7 +8,6 @@ import { HeadSectionComponent } from './head-section/head-section.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { SkillSectionComponent } from './skill-section/skill-section.component';
 import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
-import { ProjectContainer1Component } from './project-container1/project-container1.component';
 import { ProjectContainerRightComponent } from './project-container-right/project-container-right.component';
 import { ArrowLeftContactComponent } from './arrow-left-contact/arrow-left-contact.component';
 import { ContactSectionComponent } from './contact-section/contact-section.component';
@@ -16,6 +15,7 @@ import { ArrowLeftSkillsComponent } from './arrow-left-skills/arrow-left-skills.
 import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-right-portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
+import { ProjectContainerLeftComponent } from './project-container-left/project-container-left.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +25,6 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
         AboutMeComponent,
         SkillSectionComponent,
         PortfolioSectionComponent,
-        ProjectContainer1Component,
         ProjectContainerRightComponent,
         ArrowLeftContactComponent,
         ContactSectionComponent,
@@ -33,6 +32,7 @@ import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
         ArrowRightPortfolioComponent,
         FooterComponent,
         BurgerMenuComponent,
+        ProjectContainerLeftComponent,
     ],
     imports: [BrowserModule, AppRoutingModule],
     providers: [],
