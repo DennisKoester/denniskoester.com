@@ -69,13 +69,19 @@ export class ContactSectionComponent {
         for (let i = 0; i < allData.length; i++) {
             const value = allData[i];
             let required = document.getElementById(`required${i}`);
+            let inputSign = document.getElementById(`validateSign${i}`);
+
             if (value == 0) {
                 required.classList.remove('hidden');
+                inputSign.classList.remove('hidden');
+
                 validation = false;
             } else {
                 required.classList.add('hidden');
+                inputSign.classList.add('hidden');
             }
         }
+
         return validation;
     }
 
@@ -83,14 +89,15 @@ export class ContactSectionComponent {
 
     validationContactForm(id: number, input: string) {
         let required = document.getElementById(`required${id}`);
-
+        let inputSign = document.getElementById(`validateSign${id}`);
         let sign = document.getElementById(
             `validateSign${id}`
         ) as HTMLImageElement | null;
-
         let inputValue = (<HTMLInputElement | null>(
             document.getElementById(input)
         ))?.value;
+
+        inputSign.classList.remove('hidden');
 
         if (inputValue == '') {
             required.classList.remove('hidden');
@@ -99,5 +106,6 @@ export class ContactSectionComponent {
             required.classList.add('hidden');
             sign.src = 'assets/img/green_check.svg';
         }
+        console.log(inputSign);
     }
 }
