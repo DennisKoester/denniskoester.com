@@ -56,11 +56,13 @@ export class ContactSectionComponent {
     //     messageField.value = '';
     // }
 
+    validation = true;
+
     submitValidation() {
         let nameField = this.nameField.nativeElement;
         let emailField = this.emailField.nativeElement;
         let messageField = this.messageField.nativeElement;
-        let validation = true;
+        // let validation = true;
 
         let allData = [nameField.value, emailField.value, messageField.value];
 
@@ -69,12 +71,16 @@ export class ContactSectionComponent {
             let required = document.getElementById(`required${i}`);
             if (value == 0) {
                 required.classList.remove('hidden');
-                validation = false;
+                this.validation = false;
+                console.log(this.validation);
             } else {
                 required.classList.add('hidden');
+                console.log(this.validation);
             }
         }
-        return validation;
+        console.log(this.validation);
+        
+        return this.validation;
     }
 
     validationContactForm(id: number, input: string) {

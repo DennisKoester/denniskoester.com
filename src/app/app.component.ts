@@ -8,7 +8,7 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
     title = 'denniskoester.com';
 
-    timer;
+    timer: any;
 
     @HostListener('window:scroll', []) onWindowScroll() {
         document.body.classList.remove('hideScrollbar');
