@@ -6,6 +6,8 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
     styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
+    validation = false;
+
     @ViewChild('contactForm') contactForm: ElementRef;
     @ViewChild('nameField') nameField: ElementRef;
     @ViewChild('emailField') emailField: ElementRef;
@@ -13,40 +15,94 @@ export class ContactSectionComponent {
     @ViewChild('sendButton') sendButton: ElementRef;
 
     async sendMail() {
-        console.log('sending mail', this.contactForm);
+        if (this.validation === true) {
+            console.log('sending mail', this.contactForm);
 
+            let nameField = this.nameField.nativeElement;
+            let emailField = this.emailField.nativeElement;
+            let messageField = this.messageField.nativeElement;
+            let sendButton = this.sendButton.nativeElement;
+
+            nameField.disabled = true;
+            emailField.disabled = true;
+            messageField.disabled = true;
+            sendButton.disabled = true;
+
+            // Animation for sending
+
+            let fd = new FormData();
+            fd.append('name', nameField.value);
+            fd.append('email', emailField.value);
+            fd.append('message', messageField.value);
+
+            // Send email
+            await fetch('https://denniskoester.com/send_mail/send_mail.php', {
+                method: 'POST',
+                body: fd,
+            });
+
+            //  Text for email sent
+
+            nameField.disabled = false;
+            emailField.disabled = false;
+            messageField.disabled = false;
+            sendButton.disabled = false;
+
+            nameField.value = '';
+            emailField.value = '';
+            messageField.value = '';
+
+            this.resetValidation();
+        } else {
+            console.log('Email not send');
+        }
+    }
+
+    // resetForm() {
+    //     nameField.value = '';
+    //     emailField.value = '';
+    //     messageField.value = '';
+    // }
+
+    submitValidation() {
         let nameField = this.nameField.nativeElement;
         let emailField = this.emailField.nativeElement;
         let messageField = this.messageField.nativeElement;
-        let sendButton = this.sendButton.nativeElement;
 
-        nameField.disabled = true;
-        emailField.disabled = true;
-        messageField.disabled = true;
-        sendButton.disabled = true;
+        let allData = [nameField.value, emailField.value, messageField.value];
 
-        // Animation for sending
+        for (let i = 0; i < allData.length; i++) {
+            const value = allData[i];
+            let required = document.getElementById(`required${i}`);
+            if (value == 0) {
+                required.classList.remove('hidden');
+                this.validation = false;
+            } else {
+                required.classList.add('hidden');
+            }
+        }
+        return this.validation;
+    }
 
-        let fd = new FormData();
-        fd.append('name', nameField.value);
-        fd.append('email', emailField.value);
-        fd.append('message', messageField.value);
+    validationContactForm(id, input) {
+        let required = document.getElementById(`required${id}`);
+        let inputValue = (<HTMLInputElement | null>(
+            document.getElementById(input)
+        ))?.value;
 
-        // Send email
-        await fetch('https://denniskoester.com/send_mail/send_mail.php', {
-            method: 'POST',
-            body: fd,
-        });
+        console.log(inputValue);
 
-        //  Text for email sent
+        if (inputValue == '') {
+            required.classList.remove('hidden');
+        } else {
+            required.classList.add('hidden');
+        }
+    }
 
-        nameField.disabled = false;
-        emailField.disabled = false;
-        messageField.disabled = false;
-        sendButton.disabled = false;
-
-        nameField.value = '';
-        emailField.value = '';
-        messageField.value = '';
+    resetValidation() {
+        for (let i = 0; i < 6; i++) {
+            let text = document.getElementById(`required${i}`);
+            text.classList.add('hidden');
+        }
     }
 }

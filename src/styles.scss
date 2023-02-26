@@ -38,6 +38,10 @@ h2 {
     display: none !important;
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .button {
     display: flex;
     align-items: center;

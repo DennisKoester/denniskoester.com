@@ -4,45 +4,51 @@
         <div class="contact-form">
             <p>Want to discuss a new project?</p>
             <p>Say hello! Let's discuss your ideas and make it happen!</p>
-            <form id="contactForm1" (ngSubmit)="sendMail()" #contactForm ngNativeValidate>
+            <form (ngSubmit)="sendMail()" #contactForm>
                 <div class="floating-label-group">
                     <div class="border"></div>
                     <input
+                        (keyup)="validationContactForm(0, 'name')"
                         type="text"
                         id="name"
                         name="name"
                         #nameField
-                        required
                     />
                     <label class="floating-label">Your name</label>
-                    <span>Your name is required</span>
+                    <span id="required0" class="hidden"
+                        >Your name is required</span
+                    >
                     <img src="assets/img/green_check.svg" />
                 </div>
                 <div class="floating-label-group">
                     <div class="border"></div>
                     <input
+                        (keyup)="validationContactForm(1, 'email')"
                         type="text"
                         id="email"
                         name="email"
                         #emailField
-                        required
                     />
                     <label class="floating-label">Your email</label>
-                    <span>Your email is required</span>
+                    <span id="required1" class="hidden"
+                        >Your email is required</span
+                    >
                     <img src="assets/img/green_check.svg" />
                 </div>
                 <div class="floating-label-group">
                     <div class="border"></div>
                     <textarea
+                        (keyup)="validationContactForm(2, 'message')"
                         id="message"
                         name="message"
                         style="height: 200px"
                         autocomplete="off"
                         #messageField
-                        required
                     ></textarea>
                     <label class="floating-label">Your message</label>
-                    <span>Your message is empty</span>
+                    <span id="required2" class="hidden"
+                        >Your message is empty</span
+                    >
                     <img src="assets/img/green_check.svg" />
                 </div>
                 <button #sendButton class="button">Send message</button>
