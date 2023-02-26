@@ -79,20 +79,25 @@ export class ContactSectionComponent {
         return validation;
     }
 
-    validateSign = ;
+    // validateSign = '';
 
     validationContactForm(id: number, input: string) {
         let required = document.getElementById(`required${id}`);
+
+        let sign = document.getElementById(
+            `validateSign${id}`
+        ) as HTMLImageElement | null;
+
         let inputValue = (<HTMLInputElement | null>(
             document.getElementById(input)
         ))?.value;
 
         if (inputValue == '') {
             required.classList.remove('hidden');
-            this.validateSign = 'assets/img/red_exclamation.svg';
+            sign.src = 'assets/img/red_exclamation.svg';
         } else {
             required.classList.add('hidden');
-            this.validateSign = 'assets/img/green_check.svg';
+            sign.src = 'assets/img/green_check.svg';
         }
     }
 }
