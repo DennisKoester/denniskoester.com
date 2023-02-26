@@ -45,6 +45,8 @@ export class ContactSectionComponent {
         messageField.disabled = false;
         sendButton.disabled = false;
 
-        // this.myform.reset();
+        nameField.value = '';
+        emailField.value = '';
+        messageField.value = '';
     }
 }
