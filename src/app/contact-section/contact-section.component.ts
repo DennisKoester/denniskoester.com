@@ -56,13 +56,13 @@ export class ContactSectionComponent {
     //     messageField.value = '';
     // }
 
-    validation = true;
+    // validation = true;
 
     submitValidation() {
         let nameField = this.nameField.nativeElement;
         let emailField = this.emailField.nativeElement;
         let messageField = this.messageField.nativeElement;
-        // let validation = true;
+        let validation = true;
 
         let allData = [nameField.value, emailField.value, messageField.value];
 
@@ -71,17 +71,15 @@ export class ContactSectionComponent {
             let required = document.getElementById(`required${i}`);
             if (value == 0) {
                 required.classList.remove('hidden');
-                this.validation = false;
-                console.log(this.validation);
+                validation = false;
             } else {
                 required.classList.add('hidden');
-                console.log(this.validation);
             }
         }
-        console.log(this.validation);
-        
-        return this.validation;
+        return validation;
     }
+
+    validateSign = ;
 
     validationContactForm(id: number, input: string) {
         let required = document.getElementById(`required${id}`);
@@ -91,8 +89,10 @@ export class ContactSectionComponent {
 
         if (inputValue == '') {
             required.classList.remove('hidden');
+            this.validateSign = 'assets/img/red_exclamation.svg';
         } else {
             required.classList.add('hidden');
+            this.validateSign = 'assets/img/green_check.svg';
         }
     }
 }
