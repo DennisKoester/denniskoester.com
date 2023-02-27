@@ -1,3 +1,4 @@
+import { compileNgModule } from '@angular/compiler';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -44,17 +45,24 @@ export class ContactSectionComponent {
             messageField.disabled = false;
             sendButton.disabled = false;
 
-            nameField.value = '';
-            emailField.value = '';
-            messageField.value = '';
+            this.resetForm();
+            // nameField.value = '';
+            // emailField.value = '';
+            // messageField.value = '';
         }
     }
 
-    // resetForm() {
-    //     nameField.value = '';
-    //     emailField.value = '';
-    //     messageField.value = '';
-    // }
+    resetForm() {
+        this.nameField.nativeElement.value = '';
+        this.emailField.nativeElement.value = '';
+        this.messageField.nativeElement.value = '';
+
+        console.log('Form reset');
+
+        // nameField.value = '';
+        // emailField.value = '';
+        // messageField.value = '';
+    }
 
     // validation = true;
 
@@ -81,7 +89,6 @@ export class ContactSectionComponent {
                 validateSign.classList.add('hidden');
             }
         }
-
         return validation;
     }
 

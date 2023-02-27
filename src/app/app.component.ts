@@ -12,13 +12,13 @@ export class AppComponent {
 
     @HostListener('window:scroll', []) onWindowScroll() {
         document.body.classList.remove('hideScrollbar');
-        console.log('visiable');
 
-        this.timer && clearTimeout(this.timer);
+        if (this.timer) {
+            clearTimeout(this.timer);
+        }
 
         this.timer = setTimeout(() => {
             document.body.classList.add('hideScrollbar');
-            console.log('hidden');
         }, 1000);
     }
 }

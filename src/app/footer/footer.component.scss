@@ -88,8 +88,8 @@
     // }
 }
 
-.social-links a:hover .social-links img {
-    animation: slideUp 1s ease-in-out;
+.social-links a:hover {
+    animation: slideUp 1s ease-in-out forwards;
 }
 
 @keyframes slideUp {
