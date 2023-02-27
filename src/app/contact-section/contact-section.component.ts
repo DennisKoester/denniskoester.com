@@ -1,13 +1,11 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
-
 @Component({
     selector: 'app-contact-section',
     templateUrl: './contact-section.component.html',
     styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
-    
     @ViewChild('contactForm') contactForm: ElementRef;
     @ViewChild('nameField') nameField: ElementRef;
     @ViewChild('emailField') emailField: ElementRef;
@@ -71,16 +69,16 @@ export class ContactSectionComponent {
         for (let i = 0; i < allData.length; i++) {
             const value = allData[i];
             let required = document.getElementById(`required${i}`);
-            let inputSign = document.getElementById(`validateSign${i}`);
+            let validateSign = document.getElementById(`validateSign${i}`);
 
             if (value == 0) {
                 required.classList.remove('hidden');
-                inputSign.classList.remove('hidden');
+                validateSign.classList.remove('hidden');
 
                 validation = false;
             } else {
                 required.classList.add('hidden');
-                inputSign.classList.add('hidden');
+                validateSign.classList.add('hidden');
             }
         }
 
@@ -90,23 +88,18 @@ export class ContactSectionComponent {
     // validateSign = '';
 
     validationContactForm(id: number, input: string) {
-        let required = document.getElementById(`required${id}`);
-        let inputSign = document.getElementById(`validateSign${id}`);
-        let sign = document.getElementById(
-            `validateSign${id}`
-        ) as HTMLImageElement | null;
-        let inputValue = document.getElementById(
-            input
-        ) as HTMLInputElement | null;
+        let required: any = document.getElementById(`required${id}`);
+        let validateSign: any = document.getElementById(`validateSign${id}`);
+        let inputField: any = document.getElementById(input);
 
-        inputSign.classList.remove('hidden');
+        validateSign.classList.remove('hidden');
 
-        if (inputValue.value == '') {
+        if (inputField.value == '') {
             required.classList.remove('hidden');
-            sign.src = 'assets/img/red_exclamation.svg';
+            validateSign.src = 'assets/img/red_exclamation.svg';
         } else {
             required.classList.add('hidden');
-            sign.src = 'assets/img/green_check.svg';
+            validateSign.src = 'assets/img/green_check.svg';
         }
     }
 }
