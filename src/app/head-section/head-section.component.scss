@@ -2,6 +2,7 @@
     height: 100vh;
     // height: calc(100svh - 92px); //TODO Check whats the best
     width: 85%;
+    max-width: 1400px;
     padding-top: calc(112px + var(--header-height));
     margin: 0 auto;
 }

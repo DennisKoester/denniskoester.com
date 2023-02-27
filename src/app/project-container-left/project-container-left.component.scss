@@ -1,5 +1,6 @@
 .project-wrapper {
     width: 85%;
+    max-width: 1400px;
     margin: 135px auto 0 auto;
     display: flex;
     justify-content: space-between;
@@ -86,6 +87,7 @@
     justify-content: center;
     flex-basis: 35%;
     gap: 15px;
+    opacity: 0;
     transform: translateX(-1200px);
 
     h3 {
@@ -126,20 +128,17 @@
 @keyframes descSlideRight {
     0% {
         transform: translateX(-1200px);
+        opacity: 0;
     }
+    70% {
+        opacity: 0;
+    }
+
     100% {
         transform: translateX(0px);
+        opacity: 1;
     }
 }
-
-// @keyframes descSlideDown {
-//     0% {
-//         transform: translateY(-1200px);
-//     }
-//     100% {
-//         transform: translateY(0px);
-//     }
-// }
 
 @media (max-width: 1200px) {
     .project-wrapper {
