@@ -81,23 +81,11 @@
     a img {
         width: 30px;
         width: 30px;
-    }
+        transition: transform 125ms ease-in-out;
 
-    // &img:hover {
-    //     transform: translateY(-10px);
-    // }
-}
-
-.social-links a:hover {
-    animation: slideUp 1s ease-in-out forwards;
-}
-
-@keyframes slideUp {
-    0% {
-        transform: translateY(0px);
-    }
-    100% {
-        transform: translateY(-15px);
+        &:hover {
+            transform: translateY(-10px);
+        }
     }
 }
 
