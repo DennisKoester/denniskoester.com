@@ -1,11 +1,13 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
+
 @Component({
     selector: 'app-contact-section',
     templateUrl: './contact-section.component.html',
     styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
+    
     @ViewChild('contactForm') contactForm: ElementRef;
     @ViewChild('nameField') nameField: ElementRef;
     @ViewChild('emailField') emailField: ElementRef;
@@ -93,19 +95,18 @@ export class ContactSectionComponent {
         let sign = document.getElementById(
             `validateSign${id}`
         ) as HTMLImageElement | null;
-        let inputValue = (<HTMLInputElement | null>(
-            document.getElementById(input)
-        ))?.value;
+        let inputValue = document.getElementById(
+            input
+        ) as HTMLInputElement | null;
 
         inputSign.classList.remove('hidden');
 
-        if (inputValue == '') {
+        if (inputValue.value == '') {
             required.classList.remove('hidden');
             sign.src = 'assets/img/red_exclamation.svg';
         } else {
             required.classList.add('hidden');
             sign.src = 'assets/img/green_check.svg';
         }
-        console.log(inputSign);
     }
 }
