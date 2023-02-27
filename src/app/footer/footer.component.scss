@@ -48,6 +48,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    transition: font-weight 225ms ease-in;
 }
 
 .legal-notice:hover {
