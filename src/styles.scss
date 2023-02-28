@@ -28,10 +28,6 @@ h2 {
     letter-spacing: 0.01em;
     transition: 125ms;
     cursor: default;
-
-    &:hover {
-        color: var(--orange);
-    }
 }
 
 .d-none {
@@ -60,13 +56,6 @@ h2 {
     transition: 225ms ease-in-out;
     white-space: nowrap;
     cursor: pointer;
-
-    &:hover {
-        padding: 20px 80px;
-
-        font-weight: bold;
-        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-    }
 
     &:active {
         background-color: black;
@@ -111,5 +100,20 @@ h2 {
 }
 
 @media (max-width: 600px) {
-   
+}
+
+@media (hover: hover) {
+    .button {
+        &:hover {
+            color: red !important;
+            padding: 20px 80px;
+            font-weight: bold;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        }
+    }
+    h2 {
+        &:hover {
+            color: var(--orange);
+        }
+    }
 }
