@@ -184,6 +184,13 @@
     }
 }
 
+@media (max-width: 768px) {
+    .project-image {
+        height: auto;
+        width: 550px;
+    }
+}
+
 @media (max-width: 600px) {
     .project-wrapper {
         P {
