@@ -111,6 +111,11 @@
     .footer-left {
         margin: 20px 0 40px 0;
         align-items: center;
+
+        p {
+            font-weight: 300;
+            line-height: 100%;
+        }
     }
 
     .footer-right {

@@ -103,6 +103,19 @@
     }
 }
 
+@media (max-width: 320px) {
+    .skills-frame {
+        h2 {
+            font-size: 28px;
+            padding: 0 8px;
+            top: -15px;
+        }
+    }
+    .skills-container {
+        padding: 15px;
+    }
+}
+
 .animated.flip {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;

@@ -175,22 +175,23 @@
     }
 }
 
+@media (max-width: 768px) {
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-image-container {
+        margin: 0 40px 0 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .project-wrapper {
         P {
             top: -60px;
             font-size: 23px;
         }
-    }
-
-    .project-image {
-        width: 100%;
-        // max-width: 295px;
-        height: auto;
-    }
-
-    .project-image-container {
-        margin: 0 40px 0 20px;
     }
 
     .project-border {

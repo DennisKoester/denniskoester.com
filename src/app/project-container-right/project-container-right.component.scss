@@ -186,8 +186,12 @@
 
 @media (max-width: 768px) {
     .project-image {
+        width: 100%;
         height: auto;
-        width: 550px;
+    }
+
+    .project-image-container {
+        margin: 0 20px 0 40px;
     }
 }
 
@@ -197,16 +201,6 @@
             top: -60px;
             font-size: 23px;
         }
-    }
-
-    .project-image {
-        width: 100%;
-        // max-width: 350px;
-        height: auto;
-    }
-
-    .project-image-container {
-        margin: 0 20px 0 40px;
     }
 
     .project-border {
