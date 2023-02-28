@@ -99,7 +99,29 @@
 }
 
 @media (max-width: 600px) {
+    #footer {
+        height: 100%;
+    }
+
+    .footer-wrapper {
+        padding-top: 47px;
+        flex-direction: column-reverse;
+    }
+
+    .footer-left {
+        margin: 20px 0 40px 0;
+        align-items: center;
+    }
+
+    .footer-right {
+        align-items: center;
+    }
+
     .arrow-pageUp {
         display: none;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }

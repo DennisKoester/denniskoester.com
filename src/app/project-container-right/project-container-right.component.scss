@@ -55,7 +55,7 @@
     position: absolute;
     top: 186px;
     left: -63px;
-    border-radius: 50%;
+    border-radius: 100%;
     transform: rotate(-225deg) scale(0.5);
     opacity: 0;
 }
@@ -196,6 +196,41 @@
         P {
             top: -60px;
             font-size: 23px;
+        }
+    }
+
+    .project-image {
+        width: 100%;
+        // max-width: 350px;
+        height: auto;
+    }
+
+    .project-image-container {
+        margin: 0 20px 0 40px;
+    }
+
+    .project-border {
+        left: -15px;
+        top: 15px;
+    }
+
+    .project-arrow {
+        top: 48%;
+        left: -42px;
+        height: auto;
+        width: 100%;
+        max-width: 50px;
+    }
+
+    .description-card {
+        h3 {
+            font-size: 32px;
+        }
+        span {
+            font-size: 23px;
+        }
+        p {
+            font-size: 16px;
         }
     }
 }

@@ -26,7 +26,7 @@
         font-family: "Overpass";
         font-weight: 700;
         line-height: 120%;
-        font-size: clamp(23px, 4vw, 32px);
+        font-size: clamp(28px, 4vw, 32px);
         color: var(--orange);
         margin-bottom: 18px;
     }
@@ -156,6 +156,10 @@ input[data-autocompleted] {
 }
 
 @media (max-width: 600px) {
+    .contact-wrapper {
+        padding-top: 60px;
+    }
+
     .contact-form {
         form {
             width: 100%;
@@ -163,6 +167,16 @@ input[data-autocompleted] {
     }
     .button {
         padding: 20px 40px;
+    }
+
+    .contact-form {
+        p {
+            margin-bottom: 35px;
+        }
+    }
+
+    .floating-label-group {
+        margin: 0;
     }
 }
 

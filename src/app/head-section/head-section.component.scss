@@ -1,5 +1,6 @@
 .head-section {
     height: 100vh;
+    height: 100svh;
     // height: calc(100svh - 92px); //TODO Check whats the best
     width: 85%;
     max-width: 1400px;
@@ -136,6 +137,7 @@
     }
     .message-btn {
         display: flex !important;
+        margin: 50px auto;
     }
 }
 
