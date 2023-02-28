@@ -54,9 +54,9 @@
     line-height: 120%;
     border: 4px solid #000000;
     filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-    padding: 20px 0px;
-    width: 247px;
-    height: 68px;
+    padding: 20px 0;
+    max-width: 247px;
+    // height: 68px;
     transition: ease-out;
     cursor: pointer;
 
@@ -131,7 +131,22 @@
 }
 
 @media (max-width: 600px) {
+    .head-section {
+        padding-top: calc(20px + var(--header-height));
+    }
     .message-btn {
         display: flex !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .message-btn {
+        margin: 60px auto;
+        padding: 15px 0;
+        font-size: 20px;
+    }
+
+    .email-address {
+        font-size: 20px;
     }
 }

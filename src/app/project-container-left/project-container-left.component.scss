@@ -162,9 +162,24 @@
     @keyframes descSlideDown {
         0% {
             transform: translateY(-1200px);
+            opacity: 0;
         }
+        70% {
+            opacity: 0;
+        }
+
         100% {
             transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .project-wrapper {
+        P {
+            top: -60px;
+            font-size: 23px;
         }
     }
 }

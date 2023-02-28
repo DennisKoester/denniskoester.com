@@ -22,3 +22,9 @@
         margin-top: 35px;
     }
 }
+
+@media (max-width: 600px) {
+    .headline-portfolio {
+        width: unset;
+    }
+}

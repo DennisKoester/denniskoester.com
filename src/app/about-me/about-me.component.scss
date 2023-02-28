@@ -65,6 +65,17 @@
 }
 
 @media (max-width: 600px) {
+    #about-me {
+        margin-top: 38px;
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .about-me-container {
+        margin-top: 38px;
+    }
+
     .about-col-1 {
         margin-bottom: 138px;
 

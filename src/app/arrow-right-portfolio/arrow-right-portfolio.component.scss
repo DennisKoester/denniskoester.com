@@ -21,5 +21,12 @@
     .arrow-right {
         justify-content: center;
         margin: 76px auto;
+        margin-top: 20px;
+        padding: 0;
+
+        img {
+            height: auto;
+            width: 180px;
+        }
     }
 }

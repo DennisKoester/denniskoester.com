@@ -97,3 +97,9 @@
     top: -90px;
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .arrow-pageUp {
+        display: none;
+    }
+}
