@@ -106,6 +106,8 @@
 .project-btns {
     display: flex;
     justify-content: space-between;
+    user-select: none;
+
     a {
         text-decoration: none;
         color: black;

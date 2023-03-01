@@ -55,6 +55,7 @@ h2 {
     padding: 20px 60px;
     transition: 225ms ease-in-out;
     white-space: nowrap;
+    user-select: none;
     cursor: pointer;
 
     &:active {
@@ -100,6 +101,11 @@ h2 {
 }
 
 @media (max-width: 600px) {
+    .button {
+        &:hover {
+            font-weight: 400 !important;
+        }
+    }
 }
 
 @media (hover: hover) {
@@ -107,7 +113,6 @@ h2 {
         &:hover {
             padding: 20px 80px;
             font-weight: bold;
-            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
         }
     }
     h2 {

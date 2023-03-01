@@ -1,23 +1,27 @@
-<div id="footer">
-    <div class="footer-wrapper">
-        <div class="footer-left">
-            <img class="logo-footer" src="assets/img/logo_footer.svg" />
-            <p>© Dennis Köster {{ currentYear | date:'yyyy' }}</p>
-        </div>
-        <div class="footer-right">
-            <div class="social-links">
-                <a href="https://github.com/DennisKoester"
-                    ><img src="assets/img/github_icon.svg"
-                /></a>
-                <a href="#contact"><img src="assets/img/email_icon.svg" /></a>
-                <a href="#"><img src="assets/img/linkedin_icon.svg" /></a>
+<footer>
+    <div id="footer">
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <img class="logo-footer" src="assets/img/logo_footer.svg" />
+                <p>© Dennis Köster {{ currentYear | date : "yyyy" }}</p>
             </div>
-            <a class="legal-notice" href="#">Legal notice</a>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://github.com/DennisKoester"
+                        ><img src="assets/img/github_icon.svg"
+                    /></a>
+                    <a href="#contact"
+                        ><img src="assets/img/email_icon.svg"
+                    /></a>
+                    <a href="#"><img src="assets/img/linkedin_icon.svg" /></a>
+                </div>
+                <a class="legal-notice" href="#">Legal notice</a>
+            </div>
+            <img
+                (click)="scrollToTop()"
+                class="arrow-pageUp"
+                src="assets/img/arrow_up.svg"
+            />
         </div>
-        <img
-            (click)="scrollToTop()"
-            class="arrow-pageUp"
-            src="assets/img/arrow_up.svg"
-        />
     </div>
-</div>
+</footer>
