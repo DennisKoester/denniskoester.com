@@ -59,7 +59,7 @@ h2 {
 
     &:active {
         background-color: black;
-        color: var(--cream);
+        color: var(--cream) !important;
         transition: ease-out;
     }
 }

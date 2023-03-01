@@ -45,7 +45,7 @@
 .project-arrow {
     position: absolute;
     top: 186px;
-    right: -63px;
+    right: -65px;
     border-radius: 100%;
     transform: rotate(135deg) scale(0.5);
     opacity: 0;
@@ -101,8 +101,18 @@
         font-family: "Overpass";
         position: unset;
     }
+}
 
-    div.button {
+.project-btns {
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+        color: black;
+        flex: 0 0 25%;
+    }
+
+    a.button {
         align-self: flex-start;
         position: unset;
         margin-top: 20px;
@@ -137,6 +147,10 @@
 
     .description-card {
         transform: translateY(-1200px);
+    }
+
+    .project-wrapper:hover .description-card {
+        animation: descSlideDown 225ms forwards ease-in-out;
     }
 
     @keyframes descSlideDown {
@@ -213,13 +227,15 @@
         animation: descSlideRight 225ms forwards ease-in-out;
     }
 
-    .project-wrapper:hover .description-card {
-        animation: descSlideDown 225ms forwards ease-in-out;
-    }
-
     .project-wrapper {
         &:hover img {
             filter: unset;
         }
+    }
+}
+
+@media (hover: hover) and (max-width: 1200px) {
+    .project-wrapper:hover .description-card {
+        animation: descSlideDown 225ms forwards ease-in-out;
     }
 }

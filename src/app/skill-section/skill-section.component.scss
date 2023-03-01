@@ -42,11 +42,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    flex: 1 0 17%;
+    // flex: 1 0 17%; // ! Seems to work fine
     gap: 10px;
     width: 100px;
     height: 100px;
-    margin: 20px;
+    margin: 20px 40px;
 
     span {
         font-family: "Overpass";
@@ -120,16 +120,16 @@
     }
 }
 
-.animated.flip {
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible;
-    -webkit-animation-name: flip;
-    animation-name: flip;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-}
+// .animated.flip {
+//     -webkit-backface-visibility: visible;
+//     backface-visibility: visible;
+//     -webkit-animation-name: flip;
+//     animation-name: flip;
+//     -webkit-animation-duration: 1s;
+//     animation-duration: 1s;
+//     -webkit-animation-fill-mode: both;
+//     animation-fill-mode: both;
+// }
 @-webkit-keyframes flip {
     0% {
         -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
