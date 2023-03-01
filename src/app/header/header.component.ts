@@ -1,4 +1,12 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import {
+    Component,
+    OnInit,
+    HostListener,
+    ElementRef,
+    ViewChild,
+} from '@angular/core';
+
+import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Component({
     selector: 'app-header',
@@ -6,6 +14,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+    @ViewChild('burgerMenu') burgerMenu: ElementRef;
+
     ngOnInit() {}
 
     @HostListener('window:scroll', []) onWindowScroll() {
@@ -20,5 +30,10 @@ export class HeaderComponent implements OnInit {
         } else {
             header.classList.remove('shadow');
         }
+    }
+
+    openMobileMenu() {
+        // const burgerMenu = this.burgerMenu.nativeElement;
+        this.burgerMenu.nativeElement.classList.toggle('d-none');
     }
 }
