@@ -14,7 +14,6 @@ export class ContactSectionComponent {
     @ViewChild('sendButton') sendButton: ElementRef;
 
     async sendMail() {
-        this.validateEmailAdd();
         if (this.submitValidation() === true) {
             let nameField = this.nameField.nativeElement;
             let emailField = this.emailField.nativeElement;
@@ -111,13 +110,13 @@ export class ContactSectionComponent {
         }
     }
 
-    validateEmailAdd() {
-        const expression: RegExp =
-            /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+    // validateEmailAdd() {
+    //     const expression: RegExp =
+    //         /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
 
-        const email: string = 'john@gmail.com';
-        const result: boolean = expression.test(email);
+    //     const email: string = 'john@gmail.com';
+    //     const result: boolean = expression.test(email);
 
-        console.log('e-mail is ' + (result ? 'correct' : 'incorrect'));
-    }
+    //     console.log('e-mail is ' + (result ? 'correct' : 'incorrect'));
+    // }
 }
