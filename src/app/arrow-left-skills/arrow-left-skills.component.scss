@@ -11,10 +11,6 @@
     img {
         transition: all 125ms ease-in-out;
     }
-
-    &:hover img {
-        transform: translateX(-80px) translateY(80px);
-    }
 }
 
 @media (max-width: 600px) {
@@ -27,6 +23,14 @@
         img {
             height: auto;
             width: 180px;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .arrow-left {
+        &:hover img {
+            transform: translateX(-80px) translateY(80px);
         }
     }
 }

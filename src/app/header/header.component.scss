@@ -46,7 +46,7 @@
                 color: unset;
                 transition: 125ms;
 
-                &:hover {
+                &:active {
                     color: var(--orange);
                 }
             }
@@ -67,5 +67,13 @@
 
     nav {
         display: none;
+    }
+}
+
+@media (hover: hover) {
+    #header nav ul li a {
+        &:hover {
+            color: var(--orange);
+        }
     }
 }

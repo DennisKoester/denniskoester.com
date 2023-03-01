@@ -56,10 +56,6 @@
     opacity: 0;
 }
 
-.about-col-2:hover > .img-border {
-    opacity: 1;
-}
-
 .about-me-container {
     margin-top: 52px;
 }
@@ -86,5 +82,11 @@
 
     .row {
         flex-direction: column;
+    }
+}
+
+@media (hover: hover) {
+    .about-col-2:hover > .img-border {
+        opacity: 1;
     }
 }

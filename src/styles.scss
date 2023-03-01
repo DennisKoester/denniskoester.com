@@ -105,7 +105,6 @@ h2 {
 @media (hover: hover) {
     .button {
         &:hover {
-            color: red !important;
             padding: 20px 80px;
             font-weight: bold;
             filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));

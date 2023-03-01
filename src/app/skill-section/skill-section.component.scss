@@ -56,14 +56,6 @@
         line-height: 120%;
         text-align: center;
     }
-
-    &:hover {
-        color: var(--orange);
-    }
-
-    &:hover img {
-        animation: flip 1s;
-    }
 }
 
 @media (max-width: 768px) {
@@ -113,6 +105,18 @@
     }
     .skills-container {
         padding: 15px;
+    }
+}
+
+@media (hover: hover) {
+    .skill {
+        &:hover {
+            color: var(--orange);
+        }
+
+        &:hover img {
+            animation: flip 1s;
+        }
     }
 }
 

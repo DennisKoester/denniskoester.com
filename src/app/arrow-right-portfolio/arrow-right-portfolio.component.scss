@@ -11,10 +11,6 @@
         transform: rotate(-90deg);
         transition: all 125ms ease-in-out;
     }
-
-    &:hover img {
-        transform: translateX(80px) translateY(80px) rotate(-90deg);
-    }
 }
 
 @media (max-width: 600px) {
@@ -27,6 +23,14 @@
         img {
             height: auto;
             width: 180px;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .arrow-right {
+        &:hover img {
+            transform: translateX(80px) translateY(80px) rotate(-90deg);
         }
     }
 }

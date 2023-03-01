@@ -34,9 +34,17 @@ nav ul {
             color: unset;
             transition: 125ms;
 
-            &:hover {
+            &:active {
                 color: var(--orange);
             }
+        }
+    }
+}
+
+@media (hover: hover) {
+    nav ul li a {
+        &:hover {
+            color: var(--orange);
         }
     }
 }
