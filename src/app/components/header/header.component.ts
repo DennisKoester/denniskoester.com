@@ -36,4 +36,8 @@ export class HeaderComponent implements OnInit {
         // const burgerMenu = this.burgerMenu.nativeElement;
         this.burgerMenu.nativeElement.classList.toggle('d-none');
     }
+
+    // toAboutMe() {
+    //     document.getElementById('about-me').scrollIntoView({behavior: 'smooth'});
+    // }
 }

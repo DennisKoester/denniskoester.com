@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HeadSectionComponent } from './head-section/head-section.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { SkillSectionComponent } from './skill-section/skill-section.component';
-import { PortfolioSectionComponent } from './portfolio-section/portfolio-section.component';
-import { ProjectContainerRightComponent } from './project-container-right/project-container-right.component';
-import { ArrowLeftContactComponent } from './arrow-left-contact/arrow-left-contact.component';
-import { ContactSectionComponent } from './contact-section/contact-section.component';
-import { ArrowLeftSkillsComponent } from './arrow-left-skills/arrow-left-skills.component';
-import { ArrowRightPortfolioComponent } from './arrow-right-portfolio/arrow-right-portfolio.component';
-import { FooterComponent } from './footer/footer.component';
-import { BurgerMenuComponent } from './burger-menu/burger-menu.component';
-import { ProjectContainerLeftComponent } from './project-container-left/project-container-left.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
+import { PortfolioSectionComponent } from './components/portfolio-section/portfolio-section.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ImprintComponent } from './pages/imprint/imprint.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HeadSectionComponent } from './components/head-section/head-section.component';
+import { SkillSectionComponent } from './components/skill-section/skill-section.component';
+import { ProjectContainerRightComponent } from './components/project-container-right/project-container-right.component';
+import { ArrowLeftContactComponent } from './components/arrow-left-contact/arrow-left-contact.component';
+import { ArrowLeftSkillsComponent } from './components/arrow-left-skills/arrow-left-skills.component';
+import { ArrowRightPortfolioComponent } from './components/arrow-right-portfolio/arrow-right-portfolio.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
+import { ProjectContainerLeftComponent } from './components/project-container-left/project-container-left.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         FooterComponent,
         BurgerMenuComponent,
         ProjectContainerLeftComponent,
+        ImprintComponent,
+        HomeComponent,
     ],
     imports: [
         BrowserModule,
