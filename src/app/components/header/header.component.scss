@@ -6,7 +6,7 @@
     width: 100%;
     height: var(--header-height);
     background-color: var(--cream);
-    z-index: 2;
+    z-index: 99;
 
     .header-wrapper {
         display: flex;

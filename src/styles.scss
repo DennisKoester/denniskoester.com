@@ -4,6 +4,11 @@
     --cream: #fffcf3;
     --orange: #ff9900;
     --red: #e61c40;
+
+    // Scrollbar Firefox //
+
+    scrollbar-color: #ff9900 rgba(46, 54, 69, 0) !important;
+    scrollbar-width: thin !important;
 }
 
 * {
@@ -120,5 +125,3 @@ h2 {
         }
     }
 }
-
-
