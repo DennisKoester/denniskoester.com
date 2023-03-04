@@ -1,15 +1,36 @@
 #imprint {
-    margin-top: calc(30px + var(--header-height));
+    width: 85%;
+    margin: calc(30px + var(--header-height)) auto;
 }
 
 h1 {
     font-size: 40px;
+    margin-bottom: 40px;
 }
 
 h2 {
     font-size: 22px;
+    margin: 20px 0 20px 0;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: Overpass, Helvetica, sans-serif;
+    margin-bottom: 10px;
 }
 
 li {
+    font-family: Overpass, Helvetica, sans-serif;
     padding-top: 5px;
+}
+
+a {
+    color: black;
 }

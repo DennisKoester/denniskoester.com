@@ -23,7 +23,7 @@
     text-align: center;
 
     p:first-child {
-        font-family: "Overpass";
+        font-family: Overpass Helvetica, sans-serif;
         font-weight: 700;
         line-height: 120%;
         font-size: clamp(28px, 4vw, 32px);
@@ -32,7 +32,7 @@
     }
 
     p {
-        font-family: "Overpass";
+      font-family: Overpass Helvetica, sans-serif;
         font-weight: 400;
         font-size: clamp(18px, 3vw, 23px);
         line-height: 120%;
@@ -60,7 +60,7 @@ textarea {
     resize: vertical;
     outline: none;
     padding-left: 25px;
-    font-family: "Overpass";
+   font-family: Overpass Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -101,7 +101,7 @@ input[data-autocompleted] {
     margin-bottom: 25px;
 
     span {
-        font-family: "Overpass";
+        font-family: Overpass Helvetica, sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
@@ -116,7 +116,7 @@ input[data-autocompleted] {
     }
 
     .floating-label {
-        font-family: "Overpass";
+        font-family: Overpass Helvetica, sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
