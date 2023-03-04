@@ -23,7 +23,7 @@
     gap: 20px;
 
     p {
-        font-family: Overpass Helvetica, sans-serif;
+        font-family: Overpass, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 23px;
         line-height: 120%;
@@ -40,7 +40,7 @@
 
 .legal-notice {
     color: var(--cream);
-    font-family: Overpass Helvetica, sans-serif;
+    font-family: Overpass, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -81,9 +81,19 @@
 
 .arrow-pageUp-container {
     position: absolute;
-    right: 0;
     top: -90px;
+    height: 56px;
+    width: 40px;
+    bottom: 0;
+    right: 0;
     cursor: pointer;
+
+    img {
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -134,26 +144,11 @@
         }
     }
 
-    .arrow-pageUp-container {
-        height: 100px;
-        width: 40px;
-        bottom: 0;
-        right: 0;
-        // overflow: hidden;
-
-        img {
-            position: absolute;
-            z-index: 1000;
-            top: 0;
-            right: 0;
-        }
-
-        &:hover img {
-            -webkit-animation: pageUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
-                infinite both;
-            animation: pageUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
-                both;
-        }
+    .arrow-pageUp-container:hover img {
+        -webkit-animation: pageUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            infinite both;
+        animation: pageUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+            both;
     }
 
     @-webkit-keyframes pageUp {

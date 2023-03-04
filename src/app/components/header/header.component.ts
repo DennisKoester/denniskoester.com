@@ -4,7 +4,6 @@ import {
     HostListener,
     ElementRef,
     ViewChild,
-    Renderer2,
 } from '@angular/core';
 
 import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
@@ -16,8 +15,6 @@ import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 })
 export class HeaderComponent implements OnInit {
     @ViewChild('burgerMenu') burgerMenu: ElementRef<HTMLInputElement>;
-
-    constructor(private renderer: Renderer2) {}
 
     ngOnInit() {}
 
@@ -35,9 +32,13 @@ export class HeaderComponent implements OnInit {
         }
     }
 
-    openMobileMenu() {
+    toggleMenu() {
         const burgerMenu = document.getElementById('burgerMenu');
+        const burgerMenuFooter = document.getElementById('burger-menu-footer');
         burgerMenu.classList.toggle('d-none');
+        burgerMenuFooter.classList.toggle('d-none');
+        document.documentElement.classList.toggle('preventScrolling');
+        
         // const burgerMenu = burgerMenu<HTMLDivElement>(null);
         // this.burgerMenu.nativeElement.classList.toggle('d-none');
     }

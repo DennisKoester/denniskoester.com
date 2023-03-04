@@ -6,14 +6,14 @@
             <div class="normal-menu">
                 <nav>
                     <ul>
-                        <li><a href="#about-me">About me</a></li>
-                        <li><a href="#my-skills">My skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a routerLink="#about-me">About me</a></li>
+                        <li><a routerLink="#my-skills">My skills</a></li>
+                        <li><a routerLink="#portfolio">Portfolio</a></li>
                     </ul>
                 </nav>
             </div>
 
-            <img (click)="openMobileMenu()"
+            <img (click)="toggleMenu()"
                 class="burger-menu d-none"
                 src="assets/img/burger_menu.svg"
                 alt="burger menu"

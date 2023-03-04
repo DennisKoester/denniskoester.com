@@ -1,5 +1,6 @@
 :root {
     --header-height: 92px;
+    --burger-menu-footer-height: 370px;
 
     --cream: #fffcf3;
     --orange: #ff9900;
@@ -48,6 +49,10 @@ h2 {
     visibility: hidden;
 }
 
+.preventScrolling{
+    overflow: hidden;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -55,7 +60,7 @@ h2 {
     position: absolute;
     top: 200px;
     align-self: center;
-    font-family: Overpass Helvetica, sans-serif;
+    font-family: Overpass, Helvetica, sans-serif;
     font-size: 23px;
     font-weight: 400;
     line-height: 120%;

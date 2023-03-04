@@ -19,6 +19,7 @@ import { ArrowRightPortfolioComponent } from './components/arrow-right-portfolio
 import { FooterComponent } from './components/footer/footer.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { ProjectContainerLeftComponent } from './components/project-container-left/project-container-left.component';
+import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burger-menu-footer.component';
 
 @NgModule({
     declarations: [
@@ -38,6 +39,7 @@ import { ProjectContainerLeftComponent } from './components/project-container-le
         ProjectContainerLeftComponent,
         ImprintComponent,
         HomeComponent,
+        BurgerMenuFooterComponent,
     ],
     imports: [
         BrowserModule,
