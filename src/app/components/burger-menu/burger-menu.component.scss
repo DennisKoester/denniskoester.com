@@ -54,3 +54,34 @@ nav {
         }
     }
 }
+
+.navList li {
+    position: relative;
+}
+
+.navList li:after,
+.navList li > :last-child:after {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    border-color: black;
+    border-style: solid;
+    content: " ";
+}
+
+.navList li:after {
+    top: 20px;
+    right: 20px;
+    border-width: 0 0 0 0;
+}
+
+.navList li > :last-child:after {
+    bottom: -15px;
+    left: -15px;
+    border-width: 0 0 4px 4px;
+}
+
+.navList li :hover:after {
+    width: 200px;
+    height: 20px;
+}
