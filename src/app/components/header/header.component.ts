@@ -4,10 +4,10 @@ import {
     HostListener,
     ElementRef,
     ViewChild,
+    Injectable,
 } from '@angular/core';
 
-import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
-
+@Injectable({ providedIn: 'root' })
 @Component({
     selector: 'app-header',
     templateUrl: './header.component.html',
@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit() {}
 
-    @HostListener('window:scroll', []) onWindowScroll() {
+    @HostListener('body:scroll', []) onWindowScroll() {
         const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =
             window.pageYOffset ||
@@ -30,18 +30,21 @@ export class HeaderComponent implements OnInit {
         } else {
             header.classList.remove('shadow');
         }
+        console.log(verticalOffset);
+        
     }
 
     toggleMenu() {
         const burgerMenu = document.getElementById('burgerMenu');
         const burgerMenuFooter = document.getElementById('burger-menu-footer');
+        const burgerMenuIcon = document.getElementById('ham');
+
         burgerMenu.classList.toggle('d-none');
         burgerMenuFooter.classList.toggle('d-none');
         document.documentElement.classList.toggle('preventScrolling');
-        
-        // const burgerMenu = burgerMenu<HTMLDivElement>(null);
-        // this.burgerMenu.nativeElement.classList.toggle('d-none');
+        burgerMenuIcon.classList.toggle('active');
     }
+
 
     // toAboutMe() {
     //     document.getElementById('about-me').scrollIntoView({behavior: 'smooth'});

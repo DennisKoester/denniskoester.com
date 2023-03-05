@@ -89,7 +89,7 @@
         font-size: 23px;
         font-weight: 400;
         line-height: 120%;
-      font-family: Overpass, Helvetica, sans-serif;
+        font-family: Overpass, Helvetica, sans-serif;
 
         color: var(--orange);
     }
@@ -98,7 +98,7 @@
         font-size: 16px;
         font-weight: 400;
         line-height: 120%;
-   font-family: Overpass, Helvetica, sans-serif;
+        font-family: Overpass, Helvetica, sans-serif;
         position: unset;
     }
 }
@@ -149,10 +149,6 @@
 
     .description-card {
         transform: translateY(-1200px);
-    }
-
-    .project-wrapper:hover .description-card {
-        animation: descSlideDown 225ms forwards ease-in-out;
     }
 
     @keyframes descSlideDown {
