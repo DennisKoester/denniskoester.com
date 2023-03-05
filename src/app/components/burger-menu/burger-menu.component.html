@@ -1,9 +1,9 @@
 <div id="burgerMenu" #burgerMenu1 class="burger-menu d-none">
     <nav>
         <ul class="navList">
-            <li><a href="#about-me">About me</a></li>
-            <li><a href="#my-skills">My skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a (click)="toggleMenu()" href="#about-me">About me</a></li>
+            <li><a (click)="toggleMenu()" href="#my-skills">My skills</a></li>
+            <li><a (click)="toggleMenu()" href="#portfolio">Portfolio</a></li>
         </ul>
     </nav>
     <app-burger-menu-footer></app-burger-menu-footer>

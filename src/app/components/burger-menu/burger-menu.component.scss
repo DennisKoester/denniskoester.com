@@ -67,6 +67,7 @@ nav {
     border-color: black;
     border-style: solid;
     content: " ";
+    transition: all 125ms ease-in-out;
 }
 
 .navList li:after {
@@ -82,6 +83,6 @@ nav {
 }
 
 .navList li :hover:after {
-    width: 200px;
-    height: 20px;
+    height: 0px;
+    width: 100%;
 }
