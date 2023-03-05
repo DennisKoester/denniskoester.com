@@ -261,6 +261,16 @@
     }
 }
 
+@media (hover: hover) and (max-width: 1400px) {
+    .button {
+        padding: 17px 25px 15px 25px;
+
+        &:hover {
+            padding: 17px 35px 15px 35px;
+        }
+    }
+}
+
 @media (hover: hover) and (max-width: 1200px) {
     .project-wrapper:hover .description-card {
         animation: descSlideDown 225ms forwards ease-in-out;
