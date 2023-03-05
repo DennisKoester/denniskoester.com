@@ -1,14 +1,32 @@
-<div id="burgerMenu" #burgerMenu1 class="burger-menu d-none">
+<div id="burgerMenu" #burgerMenu1 class="burger-menu menu-hidden">
     <nav>
         <ul class="navList">
             <li>
-                <a (click)="header.toggleMenu()" href="#about-me">About me</a>
+                <a
+                    (click)="
+                        header.toggleMenu(); header.forceNavigate('about-me')
+                    "
+                    routerLink="#about-me"
+                    >About me</a
+                >
             </li>
             <li>
-                <a (click)="header.toggleMenu()" href="#my-skills">My skills</a>
+                <a
+                    (click)="
+                        header.toggleMenu(); header.forceNavigate('my-skills')
+                    "
+                    routerLink="#my-skills"
+                    >My skills</a
+                >
             </li>
             <li>
-                <a (click)="header.toggleMenu()" href="#portfolio">Portfolio</a>
+                <a
+                    (click)="
+                        header.toggleMenu(); header.forceNavigate('portfolio')
+                    "
+                    routerLink="#portfolio"
+                    >Portfolio</a
+                >
             </li>
         </ul>
     </nav>

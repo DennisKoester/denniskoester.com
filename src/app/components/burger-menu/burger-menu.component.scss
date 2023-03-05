@@ -7,6 +7,13 @@
     right: 0;
     background-color: var(--cream);
     z-index: 2;
+    transition: all 125ms ease-in;
+    opacity: 1;
+}
+
+.menu-hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
 nav {
@@ -41,10 +48,6 @@ nav {
             color: var(--orange);
         }
     }
-}
-
-.menu-hidden {
-    display: none;
 }
 
 @media (hover: hover) {

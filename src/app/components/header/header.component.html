@@ -6,9 +6,27 @@
             <div class="normal-menu">
                 <nav>
                     <ul>
-                        <li><a href="#about-me">About me</a></li>
-                        <li><a href="#my-skills">My skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li>
+                            <a
+                                routerLink="#about-me"
+                                (click)="forceNavigate('about-me')"
+                                >About me</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                routerLink="#my-skills"
+                                (click)="forceNavigate('my-skills')"
+                                >My skills</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                routerLink="#portfolio"
+                                (click)="forceNavigate('portfolio')"
+                                >Portfolio</a
+                            >
+                        </li>
                     </ul>
                 </nav>
             </div>

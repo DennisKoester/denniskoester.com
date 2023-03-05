@@ -6,6 +6,7 @@ import {
     ViewChild,
     Injectable,
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Injectable({ providedIn: 'root' })
@@ -15,7 +16,7 @@ import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    constructor() {}
+    constructor(private router: Router) {}
 
     ngOnInit() {}
 
@@ -39,8 +40,8 @@ export class HeaderComponent implements OnInit {
         const burgerMenuFooter = document.getElementById('burger-menu-footer');
         const burgerMenuIcon = document.getElementById('ham');
 
-        burgerMenu.classList.toggle('d-none');
-        burgerMenuFooter.classList.toggle('d-none');
+        burgerMenu.classList.toggle('menu-hidden');
+        burgerMenuFooter.classList.toggle('menu-hidden');
         document.documentElement.classList.toggle('preventScrolling');
         burgerMenuIcon.classList.toggle('active');
     }
@@ -51,4 +52,15 @@ export class HeaderComponent implements OnInit {
     //     // this.hidden = !this.hidden;
     //     this.burgerMenu2.nativeElement.classList.remove('d-none');
     // }
+
+    forceNavigate(name: string) {
+        this.router
+            .navigate(['/'], { fragment: name })
+            .then((result) => {
+                console.log(result);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
 }
