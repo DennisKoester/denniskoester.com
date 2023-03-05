@@ -1,6 +1,4 @@
 #contact {
-    width: 100%;
-    height: 100%;
     background-image: url(/assets/img/bg_contact.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,7 +58,7 @@ textarea {
     resize: vertical;
     outline: none;
     padding-left: 25px;
-   font-family: Overpass, Helvetica, sans-serif;
+    font-family: Overpass, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 120%;
@@ -101,7 +99,7 @@ input[data-autocompleted] {
     margin-bottom: 25px;
 
     span {
-      font-family: Overpass, Helvetica, sans-serif;
+        font-family: Overpass, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
@@ -116,7 +114,7 @@ input[data-autocompleted] {
     }
 
     .floating-label {
-       font-family: Overpass, Helvetica, sans-serif;
+        font-family: Overpass, Helvetica, sans-serif;
         font-weight: 400;
         font-size: 16px;
         line-height: 120%;
