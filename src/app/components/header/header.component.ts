@@ -1,13 +1,5 @@
-import {
-    Component,
-    OnInit,
-    HostListener,
-    ElementRef,
-    ViewChild,
-    Injectable,
-} from '@angular/core';
+import { Component, OnInit, HostListener, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Injectable({ providedIn: 'root' })
 @Component({
@@ -18,9 +10,11 @@ import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 export class HeaderComponent implements OnInit {
     constructor(private router: Router) {}
 
+    // collapsed: boolean = true;
+
     ngOnInit() {}
 
-    @HostListener('body:scroll', []) onWindowScroll() {
+    @HostListener('window:scroll', []) onWindowScroll() {
         const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =
             window.pageYOffset ||
@@ -39,28 +33,50 @@ export class HeaderComponent implements OnInit {
         const burgerMenu = document.getElementById('burgerMenu');
         const burgerMenuFooter = document.getElementById('burger-menu-footer');
         const burgerMenuIcon = document.getElementById('ham');
+        const header = document.getElementById('header') as HTMLDivElement;
+        const verticalOffset: number =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop ||
+            0;
 
         burgerMenu.classList.toggle('menu-hidden');
         burgerMenuFooter.classList.toggle('menu-hidden');
-        document.documentElement.classList.toggle('preventScrolling');
         burgerMenuIcon.classList.toggle('active');
+        document.documentElement.classList.toggle('preventScrolling');
+
+        if (!burgerMenu.classList.contains('menu-hidden')) {
+            header.classList.add('shadow');
+        } else if (
+            burgerMenu.classList.contains('menu-hidden') &&
+            verticalOffset === 0
+        ) {
+            header.classList.remove('shadow');
+        }
     }
 
-    // hidden: boolean = true;
-
     // toggleMenu() {
-    //     // this.hidden = !this.hidden;
-    //     this.burgerMenu2.nativeElement.classList.remove('d-none');
+    //     this.collapsed = !this.collapsed;
+    //     console.log(this.collapsed);
     // }
 
     forceNavigate(name: string) {
-        this.router
-            .navigate(['/'], { fragment: name })
-            .then((result) => {
-                console.log(result);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        this.router.navigate(['/'], { fragment: name });
     }
+
+    // scrollToElement(element: any): void {
+    //     element.scrollIntoView({
+    //         behavior: 'smooth',
+    //         block: 'start',
+    //         inline: 'nearest',
+    //     });
+    //     console.log(element);
+    // }
+
+    // ScrollIntoView(elem: string) {
+    //     console.log(elem);
+    //     document
+    //         .querySelector(elem)
+    //         .scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // }
 }

@@ -23,10 +23,7 @@ body {
     background-position: center;
     overflow: overlay;
     scrollbar-gutter: stable;
-}
-
-body {
-    // height: 100vh;
+    scroll-behavior: smooth;
 }
 
 h1,

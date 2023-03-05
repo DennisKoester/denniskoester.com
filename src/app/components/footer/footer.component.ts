@@ -17,7 +17,7 @@ export class FooterComponent implements OnInit {
     }
 
     scrollToTop() {
-        document.body.scroll({
+        window.scroll({
             top: 0,
             left: 0,
             behavior: 'smooth',

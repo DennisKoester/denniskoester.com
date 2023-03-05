@@ -9,18 +9,6 @@ const routes: Routes = [
     { path: 'imprint', component: ImprintComponent },
 ];
 
-// @NgModule({
-//     imports: [
-//         RouterModule.forRoot(routes, {
-//             scrollPositionRestoration: 'enabled',
-//             anchorScrolling: 'enabled',
-//             scrollOffset: [0, 130],
-//         }),
-//     ],
-//     exports: [RouterModule],
-// })
-// export class AppRoutingModule {}
-
 const config = {
     /* instead of use extraOptions for Router */
     onSameUrlNavigation:

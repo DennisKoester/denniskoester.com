@@ -7,7 +7,6 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PortfolioSectionComponent } from './components/portfolio-section/portfolio-section.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ImprintComponent } from './pages/imprint/imprint.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeadSectionComponent } from './components/head-section/head-section.component';
@@ -40,7 +39,6 @@ import { filter } from 'rxjs';
         FooterComponent,
         BurgerMenuComponent,
         ProjectContainerLeftComponent,
-        ImprintComponent,
         HomeComponent,
         BurgerMenuFooterComponent,
     ],
