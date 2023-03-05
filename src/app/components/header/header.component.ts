@@ -6,6 +6,7 @@ import {
     ViewChild,
     Injectable,
 } from '@angular/core';
+import { BurgerMenuComponent } from '../burger-menu/burger-menu.component';
 
 @Injectable({ providedIn: 'root' })
 @Component({
@@ -14,8 +15,6 @@ import {
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @ViewChild('burgerMenu1') burgerMenu: ElementRef<any>;
-
     constructor() {}
 
     ngOnInit() {}
@@ -50,11 +49,6 @@ export class HeaderComponent implements OnInit {
 
     // toggleMenu() {
     //     // this.hidden = !this.hidden;
-    //     let menu = this.burgerMenu1.nativeElement;
-    //     menu.classList.remove('d-none');
-    // }
-
-    // toAboutMe() {
-    //     document.getElementById('about-me').scrollIntoView({behavior: 'smooth'});
+    //     this.burgerMenu2.nativeElement.classList.remove('d-none');
     // }
 }
