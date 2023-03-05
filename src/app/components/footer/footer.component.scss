@@ -129,6 +129,14 @@
     }
 }
 
+@media screen and (max-width: 300px) {
+    .footer-left {
+        p {
+            font-size: 18px;
+        }
+    }
+}
+
 @media (hover: hover) {
     .legal-notice {
         &:hover::before {

@@ -28,3 +28,11 @@
         width: unset;
     }
 }
+
+@media screen and (max-width: 300px) {
+    .headline-portfolio {
+        p {
+            font-size: 16px;
+        }
+    }
+}

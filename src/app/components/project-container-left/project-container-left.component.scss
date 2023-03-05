@@ -44,7 +44,7 @@
 
 .project-arrow {
     position: absolute;
-    top: 186px;
+    top: 48%;
     right: -65px;
     border-radius: 100%;
     transform: rotate(135deg) scale(0.5);
@@ -209,6 +209,35 @@
         p {
             font-size: 16px;
         }
+    }
+
+    .button {
+        padding: 15px 40px 13px 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        font-size: 18px;
+        padding: 15px 30px 13px 30px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .description-card {
+        h3 {
+            font-size: 23px;
+        }
+        span {
+            font-size: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+    .button {
+        font-size: 16px;
+        padding: 15px 15px 13px 15px;
     }
 }
 

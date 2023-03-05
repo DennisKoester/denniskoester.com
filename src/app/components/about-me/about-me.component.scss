@@ -87,6 +87,14 @@
     }
 }
 
+@media screen and (max-width: 300px) {
+    .about-col-1 {
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
 @media (hover: hover) {
     .about-col-2:hover > .img-border {
         opacity: 1;

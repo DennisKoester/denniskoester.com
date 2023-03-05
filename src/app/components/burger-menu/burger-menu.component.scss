@@ -77,7 +77,7 @@ nav {
 }
 
 .navList li > :last-child:after {
-    bottom: -15px;
+    bottom: -10px;
     left: -15px;
     border-width: 0 0 4px 4px;
 }
@@ -85,4 +85,15 @@ nav {
 .navList li :hover:after {
     height: 0px;
     width: 110%;
+}
+
+@media screen and (max-width: 300px) {
+    a {
+        font-size: 32px;
+    }
+
+    .navList li > :last-child:after {
+        bottom: -5px;
+        left: -15px;
+    }
 }
