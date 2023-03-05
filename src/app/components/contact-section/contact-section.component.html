@@ -1,74 +1,76 @@
-<div id="contact">
-    <div class="contact-wrapper">
-        <h2>Say Hi!</h2>
-        <div class="contact-form">
-            <p>Want to discuss a new project?</p>
-            <p>Say hello! Let's discuss your ideas and make it happen!</p>
-            <form
-                (keyup.enter)="sendMail()"
-                (ngSubmit)="sendMail()"
-                #contactForm
-            >
-                <div class="floating-label-group">
-                    <input
-                        (keyup)="validationContactForm(0, 'name')"
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        #nameField
-                    />
-                    <label class="floating-label">Your name</label>
-                    <span id="required0" class="hidden"
-                        >Your name is required</span
-                    >
-                    <img
-                        id="validateSign0"
-                        class="hidden"
-                        src="assets/img/red_exclamation.svg"
-                    />
-                </div>
-                <div class="floating-label-group">
-                    <input
-                        (keyup)="validationContactForm(1, 'email')"
-                        type="text"
-                        id="email"
-                        name="email"
-                        required
-                        #emailField
-                    />
-                    <label class="floating-label">Your email</label>
-                    <span id="required1" class="hidden"
-                        >Your email is required</span
-                    >
-                    <img
-                        id="validateSign1"
-                        class="hidden"
-                        src="assets/img/red_exclamation.svg"
-                    />
-                </div>
-                <div class="floating-label-group">
-                    <textarea
-                        (keyup)="validationContactForm(2, 'message')"
-                        id="message"
-                        name="message"
-                        style="height: 200px"
-                        autocomplete="off"
-                        required
-                        #messageField
-                    ></textarea>
-                    <label class="floating-label">Your message</label>
-                    <span id="required2" class="hidden"
-                        >Your message is empty</span
-                    >
-                    <img
-                        id="validateSign2"
-                        class="hidden"
-                        src="assets/img/red_exclamation.svg"
-                    />
-                </div>
-                <button #sendButton class="button">Send message</button>
-            </form>
+<section>
+    <div id="contact">
+        <div class="contact-wrapper">
+            <h2>Say Hi!</h2>
+            <div class="contact-form">
+                <p>Want to discuss a new project?</p>
+                <p>Say hello! Let's discuss your ideas and make it happen!</p>
+                <form
+                    (keyup.enter)="sendMail()"
+                    (ngSubmit)="sendMail()"
+                    #contactForm
+                >
+                    <div class="floating-label-group">
+                        <input
+                            (keyup)="validationContactForm(0, 'name')"
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            #nameField
+                        />
+                        <label class="floating-label">Your name</label>
+                        <span id="required0" class="hidden"
+                            >Your name is required</span
+                        >
+                        <img
+                            id="validateSign0"
+                            class="hidden"
+                            src="assets/img/red_exclamation.svg"
+                        />
+                    </div>
+                    <div class="floating-label-group">
+                        <input
+                            (keyup)="validationContactForm(1, 'email')"
+                            type="text"
+                            id="email"
+                            name="email"
+                            required
+                            #emailField
+                        />
+                        <label class="floating-label">Your email</label>
+                        <span id="required1" class="hidden"
+                            >Your email is required</span
+                        >
+                        <img
+                            id="validateSign1"
+                            class="hidden"
+                            src="assets/img/red_exclamation.svg"
+                        />
+                    </div>
+                    <div class="floating-label-group">
+                        <textarea
+                            (keyup)="validationContactForm(2, 'message')"
+                            id="message"
+                            name="message"
+                            style="height: 200px"
+                            autocomplete="off"
+                            required
+                            #messageField
+                        ></textarea>
+                        <label class="floating-label">Your message</label>
+                        <span id="required2" class="hidden"
+                            >Your message is empty</span
+                        >
+                        <img
+                            id="validateSign2"
+                            class="hidden"
+                            src="assets/img/red_exclamation.svg"
+                        />
+                    </div>
+                    <button #sendButton class="button">Send message</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
