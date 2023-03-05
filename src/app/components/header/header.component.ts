@@ -14,7 +14,9 @@ import {
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-    @ViewChild('burgerMenu') burgerMenu: ElementRef<HTMLInputElement>;
+    @ViewChild('burgerMenu1') burgerMenu: ElementRef<any>;
+
+    constructor() {}
 
     ngOnInit() {}
 
@@ -31,7 +33,6 @@ export class HeaderComponent implements OnInit {
             header.classList.remove('shadow');
         }
         console.log(verticalOffset);
-        
     }
 
     toggleMenu() {
@@ -45,6 +46,13 @@ export class HeaderComponent implements OnInit {
         burgerMenuIcon.classList.toggle('active');
     }
 
+    // hidden: boolean = true;
+
+    // toggleMenu() {
+    //     // this.hidden = !this.hidden;
+    //     let menu = this.burgerMenu1.nativeElement;
+    //     menu.classList.remove('d-none');
+    // }
 
     // toAboutMe() {
     //     document.getElementById('about-me').scrollIntoView({behavior: 'smooth'});
