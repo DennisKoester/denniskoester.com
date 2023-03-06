@@ -4,7 +4,8 @@
             <li>
                 <a
                     (click)="
-                        header.toggleMenu(); header.forceNavigate('about-me')
+                        navigate.toggleMenu();
+                        navigate.forceNavigate('about-me')
                     "
                     routerLink="#about-me"
                     >About me</a
@@ -13,7 +14,8 @@
             <li>
                 <a
                     (click)="
-                        header.toggleMenu(); header.forceNavigate('my-skills')
+                        navigate.toggleMenu();
+                        navigate.forceNavigate('my-skills')
                     "
                     routerLink="#my-skills"
                     >My skills</a
@@ -22,7 +24,8 @@
             <li>
                 <a
                     (click)="
-                        header.toggleMenu(); header.forceNavigate('portfolio')
+                        navigate.toggleMenu();
+                        navigate.forceNavigate('portfolio')
                     "
                     routerLink="#portfolio"
                     >Portfolio</a

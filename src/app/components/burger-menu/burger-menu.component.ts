@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
+import { NavigateService } from 'src/app/navigate.service';
 
 @Component({
     selector: 'app-burger-menu',
@@ -7,6 +7,5 @@ import { HeaderComponent } from '../header/header.component';
     styleUrls: ['./burger-menu.component.scss'],
 })
 export class BurgerMenuComponent {
-    constructor(public header: HeaderComponent) {}
-    collapsed: boolean = false;
+    constructor(public navigate: NavigateService) {}
 }

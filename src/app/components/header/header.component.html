@@ -9,21 +9,21 @@
                         <li>
                             <a
                                 routerLink="#about-me"
-                                (click)="forceNavigate('about-me')"
+                                (click)="navigate.forceNavigate('about-me')"
                                 >About me</a
                             >
                         </li>
                         <li>
                             <a
                                 routerLink="#my-skills"
-                                (click)="forceNavigate('my-skills')"
+                                (click)="navigate.forceNavigate('my-skills')"
                                 >My skills</a
                             >
                         </li>
                         <li>
                             <a
                                 routerLink="#portfolio"
-                                (click)="forceNavigate('portfolio')"
+                                (click)="navigate.forceNavigate('portfolio')"
                                 >Portfolio</a
                             >
                         </li>
@@ -34,7 +34,7 @@
             <div class="burger-menu d-none">
                 <svg
                     id="ham"
-                    (click)="toggleMenu()"
+                    (click)="navigate.toggleMenu()"
                     class="ham hamRotate ham1"
                     viewBox="0 0 100 100"
                     width="80"
