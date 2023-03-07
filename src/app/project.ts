@@ -4,4 +4,5 @@ export interface Project {
     subheadline: string;
     desc: string;
     image: string;
+    routerLink: string;
 }

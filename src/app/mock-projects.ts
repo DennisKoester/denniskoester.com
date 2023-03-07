@@ -7,6 +7,7 @@ export const PROJECTS: Project[] = [
         subheadline: 'Angular | Typescript | HTML | CSS | Firebase',
         desc: ' Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         image: 'join-project.png',
+        routerLink: '',
     },
 
     {
@@ -15,5 +16,6 @@ export const PROJECTS: Project[] = [
         subheadline: 'Javascript | HTML | CSS | Rest API',
         desc: ' Pokedex using Rest API',
         image: 'join-project.png',
+        routerLink: '',
     },
 ];
