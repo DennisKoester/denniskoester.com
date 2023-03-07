@@ -26,10 +26,10 @@
     }
 }
 
-// @media (hover: hover) {
-//     .arrow-left {
-//         &:hover img {
-//             transform: translateX(-80px) translateY(80px);
-//         }
-//     }
-// }
+@media (hover: hover) {
+    .arrow-left {
+        &:hover img {
+            transform: translateX(-80px) translateY(80px);
+        }
+    }
+}

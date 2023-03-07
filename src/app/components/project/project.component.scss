@@ -1,41 +1,3 @@
-#portfolio {
-    width: 85%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.headline-portfolio {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: min-content;
-    margin: 0 auto;
-
-    p {
-        font-family: Overpass, Helvetica, sans-serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 23px;
-        line-height: 120%;
-        margin-top: 35px;
-    }
-}
-
-@media (max-width: 600px) {
-    .headline-portfolio {
-        width: unset;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .headline-portfolio {
-        p {
-            font-size: 16px;
-        }
-    }
-}
-
 .project-wrapper {
     width: 85%;
     max-width: 1400px;
@@ -105,7 +67,6 @@
     overflow: hidden;
     margin-top: 50px;
     max-width: 550px;
-    width: 75%;
 }
 
 .description-card {

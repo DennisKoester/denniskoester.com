@@ -10,5 +10,34 @@
     </div>
 </section>
 
-<app-project-container-left></app-project-container-left>
-<app-project-container-right></app-project-container-right>
+<!-- <div *ngFor="let project of projects">{{ project.name }}</div> -->
+
+<!-- <app-project *ngFor="let project of projects"></app-project> -->
+
+<div *ngFor="let project of projects; index as i" class="project-wrapper">
+    <div class="project-image-container">
+        <img class="project-image" src="./assets/img/{{ project.image }}" />
+        <div class="project-border"></div>
+        <img class="project-arrow" src="./assets/img/project_arrow.svg" />
+    </div>
+    <div class="desc-wrapper">
+        <div class="description-card">
+            <h3>{{ project.name }}</h3>
+            <span> {{ project.subheadline }}</span>
+            <p>
+                {{ project.desc }}
+            </p>
+            <div class="project-btns">
+                <a href="#" class="button">Live Test</a>
+                <a
+                    href="https://github.com/DennisKoester"
+                    target="_blank"
+                    class="button"
+                >
+                    Github
+                </a>
+            </div>
+        </div>
+    </div>
+    <p>{{ i + 1 }}/{{ projects.length }}</p>
+</div>

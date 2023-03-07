@@ -22,6 +22,7 @@ import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burge
 import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { filter } from 'rxjs';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
     declarations: [
@@ -41,6 +42,7 @@ import { filter } from 'rxjs';
         ProjectContainerLeftComponent,
         HomeComponent,
         BurgerMenuFooterComponent,
+        ProjectComponent,
     ],
     imports: [
         BrowserModule,

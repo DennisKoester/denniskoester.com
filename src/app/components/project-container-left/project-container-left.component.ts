@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Project } from 'src/app/project';
+import { PROJECTS } from 'src/app/mock-projects';
 
 @Component({
     selector: 'app-project-container-left',
@@ -6,19 +8,5 @@ import { Component } from '@angular/core';
     styleUrls: ['./project-container-left.component.scss'],
 })
 export class ProjectContainerLeftComponent {
-    projects = [
-        {
-            name: 'Join',
-            subheadline: 'Angular | Typescript | HTML | CSS | Firebase',
-            desc: ' Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-            image: 'join-project.png',
-        },
-
-        {
-            name: 'Pokedex',
-            subheadline: 'Javascript | HTML | CSS | Rest API',
-            desc: ' Pokedex using Rest API',
-            image: 'join-project.png',
-        },
-    ];
+    projects: Project[] = PROJECTS;
 }
