@@ -12,9 +12,9 @@
 
 <!-- <div *ngFor="let project of projects">{{ project.name }}</div> -->
 
-<!-- <app-project *ngFor="let project of projects"></app-project> -->
+<app-project *ngFor="let project of projects; let i = index" [index]="i" [name]="project.name" [subheadline]="project.subheadline" [desc]="project.desc" [image]="project.image"></app-project>
 
-<div *ngFor="let project of projects; index as i" class="project-wrapper">
+<!-- <div *ngFor="let project of projects; index as i" class="project-wrapper">
     <div class="project-image-container">
         <img class="project-image" src="./assets/img/{{ project.image }}" />
         <div class="project-border"></div>
@@ -40,4 +40,4 @@
         </div>
     </div>
     <p>{{ i + 1 }}/{{ projects.length }}</p>
-</div>
+</div> -->

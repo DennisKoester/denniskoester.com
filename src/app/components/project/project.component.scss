@@ -1,3 +1,5 @@
+// Left side //
+
 .project-wrapper {
     width: 85%;
     max-width: 1400px;
@@ -20,9 +22,12 @@
     }
 
     img {
-        // filter: grayscale(100%);
         filter: sepia(50%);
     }
+}
+
+.right-project-wrapper {
+    flex-direction: row-reverse;
 }
 
 .project-image-container {
@@ -301,3 +306,6 @@
         animation: descSlideDown 225ms forwards ease-in-out;
     }
 }
+
+// Right Side //
+
