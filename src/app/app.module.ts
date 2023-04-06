@@ -11,13 +11,11 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HeadSectionComponent } from './components/head-section/head-section.component';
 import { SkillSectionComponent } from './components/skill-section/skill-section.component';
-import { ProjectContainerRightComponent } from './components/project-container-right/project-container-right.component';
 import { ArrowLeftContactComponent } from './components/arrow-left-contact/arrow-left-contact.component';
 import { ArrowLeftSkillsComponent } from './components/arrow-left-skills/arrow-left-skills.component';
 import { ArrowRightPortfolioComponent } from './components/arrow-right-portfolio/arrow-right-portfolio.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
-import { ProjectContainerLeftComponent } from './components/project-container-left/project-container-left.component';
 import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burger-menu-footer.component';
 import { Router, Scroll } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
@@ -32,14 +30,12 @@ import { ProjectComponent } from './components/project/project.component';
         AboutMeComponent,
         SkillSectionComponent,
         PortfolioSectionComponent,
-        ProjectContainerRightComponent,
         ArrowLeftContactComponent,
         ContactSectionComponent,
         ArrowLeftSkillsComponent,
         ArrowRightPortfolioComponent,
         FooterComponent,
         BurgerMenuComponent,
-        ProjectContainerLeftComponent,
         HomeComponent,
         BurgerMenuFooterComponent,
         ProjectComponent,

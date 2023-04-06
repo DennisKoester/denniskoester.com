@@ -8,10 +8,12 @@ import { PROJECTS } from 'src/app/mock-projects';
     styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent {
-    @Input () index;
-    @Input () name;
-    @Input () subheadline;
-    @Input () desc;
-    @Input () image;
+    @Input() index: number;
+    @Input() name: string;
+    @Input() subheadline: string;
+    @Input() desc: string;
+    @Input() image: string;
+    @Input() routerLink: string;
+    @Input() totalProjects: number;
     project: Project[] = PROJECTS;
 }

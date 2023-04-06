@@ -10,5 +10,13 @@
     </div>
 </section>
 
-
-<app-project *ngFor="let project of projects; let i = index" [index]="i" [name]="project.name" [subheadline]="project.subheadline" [desc]="project.desc" [image]="project.image"></app-project>
+<app-project
+    *ngFor="let project of projects; let i = index"
+    [index]="i"
+    [name]="project.name"
+    [subheadline]="project.subheadline"
+    [desc]="project.desc"
+    [image]="project.image"
+    [routerLink]="project.routerLink"
+    [totalProjects]="projects.length"
+></app-project>

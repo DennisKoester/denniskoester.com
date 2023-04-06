@@ -4,7 +4,7 @@ export const PROJECTS: Project[] = [
     {
         id: 1,
         name: 'Join',
-        subheadline: 'Angular | Typescript | HTML | CSS | Firebase',
+        subheadline: 'Javascript | HTML | CSS',
         desc: ' Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         image: 'join-project.png',
         routerLink: '',
@@ -12,9 +12,36 @@ export const PROJECTS: Project[] = [
 
     {
         id: 2,
+        name: 'Slack Clone',
+        subheadline: 'Angular | Typescript | Firebase | HTML | SCSS',
+        desc: ' Clone of famous Slack Messanger',
+        image: 'join-project.png',
+        routerLink: '',
+    },
+
+    {
+        id: 3,
         name: 'Pokedex',
         subheadline: 'Javascript | HTML | CSS | Rest API',
         desc: ' Pokedex using Rest API',
+        image: 'join-project.png',
+        routerLink: '',
+    },
+
+    {
+        id: 4,
+        name: 'Doorstep Delivery',
+        subheadline: 'Javascript | HTML | CSS',
+        desc: ' Clone of Takeaway',
+        image: 'join-project.png',
+        routerLink: '',
+    },
+
+    {
+        id: 5,
+        name: 'Portfolio',
+        subheadline: 'Angular | Typescript | HTML | SCSS',
+        desc: ' Clone of Takeaway',
         image: 'join-project.png',
         routerLink: '',
     },

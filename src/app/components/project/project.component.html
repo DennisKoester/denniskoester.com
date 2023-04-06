@@ -12,7 +12,7 @@
                 {{ desc }}
             </p>
             <div class="project-btns">
-                <a href="#" class="button">Live Test</a>
+                <a [routerLink]="['/slack-clone']" class="button">Live Test</a>
                 <a
                     href="https://github.com/DennisKoester"
                     target="_blank"
@@ -23,6 +23,9 @@
             </div>
         </div>
     </div>
-    <p>{{ index < 9 ? 0 : "" }}{{ index + 1 }}/05</p>
+    <p>
+        {{ index < 9 ? 0 : "" }}{{ index + 1 }}/{{ totalProjects < 9 ? 0 : ""
+        }}{{ totalProjects }}
+    </p>
 </div>
 ¡
