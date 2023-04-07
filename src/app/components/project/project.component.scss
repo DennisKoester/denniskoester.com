@@ -21,13 +21,13 @@
         right: 0;
     }
 
-    img {
-        filter: sepia(50%);
-    }
-}
+    .project-image-container {
+        position: relative;
 
-.project-image-container {
-    position: relative;
+        .project-image {
+            width: 600px;
+        }
+    }
 }
 
 .project-border {
@@ -68,6 +68,7 @@
     overflow: hidden;
     margin-top: 50px;
     max-width: 550px;
+    // width: 75%;
 }
 
 .description-card {
