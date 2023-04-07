@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
         subheadline: 'Javascript | HTML | CSS',
         desc: ' Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
         image: 'Join_Kanban_Template.png',
-        routerLink: '',
+        routerLink: 'https://denniskoester.com/join',
     },
 
     {
@@ -16,7 +16,7 @@ export const PROJECTS: Project[] = [
         subheadline: 'Angular | Typescript | Firebase | HTML | SCSS',
         desc: ' Clone of famous Slack Messanger',
         image: 'Join_Kanban_Template.png',
-        routerLink: '',
+        routerLink: 'https://denniskoester.com/slack-clone',
     },
 
     {
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
         subheadline: 'Javascript | HTML | CSS | Rest API',
         desc: ' Pokedex using Rest API',
         image: 'Join_Kanban_Template.png',
-        routerLink: '',
+        routerLink: 'https://denniskoester.com/pokedex',
     },
 
     {
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
         subheadline: 'Javascript | HTML | CSS',
         desc: ' Clone of Takeaway',
         image: 'Join_Kanban_Template.png',
-        routerLink: '',
+        routerLink: 'https://denniskoester.com/doorstep-delivery',
     },
 
     {
