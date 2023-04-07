@@ -13,7 +13,8 @@ export class ProjectComponent {
     @Input() subheadline: string;
     @Input() desc: string;
     @Input() image: string;
-    @Input() routerLink: string;
+    @Input() URL: string;
+    @Input() gitHub: string;
     @Input() totalProjects: number;
     project: Project[] = PROJECTS;
 }
