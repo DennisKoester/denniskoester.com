@@ -1,12 +1,16 @@
-#header {
+header {
+    height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    height: var(--header-height);
-    background-color: var(--cream);
     z-index: 99;
+}
+
+#header {
+    height: 100%;
+    background-color: var(--cream);
 
     .header-wrapper {
         display: flex;
