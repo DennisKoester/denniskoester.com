@@ -4,8 +4,8 @@ export const PROJECTS: Project[] = [
     {
         id: 1,
         name: 'Join',
-        subheadline: 'Javascript | HTML | CSS',
-        desc: ' Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+        subheadline: 'JavaScript | HTML | CSS',
+        desc: ' Task manager inspired by the kanban system. Create and organize tasks using drag and drop function, assign to users and specific categories.',
         image: 'Join_Kanban_template.png',
         URL: 'https://denniskoester.com/join',
         gitHub: 'https://github.com/DennisKoester/join',
@@ -14,8 +14,8 @@ export const PROJECTS: Project[] = [
     {
         id: 2,
         name: 'Slack Clone',
-        subheadline: 'Angular | Typescript | Firebase | HTML | SCSS',
-        desc: 'Clone of famous Slack Messanger',
+        subheadline: 'Angular | TypeScript | Firebase | Material | SCSS',
+        desc: 'Clone of the famous Slack Messenger',
         image: 'Slack_Clone_template.png',
         URL: 'https://denniskoester.com/slack-clone',
         gitHub: 'https://github.com/DennisKoester/slack-clone',
@@ -23,12 +23,12 @@ export const PROJECTS: Project[] = [
 
     {
         id: 3,
-        name: 'El Polo Loco',
-        subheadline: 'Javascript | HTML | CSS ',
-        desc: ' El Polo Loco',
-        image: 'El_Polo_Loco_template.png',
-        URL: 'https://denniskoester.com/el-polo-loco/',
-        gitHub: 'https://github.com/DennisKoester/pokedex',
+        name: 'El Pollo Loco',
+        subheadline: 'JavaScript | OOP | HTML | CSS ',
+        desc: 'Javascript based and object orientated jump & run game',
+        image: 'El_Pollo_Loco_template.png',
+        URL: 'https://denniskoester.com/el-pollo-loco/',
+        gitHub: 'https://github.com/DennisKoester/el-pollo-loco',
     },
     {
         id: 4,
@@ -43,20 +43,20 @@ export const PROJECTS: Project[] = [
     {
         id: 5,
         name: 'Doorstep Delivery',
-        subheadline: 'Javascript | HTML | CSS',
+        subheadline: 'JavaScript | HTML | CSS',
         desc: 'Clone of Takeaway',
         image: 'Doorstep_Delivery_template.png',
         URL: 'https://denniskoester.com/doorstep-delivery',
         gitHub: 'https://github.com/DennisKoester/doorstep-delivery',
     },
 
-    {
-        id: 6,
-        name: 'Portfolio',
-        subheadline: 'Angular | Typescript | HTML | SCSS',
-        desc: 'My Portfolio',
-        image: 'Slack_Clone_template2.png',
-        URL: '',
-        gitHub: 'https://github.com/DennisKoester/denniskoester.com',
-    },
+    // {
+    //     id: 6,
+    //     name: 'Portfolio',
+    //     subheadline: 'Angular | TypeScript | HTML | SCSS',
+    //     desc: 'My Portfolio',
+    //     image: 'Slack_Clone_template2.png',
+    //     URL: '',
+    //     gitHub: 'https://github.com/DennisKoester/denniskoester.com',
+    // },
 ];
