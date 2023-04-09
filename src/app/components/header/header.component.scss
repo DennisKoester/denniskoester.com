@@ -28,7 +28,7 @@ header {
     }
 
     .logo {
-        height: 30px;
+        height: 40px;
         width: auto;
     }
 
@@ -122,12 +122,23 @@ header {
     stroke-dashoffset: -138px;
 }
 
+@media only screen and (max-width: 720px) {
+    #header {
+        .header-wrapper {
+            width: 90%;
+        }
+        .logo {
+            height: 28px;
+        }
+    }
+}
+
 @media only screen and (max-width: 480px) {
     header {
         height: 60px;
     }
 
     .ham {
-        width: 50px;
+        width: 55px;
     }
 }

@@ -7,7 +7,6 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
     title = 'denniskoester.com';
-
     timer: any;
 
     @HostListener('window:scroll', []) onWindowScroll() {

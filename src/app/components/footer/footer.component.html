@@ -19,7 +19,12 @@
                 </div>
                 <a routerLink="imprint" class="legal-notice">Legal notice</a>
             </div>
-            <div class="arrow-pageUp-container">
+            <div
+                [ngStyle]="{
+                    filter: this.router.url === '/imprint' ? 'invert(1)' : ''
+                }"
+                class="arrow-pageUp-container"
+            >
                 <img
                     (click)="scrollToTop()"
                     class="arrow-pageUp"
