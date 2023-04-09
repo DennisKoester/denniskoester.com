@@ -1,13 +1,21 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     title = 'denniskoester.com';
     timer: any;
+
+    ngOnInit(): void {
+        AOS.init({
+            offset: 400,
+            once: true,
+        });
+    }
 
     @HostListener('window:scroll', []) onWindowScroll() {
         document.body.classList.remove('hideScrollbar');

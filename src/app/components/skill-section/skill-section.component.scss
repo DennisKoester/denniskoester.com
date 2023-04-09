@@ -48,7 +48,7 @@
     height: 100px;
     margin: 20px 40px;
 
-    img{
+    img {
         height: 75px;
     }
 
@@ -106,19 +106,6 @@
     }
 }
 
-@media (max-width: 400px) {
-    .skills-frame {
-        h2 {
-            font-size: 28px;
-            padding: 0 8px;
-            top: -18px;
-        }
-    }
-    .skills-container {
-        padding: 15px;
-    }
-}
-
 @media (hover: hover) {
     .skill {
         &:hover {
@@ -132,17 +119,6 @@
             animation: flip 1s;
         }
     }
-
-    // .animated.flip {
-    //     -webkit-backface-visibility: visible;
-    //     backface-visibility: visible;
-    //     -webkit-animation-name: flip;
-    //     animation-name: flip;
-    //     -webkit-animation-duration: 1s;
-    //     animation-duration: 1s;
-    //     -webkit-animation-fill-mode: both;
-    //     animation-fill-mode: both;
-    // }
 
     @keyframes move {
         0% {
@@ -191,5 +167,18 @@
             -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
         }
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-frame {
+        h2 {
+            font-size: 28px;
+            padding: 0 8px;
+            top: -18px;
+        }
+    }
+    .skills-container {
+        padding: 15px;
     }
 }

@@ -6,7 +6,7 @@
     padding-right: 50px;
     width: 85%;
     max-width: 1400px;
-    cursor: pointer;
+    // cursor: pointer;
 
     img {
         transition: all 125ms ease-in-out;
@@ -27,10 +27,10 @@
     }
 }
 
-@media (hover: hover) {
-    .arrow-left {
-        &:hover img {
-            transform: translateX(-80px) translateY(80px);
-        }
-    }
-}
+// @media (hover: hover) {
+//     .arrow-left {
+//         &:hover img {
+//             transform: translateX(-80px) translateY(80px);
+//         }
+//     }
+// }
