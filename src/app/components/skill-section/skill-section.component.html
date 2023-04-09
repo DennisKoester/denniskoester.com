@@ -3,7 +3,11 @@
         <div class="skills-frame">
             <h2>My skills</h2>
             <div class="skills-container">
-                <div *ngFor="let skill of skills" class="skill">
+                <div
+                    *ngFor="let skill of skills"
+                    data-aos="flip-left"
+                    class="skill"
+                >
                     <img src=" {{ skill.image }} " />
                     <span>{{ skill.name }}</span>
                 </div>
