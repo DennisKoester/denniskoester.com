@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit {
         } else {
             header.classList.remove('shadow');
         }
-        console.log(verticalOffset);
+        // console.log(verticalOffset);
     }
 
     // toggleMenu() {

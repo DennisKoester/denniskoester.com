@@ -121,3 +121,13 @@ header {
 .ham1.active .bottom {
     stroke-dashoffset: -138px;
 }
+
+@media only screen and (max-width: 480px) {
+    header {
+        height: 60px;
+    }
+
+    .ham {
+        width: 50px;
+    }
+}

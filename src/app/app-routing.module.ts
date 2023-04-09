@@ -10,13 +10,13 @@ const routes: Routes = [
 ];
 
 const config = {
-    //TODO Not WORKING !!!!
     /* instead of use extraOptions for Router */
     onSameUrlNavigation:
         'reload' /**fix to rescroll to same anchor url after scrolling */,
     scrollPositionRestoration: 'top',
     anchorScrolling: 'enabled',
-    scrollOffset: [0, 130],
+    // scrollOffset: [0, 130],
+    // scrollOffset: [0, 90], mobile version
 };
 
 @NgModule({

@@ -18,7 +18,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
 import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burger-menu-footer.component';
 import { Router, Scroll } from '@angular/router';
-import { ViewportScroller } from '@angular/common';
+import {
+    ViewportScroller,
+    HashLocationStrategy,
+    LocationStrategy,
+} from '@angular/common';
 import { filter } from 'rxjs';
 import { ProjectComponent } from './components/project/project.component';
 
@@ -46,12 +50,20 @@ import { ProjectComponent } from './components/project/project.component';
         FormsModule,
         ReactiveFormsModule,
     ],
-    providers: [],
+    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule {
+    scrollOffset: any;
+
     constructor(router: Router, viewportScroller: ViewportScroller) {
-        viewportScroller.setOffset([0, 0]);
+        if (innerWidth <= 480) {
+            this.scrollOffset = [0, 90];
+        } else {
+            this.scrollOffset = [0, 130];
+        }
+
+        viewportScroller.setOffset(this.scrollOffset);
         router.events
             .pipe(filter((e) => e instanceof Scroll))
             .subscribe((e: Scroll) => {

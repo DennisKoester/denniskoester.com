@@ -1,5 +1,5 @@
 <header>
-    <div id="header" class="">
+    <div #header id="header" class="">
         <div class="header-wrapper">
             <a routerLink="/"><img class="logo" src="assets/img/logo.svg" /></a>
 
@@ -33,6 +33,7 @@
 
             <div class="burger-menu d-none">
                 <svg
+                    [ngClass]="{'active': navigate.menuCollapsed === true}"
                     id="ham"
                     (click)="navigate.toggleMenu()"
                     class="ham hamRotate ham1"
