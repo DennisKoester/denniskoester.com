@@ -13,7 +13,7 @@ export class NavigateService {
     toggleMenu() {
         this.menuCollapsed = !this.menuCollapsed;
         document.documentElement.classList.toggle('preventScrolling');
-        // const header = document.getElementById('header') as HTMLDivElement;
+        const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =
             window.pageYOffset ||
             document.documentElement.scrollTop ||
@@ -21,11 +21,11 @@ export class NavigateService {
             0;
 
         if (this.menuCollapsed) {
-            this.header.nativeElement.classList.add('shadow');
+            header.classList.add('shadow');
             console.log('test');
             
         } else if (!this.menuCollapsed && verticalOffset === 0) {
-            // this.header.nativeElement.classList.remove('shadow');
+            header.classList.remove('shadow');
         }
     }
 
