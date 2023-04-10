@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener, Injectable } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { NavigateService } from 'src/app/navigate.service';
 
 @Component({
@@ -6,13 +6,12 @@ import { NavigateService } from 'src/app/navigate.service';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
     constructor(public navigate: NavigateService) {}
 
-    // collapsed: boolean = true;
-
-    ngOnInit() {}
-
+    /**
+     * Handles the visibility of the header shadow
+     */
     @HostListener('window:scroll', []) onWindowScroll() {
         const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =
@@ -25,27 +24,5 @@ export class HeaderComponent implements OnInit {
         } else {
             header.classList.remove('shadow');
         }
-        // console.log(verticalOffset);
     }
-
-    // toggleMenu() {
-    //     this.collapsed = !this.collapsed;
-    //     console.log(this.collapsed);
-    // }
-
-    // scrollToElement(element: any): void {
-    //     element.scrollIntoView({
-    //         behavior: 'smooth',
-    //         block: 'start',
-    //         inline: 'nearest',
-    //     });
-    //     console.log(element);
-    // }
-
-    // ScrollIntoView(elem: string) {
-    //     console.log(elem);
-    //     document
-    //         .querySelector(elem)
-    //         .scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // }
 }

@@ -8,7 +8,9 @@ export class NavigateService {
     menuCollapsed: boolean = true;
 
     constructor(private router: Router) {}
-
+    /**
+     * Toggle burger menu and handle shadow for header
+     */
     toggleMenu() {
         this.menuCollapsed = !this.menuCollapsed;
         document.documentElement.classList.toggle('preventScrolling');
@@ -21,16 +23,21 @@ export class NavigateService {
 
         if (this.menuCollapsed) {
             header.classList.add('shadow');
-            console.log('test');
         } else if (!this.menuCollapsed && verticalOffset === 0) {
             header.classList.remove('shadow');
         }
     }
 
+    /**
+     * Close the burger menu
+     */
     closeMenu() {
         this.menuCollapsed = true;
     }
 
+    /**
+     * Force the navigation to a fragment
+     */
     forceNavigate(name: string) {
         this.router.navigate(['/'], { fragment: name });
     }

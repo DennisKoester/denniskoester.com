@@ -7,16 +7,22 @@ import * as AOS from 'aos';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-    title = 'denniskoester.com';
+    title: string = 'denniskoester.com';
     timer: any;
 
     ngOnInit(): void {
+        /**
+         * Starts the AOS library. Animation on scroll.
+         */
         AOS.init({
             offset: 200,
             once: true,
         });
     }
 
+    /**
+     * Hides scrollbar when not scrolling
+     */
     @HostListener('window:scroll', []) onWindowScroll() {
         document.body.classList.remove('hideScrollbar');
 
@@ -29,32 +35,3 @@ export class AppComponent implements OnInit {
         }, 1000);
     }
 }
-
-// ngOnInit(): void {
-//     function hasTouch() {
-//         return (
-//             'ontouchstart' in document.documentElement ||
-//             navigator.maxTouchPoints > 0
-//         );
-//         //  || navigator.msMaxTouchPoints > 0;
-//     }
-
-//     if (hasTouch()) {
-//         // remove all the :hover stylesheets
-//         try {
-//             // prevent exception on browsers not supporting DOM styleSheets properly
-//             for (var si in document.styleSheets) {
-//                 var styleSheet = document.styleSheets[si];
-//                 if (!styleSheet.rules) continue;
-
-//                 for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-//                     if (!styleSheet.rules[ri].selectorText) continue;
-
-//                     if (styleSheet.rules[ri].selectorText.match(':hover')) {
-//                         styleSheet.deleteRule(ri);
-//                     }
-//                 }
-//             }
-//         } catch (ex) {}
-//     }
-// }

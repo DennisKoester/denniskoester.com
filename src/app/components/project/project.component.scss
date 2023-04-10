@@ -6,7 +6,6 @@
     margin: 135px auto 0 auto;
     display: flex;
     justify-content: space-between;
-    // align-items: flex-start;
     align-items: center;
     position: relative;
     gap: 100px;
@@ -68,10 +67,7 @@
 .desc-wrapper {
     position: relative;
     overflow: hidden;
-    // margin-top: 50px;
-    // max-width: 550px;
     width: 550px;
-    // width: 75%;
 }
 
 .description-card {
@@ -167,7 +163,6 @@
 @media (max-width: 1200px) {
     .project-wrapper {
         flex-direction: column;
-        // align-items: center;
         gap: 0;
 
         P {

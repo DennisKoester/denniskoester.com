@@ -13,13 +13,18 @@ export class FooterComponent implements OnInit {
 
     ngOnInit() {
         this.generateDate();
-        console.log(this.router.url);
     }
 
+    /**
+     * Generates the current date
+     */
     generateDate() {
         this.currentYear = Date.now();
     }
 
+    /**
+     * Scrolls to the top of the page
+     */
     scrollToTop() {
         window.scroll({
             top: 0,

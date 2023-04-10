@@ -1,4 +1,3 @@
-import { compileNgModule } from '@angular/compiler';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -46,9 +45,6 @@ export class ContactSectionComponent {
             sendButton.disabled = false;
 
             this.resetForm();
-            // nameField.value = '';
-            // emailField.value = '';
-            // messageField.value = '';
         }
     }
 
@@ -56,12 +52,6 @@ export class ContactSectionComponent {
         this.nameField.nativeElement.value = '';
         this.emailField.nativeElement.value = '';
         this.messageField.nativeElement.value = '';
-
-        console.log('Form reset');
-
-        // nameField.value = '';
-        // emailField.value = '';
-        // messageField.value = '';
     }
 
     // validation = true;
