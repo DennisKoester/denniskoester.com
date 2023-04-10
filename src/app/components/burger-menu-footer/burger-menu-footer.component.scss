@@ -1,9 +1,10 @@
 footer {
+    height: var(--burger-menu-footer-height-mobile);
     width: 100%;
     background-image: url(/assets/img/bg_contact.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
     left: 0;

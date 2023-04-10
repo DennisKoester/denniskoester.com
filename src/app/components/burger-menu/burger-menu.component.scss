@@ -1,6 +1,6 @@
 .burger-menu {
     position: fixed;
-    padding-top: var(--header-height);
+    padding-top: var(--header-height-mobile);
     top: 0;
     bottom: 0;
     left: 0;
@@ -17,6 +17,8 @@
 }
 
 nav {
+    // height: calc(100svh - var(--burger-menu-footer-height));
+    height: calc(100% - var(--burger-menu-footer-height-mobile));
     font-family: Syne, Helvetica, sans-serif;
     font-weight: 700;
     font-size: 45px;
@@ -31,7 +33,7 @@ nav {
     line-height: 100%;
     letter-spacing: -0.025em;
     padding: 0;
-    height: calc(100vh - var(--burger-menu-footer-height));
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

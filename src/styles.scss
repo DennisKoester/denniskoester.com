@@ -1,6 +1,8 @@
 :root {
     --header-height: 92px;
+    --header-height-mobile: 60px;
     --burger-menu-footer-height: 370px;
+    --burger-menu-footer-height-mobile: 275px;
 
     --cream: #fffcf3;
     --orange: #ff9900;
@@ -21,7 +23,8 @@ html,
 body {
     background-color: var(--cream);
     background-position: center;
-    overflow: overlay;
+    overflow-y: overlay;
+    overflow-x: hidden;
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
 }
