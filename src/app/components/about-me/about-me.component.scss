@@ -74,7 +74,11 @@
     }
 
     .about-col-1 {
-        margin-bottom: 138px;
+        margin-bottom: 60px;
+
+        p {
+            font-size: 20px;
+        }
 
         .button {
             display: none !important;

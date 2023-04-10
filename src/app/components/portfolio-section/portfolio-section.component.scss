@@ -25,6 +25,10 @@
 @media (max-width: 600px) {
     .headline-portfolio {
         width: unset;
+
+        p {
+            font-size: 20px;
+        }
     }
 }
 
