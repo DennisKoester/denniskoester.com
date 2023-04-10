@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
     providedIn: 'root',
 })
 export class NavigateService {
-    menuCollapsed: boolean = false;
+    menuCollapsed: boolean = true;
 
     constructor(private router: Router) {}
 
@@ -25,6 +25,10 @@ export class NavigateService {
         } else if (!this.menuCollapsed && verticalOffset === 0) {
             header.classList.remove('shadow');
         }
+    }
+
+    closeMenu() {
+        this.menuCollapsed = true;
     }
 
     forceNavigate(name: string) {

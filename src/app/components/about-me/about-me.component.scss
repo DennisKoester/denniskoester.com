@@ -3,7 +3,6 @@
     max-width: 1400px;
     margin: 0 auto;
     margin-top: 148px;
-    // scroll-margin-top: 130px;
 
     h2 {
         text-align: center;
@@ -13,7 +12,7 @@
 .row {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
 }
 
 .about-col-1 {
@@ -65,7 +64,7 @@
     margin-top: 52px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #about-me {
         margin-top: 38px;
     }
@@ -85,7 +84,6 @@
             display: none !important;
         }
     }
-
     .row {
         flex-direction: column;
     }

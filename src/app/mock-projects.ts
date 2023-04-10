@@ -5,7 +5,7 @@ export const PROJECTS: Project[] = [
         id: 1,
         name: 'Join',
         subheadline: 'JavaScript | HTML | CSS',
-        desc: ' Task manager inspired by the kanban system. Create and organize tasks using drag and drop function, assign to users and specific categories.',
+        desc: 'Task manager inspired by the Kanban system. Create and organize tasks using the drag and drop function, assign these to users, and use specific categories.',
         image: 'Join_Kanban_template.png',
         URL: 'https://denniskoester.com/join',
         gitHub: 'https://github.com/DennisKoester/join',
@@ -13,9 +13,9 @@ export const PROJECTS: Project[] = [
 
     {
         id: 2,
-        name: 'Slack Clone',
+        name: 'Sl@ck Clone',
         subheadline: 'Angular | TypeScript | Firebase | Material | SCSS',
-        desc: 'Clone of the famous Slack Messenger',
+        desc: 'Clone of the famous Sl@ck Messenger. Message your friends and colleagues in a private chat or a group channel. Feel free to send them funny memes.',
         image: 'Slack_Clone_template.png',
         URL: 'https://denniskoester.com/slack-clone',
         gitHub: 'https://github.com/DennisKoester/slack-clone',
@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
         id: 3,
         name: 'El Pollo Loco',
         subheadline: 'JavaScript | OOP | HTML | CSS ',
-        desc: 'Javascript based and object orientated jump & run game',
+        desc: 'Javascript-based and object-orientated jump & run game. Help Pepe to get his taco back!',
         image: 'El_Pollo_Loco_template.png',
         URL: 'https://denniskoester.com/el-pollo-loco/',
         gitHub: 'https://github.com/DennisKoester/el-pollo-loco',
@@ -49,14 +49,4 @@ export const PROJECTS: Project[] = [
         URL: 'https://denniskoester.com/doorstep-delivery',
         gitHub: 'https://github.com/DennisKoester/doorstep-delivery',
     },
-
-    // {
-    //     id: 6,
-    //     name: 'Portfolio',
-    //     subheadline: 'Angular | TypeScript | HTML | SCSS',
-    //     desc: 'My Portfolio',
-    //     image: 'Slack_Clone_template2.png',
-    //     URL: '',
-    //     gitHub: 'https://github.com/DennisKoester/denniskoester.com',
-    // },
 ];
