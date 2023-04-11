@@ -139,3 +139,11 @@
         font-size: 20px;
     }
 }
+
+@media only screen and (hover: hover) {
+    .email-address {
+        &:hover {
+            color: var(--orange);
+        }
+    }
+}

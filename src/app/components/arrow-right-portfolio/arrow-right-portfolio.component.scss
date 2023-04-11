@@ -1,7 +1,6 @@
 .arrow-right {
     display: flex;
     justify-content: flex-start;
-    // margin: 20px auto 90px auto;
     margin: 55px auto 0px auto;
 
     width: 85%;
@@ -27,11 +26,3 @@
         }
     }
 }
-
-// @media (hover: hover) {
-//     .arrow-right {
-//         &:hover img {
-//             transform: translateX(80px) translateY(80px) rotate(-90deg);
-//         }
-//     }
-// }

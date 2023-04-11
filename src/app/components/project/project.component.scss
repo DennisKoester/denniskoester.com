@@ -53,17 +53,6 @@
     opacity: 0;
 }
 
-// @keyframes project-arrow {
-//     0% {
-//         opacity: 1;
-//         transform: rotate(135deg) scale(0.5);
-//     }
-//     100% {
-//         opacity: 1;
-//         transform: rotate(0deg) scale(1);
-//     }
-// }
-
 .desc-wrapper {
     position: relative;
     overflow: hidden;
@@ -77,7 +66,6 @@
     flex-basis: 35%;
     gap: 15px;
     opacity: 1;
-    // transform: translateX(-1200px);
 
     h3 {
         font-family: Syne, Helvetica, sans-serif;
@@ -122,21 +110,6 @@
     }
 }
 
-// @keyframes descSlideRight {
-//     0% {
-//         transform: translateX(-1200px);
-//         opacity: 0;
-//     }
-//     70% {
-//         opacity: 0;
-//     }
-
-//     100% {
-//         transform: translateX(0px);
-//         opacity: 1;
-//     }
-// }
-
 // Right Side //
 
 .right-project-wrapper {
@@ -154,10 +127,6 @@
         left: -65px;
         transform: rotate(-225deg) scale(0.5);
     }
-
-    .description-card {
-        // transform: translateX(1200px);
-    }
 }
 
 @media (max-width: 1200px) {
@@ -172,10 +141,6 @@
 
     .desc-wrapper {
         margin-top: 50px;
-    }
-
-    .description-card {
-        // transform: translateY(-1200px);
     }
 
     @keyframes descSlideDown {
@@ -194,10 +159,6 @@
     }
 
     .right-project-wrapper {
-        .description-card {
-            // transform: translateY(-1200px);
-        }
-
         @keyframes descSlideDown {
             0% {
                 transform: translateY(-1200px);
@@ -234,6 +195,12 @@
     .desc-wrapper {
         width: 80%;
     }
+
+    .project-wrapper {
+        P {
+            font-size: 36px;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -242,19 +209,32 @@
             top: -60px;
             font-size: 23px;
         }
+        .project-arrow {
+            opacity: 1;
+            transform: rotate(0deg) scale(1);
+            top: 48%;
+            right: -42px;
+            height: auto;
+            width: 100%;
+            max-width: 50px;
+        }
+    }
+
+    .right-project-wrapper {
+        .project-border {
+            left: -15px;
+        }
+        .project-arrow {
+            left: -42px;
+            opacity: 1;
+            transform: rotate(-90deg) scale(1);
+        }
     }
 
     .project-border {
         left: 15px;
         top: 15px;
-    }
-
-    .project-arrow {
-        top: 48%;
-        right: -42px;
-        height: auto;
-        width: 100%;
-        max-width: 50px;
+        opacity: 1;
     }
 
     .description-card {
@@ -267,12 +247,6 @@
         }
         p {
             font-size: 16px;
-        }
-    }
-
-    .right-project-wrapper {
-        .project-border {
-            left: -15px;
         }
     }
 
@@ -348,30 +322,6 @@
         animation: project-arrow 225ms forwards ease-in-out;
     }
 
-    // .project-wrapper:hover .description-card {
-    //     animation: descSlideRight 225ms forwards ease-in-out;
-    // }
-
-    .project-wrapper {
-        &:hover img {
-            filter: unset;
-        }
-    }
-    @keyframes descSlideRight {
-        0% {
-            transform: translateX(-1200px);
-            opacity: 0;
-        }
-        70% {
-            opacity: 0;
-        }
-
-        100% {
-            transform: translateX(0px);
-            opacity: 1;
-        }
-    }
-
     @keyframes project-arrow {
         0% {
             opacity: 1;
@@ -389,29 +339,6 @@
 
     .right-project-wrapper:hover .project-arrow {
         animation: project-arrow-right 225ms forwards ease-in-out;
-    }
-
-    // .right-project-wrapper:hover .description-card {
-    //     animation: descSlideLeft 225ms forwards ease-in-out;
-    // }
-
-    .right-project-wrapper {
-        &:hover img {
-            filter: unset;
-        }
-    }
-    @keyframes descSlideLeft {
-        0% {
-            transform: translateX(1200px);
-            opacity: 0;
-        }
-        70% {
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0px);
-            opacity: 1;
-        }
     }
 
     @keyframes project-arrow-right {
@@ -434,10 +361,4 @@
             padding: 17px 35px 15px 35px;
         }
     }
-}
-
-@media (hover: hover) and (max-width: 1200px) {
-    // .project-wrapper:hover .description-card {
-    //     animation: descSlideDown 225ms forwards ease-in-out;
-    // }
 }
