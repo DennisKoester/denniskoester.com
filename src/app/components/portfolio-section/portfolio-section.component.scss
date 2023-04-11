@@ -23,7 +23,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .headline-portfolio {
         width: unset;
 
@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 300px) {
     .headline-portfolio {
         p {
             font-size: 16px;

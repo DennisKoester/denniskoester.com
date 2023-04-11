@@ -14,7 +14,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .arrow-right {
         justify-content: center;
         margin: 60px auto 0 auto;

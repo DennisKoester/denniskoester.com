@@ -100,7 +100,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     #footer {
         height: 100%;
     }
@@ -134,7 +134,7 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 300px) {
     .footer-left {
         p {
             font-size: 18px;
@@ -142,7 +142,7 @@
     }
 }
 
-@media (hover: hover) {
+@media only screen and (hover: hover) {
     .legal-notice {
         &:hover::before {
             transform: translateX(0) scale(1);

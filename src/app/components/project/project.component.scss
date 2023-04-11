@@ -129,7 +129,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
     .project-wrapper {
         flex-direction: column;
         gap: 0;
@@ -176,7 +176,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .project-image {
         width: 100%;
         height: auto;
@@ -203,7 +203,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .project-wrapper {
         P {
             top: -60px;
@@ -259,14 +259,14 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 480px) {
     .button {
         font-size: 18px;
         padding: 15px 30px 13px 30px;
     }
 }
 
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 300px) {
     .description-card {
         h3 {
             font-size: 23px;
@@ -284,7 +284,7 @@
     }
 }
 
-@media (hover: hover) {
+@media only screen and (hover: hover) {
     // .project-btns {
     //     .button:not(:active) {
     //         background: linear-gradient(
@@ -353,7 +353,7 @@
     }
 }
 
-@media (hover: hover) and (max-width: 1400px) {
+@media only screen and (hover: hover) and (max-width: 1400px) {
     .button {
         padding: 17px 25px 15px 25px;
 

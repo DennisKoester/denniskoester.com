@@ -62,24 +62,6 @@ header {
     box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 }
 
-@media only screen and (max-width: 600px) {
-    .burger-menu {
-        display: block !important;
-    }
-
-    nav {
-        display: none;
-    }
-}
-
-@media (hover: hover) {
-    #header nav ul li a {
-        &:hover {
-            color: var(--orange);
-        }
-    }
-}
-
 .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -131,6 +113,16 @@ header {
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        display: block !important;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 480px) {
     header {
         height: var(--header-height-mobile);
@@ -138,5 +130,13 @@ header {
 
     .ham {
         width: 55px;
+    }
+}
+
+@media only screen and (hover: hover) {
+    #header nav ul li a {
+        &:hover {
+            color: var(--orange);
+        }
     }
 }

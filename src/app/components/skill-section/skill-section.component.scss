@@ -61,7 +61,7 @@
     }
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .skills-frame {
         h2 {
             top: -40px;
@@ -69,7 +69,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .skills-frame {
         h2 {
             top: -32px;
@@ -81,7 +81,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .skills-frame {
         h2 {
             font-size: 40px;
@@ -105,7 +105,20 @@
     }
 }
 
-@media (hover: hover) {
+@media only screen and (max-width: 400px) {
+    .skills-frame {
+        h2 {
+            font-size: 28px;
+            padding: 0 8px;
+            top: -18px;
+        }
+    }
+    .skills-container {
+        padding: 15px;
+    }
+}
+
+@media only screen and (hover: hover) {
     .skill {
         &:hover {
             color: var(--orange);
@@ -166,18 +179,5 @@
             -webkit-animation-timing-function: ease-in;
             animation-timing-function: ease-in;
         }
-    }
-}
-
-@media (max-width: 400px) {
-    .skills-frame {
-        h2 {
-            font-size: 28px;
-            padding: 0 8px;
-            top: -18px;
-        }
-    }
-    .skills-container {
-        padding: 15px;
     }
 }

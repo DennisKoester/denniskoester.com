@@ -107,7 +107,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .head-section {
         padding-top: calc(20px + var(--header-height));
     }
@@ -127,7 +127,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media only screen and (max-width: 320px) {
     .message-btn {
         margin: 60px auto;
         padding: 15px 0;

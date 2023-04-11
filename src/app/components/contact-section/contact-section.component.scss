@@ -157,7 +157,7 @@ input[data-autocompleted] {
     margin-bottom: 17px;
 }
 
-@media (max-width: 600px) {
+@media only screen and  (max-width: 600px) {
     .contact-wrapper {
         padding-top: 60px;
     }
@@ -183,13 +183,10 @@ input[data-autocompleted] {
     }
 }
 
-@media (max-width: 320px) {
+@media only screen and (max-width: 320px) {
     .button {
         margin: 60px auto;
         font-size: 18px;
         width: 170px;
     }
-}
-
-@media (hover: hover) {
 }
