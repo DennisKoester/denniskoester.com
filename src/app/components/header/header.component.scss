@@ -49,6 +49,7 @@ header {
                 font-weight: bold;
                 color: unset;
                 transition: 125ms;
+                cursor: pointer;
 
                 &:active {
                     color: var(--orange);

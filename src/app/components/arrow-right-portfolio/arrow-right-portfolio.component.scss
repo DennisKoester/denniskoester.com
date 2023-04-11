@@ -2,15 +2,12 @@
     display: flex;
     justify-content: flex-start;
     margin: 55px auto 0px auto;
-
     width: 85%;
     max-width: 1400px;
     padding-left: 50px;
-    cursor: pointer;
 
     img {
         transform: rotate(-90deg);
-        transition: all 125ms ease-in-out;
     }
 }
 

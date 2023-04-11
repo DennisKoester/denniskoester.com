@@ -4,8 +4,9 @@
     margin: 0 auto;
     margin-top: 148px;
 
-    h2 {
-        text-align: center;
+    .about-me-header {
+        display: flex;
+        justify-content: center;
     }
 }
 
