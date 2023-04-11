@@ -17,7 +17,7 @@
         line-height: 120%;
         font-feature-settings: "pnum" on, "lnum" on;
         position: absolute;
-        top: -28px;
+        top: -60px;
         right: 0;
     }
 
@@ -230,6 +230,10 @@
             margin: 0 20px 0 40px;
         }
     }
+
+    .desc-wrapper {
+        width: 80%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -272,6 +276,10 @@
         }
     }
 
+    .desc-wrapper {
+        width: 100%;
+    }
+
     .button {
         padding: 15px 40px 13px 40px;
     }
@@ -303,34 +311,34 @@
 }
 
 @media (hover: hover) {
-    .project-btns {
-        .button:not(:active) {
-            background: linear-gradient(
-                    to left,
-                    rgba(255, 255, 255, 0) 50%,
-                    var(--orange) 50%
-                )
-                right;
-            background-size: 200%;
-            transition: 125ms ease-out;
-            &:hover {
-                background-position: left;
-            }
-        }
-        .button:nth-of-type(2n):not(:active) {
-            background: linear-gradient(
-                    to right,
-                    rgba(255, 255, 255, 0) 50%,
-                    var(--orange) 50%
-                )
-                left;
-            background-size: 200%;
-            transition: 125ms ease-out;
-            &:hover {
-                background-position: right;
-            }
-        }
-    }
+    // .project-btns {
+    //     .button:not(:active) {
+    //         background: linear-gradient(
+    //                 to left,
+    //                 rgba(255, 255, 255, 0) 50%,
+    //                 #ff9900d3 80%
+    //             )
+    //             right;
+    //         background-size: 200%;
+    //         transition: 125ms ease-out;
+    //         &:hover {
+    //             background-position: left;
+    //         }
+    //     }
+    //     .button:nth-of-type(2n):not(:active) {
+    //         background: linear-gradient(
+    //                 to right,
+    //                 rgba(255, 255, 255, 0) 50%,
+    //                 var(--orange) 50%
+    //             )
+    //             left;
+    //         background-size: 200%;
+    //         transition: 125ms ease-out;
+    //         &:hover {
+    //             background-position: right;
+    //         }
+    //     }
+    // }
 
     .project-wrapper:hover .project-border {
         opacity: 1;
@@ -340,9 +348,9 @@
         animation: project-arrow 225ms forwards ease-in-out;
     }
 
-    .project-wrapper:hover .description-card {
-        animation: descSlideRight 225ms forwards ease-in-out;
-    }
+    // .project-wrapper:hover .description-card {
+    //     animation: descSlideRight 225ms forwards ease-in-out;
+    // }
 
     .project-wrapper {
         &:hover img {
@@ -383,9 +391,9 @@
         animation: project-arrow-right 225ms forwards ease-in-out;
     }
 
-    .right-project-wrapper:hover .description-card {
-        animation: descSlideLeft 225ms forwards ease-in-out;
-    }
+    // .right-project-wrapper:hover .description-card {
+    //     animation: descSlideLeft 225ms forwards ease-in-out;
+    // }
 
     .right-project-wrapper {
         &:hover img {
@@ -429,7 +437,7 @@
 }
 
 @media (hover: hover) and (max-width: 1200px) {
-    .project-wrapper:hover .description-card {
-        animation: descSlideDown 225ms forwards ease-in-out;
-    }
+    // .project-wrapper:hover .description-card {
+    //     animation: descSlideDown 225ms forwards ease-in-out;
+    // }
 }

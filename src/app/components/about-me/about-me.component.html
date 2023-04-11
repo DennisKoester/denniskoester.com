@@ -22,9 +22,18 @@
                         If you think I’d be a good match for your projects,
                         contact me!
                     </p>
-                    <a class="button" href="#contact">Let's talk</a>
+                    <div
+                        class="button"
+                        (click)="navigate.forceNavigate('contact')"
+                    >
+                        Let's talk
+                    </div>
                 </div>
-                <div data-aos="fade-left" class="about-col-2">
+                <div
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                    class="about-col-2"
+                >
                     <img
                         class="profile-image"
                         src="./assets/img/profile_photo1.png"

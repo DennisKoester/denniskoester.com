@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     width: 85%;
+    margin-top: 6px;
     white-space: nowrap;
 
     p {
@@ -38,9 +39,8 @@
         // font-size: clamp(22px, 4vw, 48px);
         font-family: Syne, Helvetica, sans-serif;
         font-weight: 800;
-        font-size: clamp(20px, 3vw, 30px);
+        font-size: clamp(16px, 3vw, 30px);
         color: var(--orange);
-        margin-top: 6px;
     }
 
     .underline {
@@ -71,6 +71,7 @@
     text-orientation: mixed;
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .scroll-down-container {

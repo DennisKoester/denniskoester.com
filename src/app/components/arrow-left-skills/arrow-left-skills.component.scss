@@ -1,7 +1,8 @@
 .arrow-left {
     display: flex;
     justify-content: flex-end;
-    margin: 20px auto 90px auto;
+    // margin: 20px auto 90px auto;
+    margin: 55px auto 0px auto;
     padding-right: 50px;
     width: 85%;
     max-width: 1400px;
@@ -14,8 +15,7 @@
 @media (max-width: 600px) {
     .arrow-left {
         justify-content: center;
-        margin: 76px auto;
-        margin-top: 20px;
+        margin: 60px auto 0 auto;
         padding: 0;
 
         img {

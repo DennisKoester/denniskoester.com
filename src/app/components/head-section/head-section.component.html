@@ -1,6 +1,6 @@
 <section>
     <div class="head-section">
-        <div data-aos="zoom-in" class="headline">
+        <div data-aos="zoom-in-up" class="headline">
             <h1>Frontend</h1>
             <h1>Developer</h1>
             <div class="subheadline">
@@ -9,10 +9,17 @@
             </div>
         </div>
 
-        <a href="#contact" class="button message-btn d-none">Send a message</a>
+        <div
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+            (click)="navigate.forceNavigate('contact')"
+            class="button message-btn d-none"
+        >
+            Send a message
+        </div>
 
         <div class="address-scroll-container">
-            <a href="#contact" class="email-address"
+            <a (click)="navigate.forceNavigate('contact')" class="email-address"
                 >contact@denniskoester.com</a
             >
             <div class="scroll-down-container">
