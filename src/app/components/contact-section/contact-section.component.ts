@@ -51,7 +51,11 @@ export class ContactSectionComponent {
     resetForm() {
         this.nameField.nativeElement.value = '';
         this.emailField.nativeElement.value = '';
-        this.messageField.nativeElement.value = '';
+        
+        setTimeout(() => {
+            this.messageField.nativeElement.value = '';
+        }, 5000);
+        this.messageField.nativeElement.value = 'MESSAGE SENT';
     }
 
     // validation = true;
