@@ -58,9 +58,9 @@ export class AppModule {
 
     constructor(router: Router, viewportScroller: ViewportScroller) {
         if (innerWidth <= 480) {
-            this.scrollOffset = [0, 90];
+            this.scrollOffset = [0, 80];
         } else {
-            this.scrollOffset = [0, 130];
+            this.scrollOffset = [0, 120];
         }
 
         viewportScroller.setOffset(this.scrollOffset);

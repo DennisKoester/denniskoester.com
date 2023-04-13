@@ -10,11 +10,7 @@
                     (ngSubmit)="sendMail()"
                     #contactForm
                 >
-                    <div
-                        data-aos="fade-left"
-                        data-aos-duration="500"
-                        class="floating-label-group"
-                    >
+                    <div data-aos="fade-left" class="floating-label-group">
                         <input
                             (keyup)="validationContactForm(0, 'name')"
                             type="text"
@@ -33,11 +29,7 @@
                             src="assets/img/red_exclamation.svg"
                         />
                     </div>
-                    <div
-                        data-aos="fade-right"
-                        data-aos-duration="500"
-                        class="floating-label-group"
-                    >
+                    <div data-aos="fade-right" class="floating-label-group">
                         <input
                             (keyup)="validationContactForm(1, 'email')"
                             type="text"
@@ -56,11 +48,7 @@
                             src="assets/img/red_exclamation.svg"
                         />
                     </div>
-                    <div
-                        data-aos="fade-left"
-                        data-aos-duration="500"
-                        class="floating-label-group"
-                    >
+                    <div data-aos="fade-left" class="floating-label-group">
                         <textarea
                             (keyup)="validationContactForm(2, 'message')"
                             id="message"
@@ -80,9 +68,7 @@
                             src="assets/img/red_exclamation.svg"
                         />
                     </div>
-                    <button #sendButton class="button">
-                        Send message
-                    </button>
+                    <button #sendButton class="button">Send message</button>
                 </form>
             </div>
         </div>

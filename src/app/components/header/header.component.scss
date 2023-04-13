@@ -30,6 +30,7 @@ header {
     .logo {
         height: 40px;
         width: auto;
+        margin-top: 4px;
     }
 
     nav ul {
@@ -111,6 +112,11 @@ header {
         .logo {
             height: 28px;
         }
+    }
+
+    nav ul li a{
+        font-size: 22px;
+
     }
 }
 
