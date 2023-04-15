@@ -97,7 +97,7 @@
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .about-col-2:hover > .img-border {
         opacity: 1;
     }

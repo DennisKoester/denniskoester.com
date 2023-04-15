@@ -134,7 +134,7 @@ h2 {
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .button {
         &:hover {
             padding: 15px 60px 13px 60px;

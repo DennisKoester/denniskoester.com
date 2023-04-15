@@ -118,7 +118,7 @@
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .skill {
         &:hover {
             color: var(--orange);

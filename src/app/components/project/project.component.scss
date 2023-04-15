@@ -281,7 +281,7 @@
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     // .project-btns {
     //     .button:not(:active) {
     //         background: linear-gradient(
@@ -350,7 +350,7 @@
     }
 }
 
-@media only screen and (hover: hover) and (max-width: 1400px) {
+@media only screen and (hover: hover) and (max-width: 1300px) and (pointer: fine) {
     .button {
         padding: 17px 25px 15px 25px;
 

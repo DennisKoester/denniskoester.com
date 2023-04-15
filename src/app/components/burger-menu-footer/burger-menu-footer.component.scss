@@ -62,7 +62,7 @@ h2 {
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .social-links {
         a:hover img {
             transform: translateY(-10px);

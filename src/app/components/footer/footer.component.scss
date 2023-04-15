@@ -142,7 +142,7 @@
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .legal-notice {
         &:hover::before {
             transform: translateX(0) scale(1);

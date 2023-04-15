@@ -141,7 +141,7 @@
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     .email-address {
         &:hover {
             color: var(--orange);

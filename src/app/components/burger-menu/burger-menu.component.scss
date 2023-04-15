@@ -51,7 +51,7 @@ nav {
     }
 }
 
-@media only screen and (hover: hover) {
+@media only screen and (hover: hover) and (pointer: fine) {
     nav ul li a {
         &:hover {
             color: var(--orange);
