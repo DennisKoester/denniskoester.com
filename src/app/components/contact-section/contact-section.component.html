@@ -113,10 +113,8 @@
                                             contactForm.get('message').touched))
                             }"
                             class="hidden"
-                            >Your message needs min.
-                            {{ contactForm.get('message').errors?.['minlength']?.requiredLength }}
+                            >Your message needs min. {{ this.minLength }}
                         </span>
-                        <p>{{ contactForm.get("message").errors | json }}</p>
                         <img
                             [ngClass]="{
                                 visable:

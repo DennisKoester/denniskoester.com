@@ -9,13 +9,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactSectionComponent {
     isSubmitted: boolean = false;
+    minLength: number = 20;
 
     constructor(private fb: FormBuilder, private httpClient: HttpClient) {}
 
     contactForm = this.fb.group({
         name: ['', Validators.required],
         email: ['', [Validators.required, Validators.email]],
-        message: ['', [Validators.required, Validators.minLength(20)]],
+        message: [
+            '',
+            [Validators.required, Validators.minLength(this.minLength)],
+        ],
     });
 
     async commitForm() {
