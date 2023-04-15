@@ -5,28 +5,20 @@
             <div data-aos="zoom-in" class="contact-form">
                 <p>Want to discuss a new project?</p>
                 <p>Say hello! Let's discuss your ideas and make it happen!</p>
-                <form
-                    (keyup.enter)="commitForm(contactForm.value, contactForm)"
-                    (ngSubmit)="commitForm(contactForm.value, contactForm)"
-                    #contactForm="ngForm"
-                >
+                <form [formGroup]="contactForm" (ngSubmit)="commitForm()">
                     <div data-aos="fade-left" class="floating-label-group">
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            ngModel
-                            #name="ngModel"
-                        />
+                        <input type="text" id="name" formControlName="name" />
                         <label class="floating-label">Your name</label>
                         <span
                             class="hidden"
                             id="required0"
                             [ngClass]="{
                                 visable:
-                                    name.invalid &&
-                                    (name.dirty || name.touched) === true
+                                    contactForm
+                                        .get('name')
+                                        ?.hasError('required') &&
+                                    (contactForm.get('name')?.dirty ||
+                                        contactForm.get('name')?.touched)
                             }"
                             >Your name is required</span
                         >
@@ -34,35 +26,36 @@
                             class="hidden"
                             [ngClass]="{
                                 visable:
-                                    name.invalid &&
-                                    (name.dirty || name.touched) === true
+                                    contactForm
+                                        .get('name')
+                                        ?.hasError('required') &&
+                                    (contactForm.get('name')?.dirty ||
+                                        contactForm.get('name')?.touched)
                             }"
                             src="assets/img/red_exclamation.svg"
                         />
                         <img
                             class="hidden"
                             [ngClass]="{
-                                visable: name.valid === true
+                                visable: isSubmitted
                             }"
                             src="assets/img/green_check.svg"
                         />
                     </div>
                     <div data-aos="fade-right" class="floating-label-group">
-                        <input
-                            type="text"
-                            id="email"
-                            name="email"
-                            required
-                            email
-                            ngModel
-                            #email="ngModel"
-                        />
+                        <input type="text" id="email" formControlName="email" />
                         <label class="floating-label">Your email</label>
                         <span
                             [ngClass]="{
                                 visable:
-                                    email.invalid &&
-                                    (email.dirty || email.touched) === true
+                                    contactForm
+                                        .get('email')
+                                        ?.hasError('email') ||
+                                    (contactForm
+                                        .get('email')
+                                        ?.hasError('required') &&
+                                        (contactForm.get('email')?.dirty ||
+                                            contactForm.get('email')?.touched))
                             }"
                             class="hidden"
                             >Your email is required</span
@@ -70,8 +63,11 @@
                         <img
                             [ngClass]="{
                                 visable:
-                                    email.invalid &&
-                                    (email.dirty || email.touched) === true
+                                    contactForm
+                                        .get('email')
+                                        ?.hasError('required') &&
+                                    (contactForm.get('email').dirty ||
+                                        contactForm.get('email').touched)
                             }"
                             class="hidden"
                             src="assets/img/red_exclamation.svg"
@@ -79,7 +75,7 @@
                         <img
                             class="hidden"
                             [ngClass]="{
-                                visable: email.valid === true
+                                visable: isSubmitted
                             }"
                             src="assets/img/green_check.svg"
                         />
@@ -87,29 +83,48 @@
                     <div data-aos="fade-left" class="floating-label-group">
                         <textarea
                             id="message"
-                            type="text"
-                            name="message"
                             style="height: 200px"
                             autocomplete="off"
-                            required
-                            ngModel
-                            #message="ngModel"
+                            formControlName="message"
                         ></textarea>
                         <label class="floating-label">Your message</label>
-                        <span
+                        <!-- <span
                             [ngClass]="{
                                 visable:
-                                    message.invalid &&
-                                    (message.dirty || message.touched) === true
+                                    contactForm
+                                        .get('message')
+                                        ?.hasError('required') &&
+                                    (contactForm.get('message').dirty ||
+                                        contactForm.get('message').touched)
                             }"
                             class="hidden"
                             >Your message is empty</span
-                        >
+                        > -->
+                        <span
+                            [ngClass]="{
+                                visable:
+                                    contactForm
+                                        .get('message')
+                                        ?.hasError('minlength') ||
+                                    (contactForm
+                                        .get('message')
+                                        ?.hasError('required') &&
+                                        (contactForm.get('message').dirty ||
+                                            contactForm.get('message').touched))
+                            }"
+                            class="hidden"
+                            >Your message needs min.
+                            {{ contactForm.get('message').errors?.['minlength']?.requiredLength }}
+                        </span>
+                        <p>{{ contactForm.get("message").errors | json }}</p>
                         <img
                             [ngClass]="{
                                 visable:
-                                    message.invalid &&
-                                    (message.dirty || message.touched) === true
+                                    contactForm
+                                        .get('message')
+                                        ?.hasError('required') &&
+                                    (contactForm.get('message').dirty ||
+                                        contactForm.get('message').touched)
                             }"
                             class="hidden"
                             src="assets/img/red_exclamation.svg"
@@ -117,12 +132,19 @@
                         <img
                             class="hidden"
                             [ngClass]="{
-                                visable: message.valid === true
+                                visable: isSubmitted
                             }"
                             src="assets/img/green_check.svg"
                         />
                     </div>
-                    <button #sendButton class="button">Send message</button>
+                    <button
+                        [disabled]="contactForm.invalid"
+                        type="submit"
+                        #sendButton
+                        class="button"
+                    >
+                        Send message
+                    </button>
                 </form>
             </div>
         </div>

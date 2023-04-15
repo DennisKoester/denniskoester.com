@@ -25,6 +25,7 @@ import {
 } from '@angular/common';
 import { filter } from 'rxjs';
 import { ProjectComponent } from './components/project/project.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -49,6 +50,7 @@ import { ProjectComponent } from './components/project/project.component';
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
+        HttpClientModule
     ],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],

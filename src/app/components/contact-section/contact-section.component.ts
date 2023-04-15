@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
     selector: 'app-contact-section',
@@ -7,22 +8,35 @@ import { NgForm } from '@angular/forms';
     styleUrls: ['./contact-section.component.scss'],
 })
 export class ContactSectionComponent {
-    async commitForm(data: any, form: NgForm) {
-        console.log('test')
-        await this.sendMail(data);
+    isSubmitted: boolean = false;
 
-        form.resetForm();
-    }
+    constructor(private fb: FormBuilder, private httpClient: HttpClient) {}
 
-    async sendMail(data: any) {
-        let fd = new FormData();
+    contactForm = this.fb.group({
+        name: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+        message: ['', [Validators.required, Validators.minLength(20)]],
+    });
+
+    async commitForm() {
+        const data = this.contactForm.value;
+        const fd = new FormData();
         fd.append('name', data.name);
         fd.append('email', data.email);
         fd.append('message', data.message);
 
-        await fetch('https://denniskoester.com/send_mail/send_mail.php', {
-            method: 'POST',
-            body: fd,
-        });
+        this.httpClient
+            .post('https://denniskoester.com/send_mail/send_mail.php', fd)
+            .subscribe({
+                complete: () => console.log('complete'),
+                error: (err) => console.log(err),
+            });
+
+        this.isSubmitted = true;
+
+        setTimeout(() => {
+            this.isSubmitted = false;
+        }, 2000);
+        this.contactForm.reset();
     }
 }
