@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    gap: 100px;
+    gap: 85px;
 
     p {
         font-family: Syne, Helvetica, sans-serif;
@@ -89,6 +89,12 @@
         font-family: Overpass, Helvetica, sans-serif;
         position: unset;
     }
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 230px;
 }
 
 .project-btns {

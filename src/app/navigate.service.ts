@@ -1,4 +1,4 @@
-import { Inject, Injectable, Renderer2 } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -13,7 +13,6 @@ export class NavigateService {
      */
     toggleMenu() {
         this.menuCollapsed = !this.menuCollapsed;
-        document.documentElement.classList.toggle('preventScrolling');
         const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =
             window.pageYOffset ||
@@ -26,6 +25,7 @@ export class NavigateService {
         } else if (!this.menuCollapsed && verticalOffset === 0) {
             header.classList.remove('shadow');
         }
+        document.documentElement.classList.toggle('preventScrolling');
     }
 
     /**
@@ -40,5 +40,9 @@ export class NavigateService {
      */
     forceNavigate(name: string) {
         this.router.navigate(['/'], { fragment: name });
+    }
+
+    refreshPage() {
+        window.location.reload();
     }
 }

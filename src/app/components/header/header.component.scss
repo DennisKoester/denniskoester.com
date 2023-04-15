@@ -31,6 +31,7 @@ header {
         height: 40px;
         width: auto;
         margin-top: 4px;
+        cursor: pointer;
     }
 
     nav ul {
@@ -114,9 +115,8 @@ header {
         }
     }
 
-    nav ul li a{
+    nav ul li a {
         font-size: 22px;
-
     }
 }
 

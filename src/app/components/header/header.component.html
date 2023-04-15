@@ -1,9 +1,11 @@
 <header>
     <div id="header" class="">
         <div class="header-wrapper">
-            <a routerLink="/" (click)="navigate.closeMenu()"
-                ><img class="logo" src="assets/img/own_logo_black.png" />
-            </a>
+            <img
+                (click)="navigate.refreshPage()"
+                class="logo"
+                src="assets/img/own_logo_black.png"
+            />
             <div class="normal-menu">
                 <nav>
                     <ul>

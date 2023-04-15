@@ -5,8 +5,8 @@
 }
 
 .headline-portfolio {
-    width: min-content;
     margin: 0 auto;
+    text-align: center;
 
     p {
         font-family: Overpass, Helvetica, sans-serif;
@@ -14,15 +14,13 @@
         font-weight: 400;
         font-size: 20px;
         line-height: 120%;
-        text-align: center;
-        margin-top: 35px;
+        max-width: 700px;
+        margin: 35px auto 0 auto;
     }
 }
 
 @media only screen and (max-width: 600px) {
     .headline-portfolio {
-        width: unset;
-        text-align: center;
         p {
             font-size: 20px;
         }
