@@ -265,6 +265,11 @@
         font-size: 18px;
         padding: 15px 30px 13px 30px;
     }
+    .description-card {
+        h3 {
+            font-size: 26px;
+        }
+    }
 }
 
 @media only screen and (max-width: 300px) {
@@ -285,7 +290,7 @@
     }
 }
 
-@media only screen and (hover: hover) and (pointer: fine) {
+@media only screen and (hover: hover) and (min-width: 600px) and (pointer: fine) {
     .project-wrapper:hover .project-border {
         opacity: 1;
     }
