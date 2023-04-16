@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Injectable({
     providedIn: 'root',
@@ -7,7 +8,7 @@ import { Router } from '@angular/router';
 export class NavigateService {
     menuCollapsed: boolean = true;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private location: Location) {}
     /**
      * Toggles burger menu and handles shadow for header
      */
@@ -43,13 +44,25 @@ export class NavigateService {
      * Forces the navigation to a fragment
      */
     forceNavigate(name: string) {
+        this.handleScrollSmooth();
         this.router.navigate(['/'], { fragment: name });
     }
 
     /**
-     * Refreshes the current page
+     * Leeds back to main page and refreshes it
      */
     refreshPage() {
+        this.location.go('');
         window.location.reload();
+    }
+
+    /**
+     * Handels the scroll smooth to
+     */
+    handleScrollSmooth() {
+        document.documentElement.style.scrollBehavior = 'smooth';
+        setTimeout(() => {
+            document.documentElement.style.scrollBehavior = 'auto';
+        }, 1000);
     }
 }

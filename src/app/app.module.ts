@@ -20,8 +20,8 @@ import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burge
 import { Router, Scroll } from '@angular/router';
 import {
     ViewportScroller,
-    HashLocationStrategy,
     LocationStrategy,
+    PathLocationStrategy,
 } from '@angular/common';
 import { filter } from 'rxjs';
 import { ProjectComponent } from './components/project/project.component';
@@ -52,7 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
         ReactiveFormsModule,
         HttpClientModule,
     ],
-    providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+    providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
     bootstrap: [AppComponent],
 })
 export class AppModule {

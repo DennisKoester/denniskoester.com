@@ -10,11 +10,11 @@ const routes: Routes = [
 ];
 
 const config = {
-    /* instead of use extraOptions for Router */
-    onSameUrlNavigation:
-        'reload' /**fix to rescroll to same anchor url after scrolling */,
-    scrollPositionRestoration: 'top',
+    onSameUrlNavigation: 'reload',
+    scrollPositionRestoration: 'enabled',
+    useHash: false,
     anchorScrolling: 'enabled',
+    scrollBehavior: 'smooth',
 };
 
 @NgModule({
