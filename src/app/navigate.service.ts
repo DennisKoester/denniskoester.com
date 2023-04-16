@@ -51,7 +51,7 @@ export class NavigateService {
     /**
      * Leeds back to main page and refreshes it
      */
-    refreshPage() {
+    redirectToMainPage() {
         this.location.go('');
         window.location.reload();
     }
