@@ -21,9 +21,7 @@
     text-align: center;
 
     p:first-child {
-        font-family: Overpass, Helvetica, sans-serif;
         font-weight: 700;
-        line-height: 120%;
         font-size: clamp(28px, 4vw, 32px);
         color: var(--orange);
         margin-bottom: 18px;
@@ -155,6 +153,25 @@ input[data-autocompleted] {
     background-color: black;
     border: 4px solid var(--cream);
     margin-bottom: 17px;
+}
+
+.contact-popup {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    border: 4px solid var(--cream);
+    background-color: var(--orange);
+
+    span {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
 }
 
 @media only screen and (max-width: 600px) {

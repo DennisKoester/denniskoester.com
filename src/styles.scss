@@ -10,7 +10,7 @@
 
     // Scrollbar Firefox //
 
-    scrollbar-color: #ff9900 rgba(46, 54, 69, 0) !important;
+    scrollbar-color: var(--orange) rgba(46, 54, 69, 0) !important;
     scrollbar-width: thin !important;
 }
 
@@ -44,6 +44,12 @@ h2 {
     font-size: clamp(28px, 8vw, 78px);
     transition: 125ms;
     cursor: default;
+}
+
+span {
+    font-family: Overpass, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 120%;
 }
 
 .d-none {

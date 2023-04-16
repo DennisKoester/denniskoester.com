@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 export class ContactSectionComponent {
     isSubmitted: boolean = false;
     minLength: number = 20;
+    emailSent: boolean = false;
+    emailNotSent: boolean = false;
 
     constructor(private fb: FormBuilder, private httpClient: HttpClient) {}
 
@@ -23,17 +25,14 @@ export class ContactSectionComponent {
     });
 
     async commitForm() {
-        const data = this.contactForm.value;
-        const fd = new FormData();
-        fd.append('name', data.name);
-        fd.append('email', data.email);
-        fd.append('message', data.message);
-
         this.httpClient
-            .post('https://denniskoester.com/send_mail/send_mail.php', fd)
+            .post<any>(
+                'https://denniskoester.com/send_mail/send_mail.php',
+                this.setFormData()
+            )
             .subscribe({
-                complete: () => console.log('complete'),
-                error: (err) => console.log(err),
+                complete: () => (this.emailSent = true),
+                error: () => (this.emailNotSent = true),
             });
 
         this.isSubmitted = true;
@@ -41,6 +40,16 @@ export class ContactSectionComponent {
         setTimeout(() => {
             this.isSubmitted = false;
         }, 2000);
+
         this.contactForm.reset();
+    }
+
+    setFormData() {
+        const data = this.contactForm.value;
+        const fd = new FormData();
+        fd.append('name', data.name);
+        fd.append('email', data.email);
+        fd.append('message', data.message);
+        return fd;
     }
 }

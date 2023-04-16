@@ -112,7 +112,8 @@
                                             contactForm.get('message').touched))
                             }"
                             class="hidden"
-                            >Your message needs min. {{ this.minLength }}
+                            >Your message needs min.
+                            {{ this.minLength }} characters.
                         </span>
                         <img
                             [ngClass]="{
@@ -143,6 +144,17 @@
                         Send message
                     </button>
                 </form>
+
+                <div
+                    data-aos="fade-up"
+                    *ngIf="isSubmitted && (emailSent || emailNotSent)"
+                    class="contact-popup"
+                >
+                    <span *ngIf="emailSent">Email successfully sent.</span>
+                    <span *ngIf="emailNotSent"
+                        >Email not sent. Please try again later.</span
+                    >
+                </div>
             </div>
         </div>
     </div>
