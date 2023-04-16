@@ -5,7 +5,7 @@
             <div data-aos="zoom-in" class="contact-form">
                 <p>Want to discuss a new project?</p>
                 <p>Say hello! Let's discuss your ideas and make it happen!</p>
-                <form [formGroup]="contactForm" (ngSubmit)="commitForm()">
+                <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
                     <div data-aos="fade-left" class="floating-label-group">
                         <input type="text" id="name" formControlName="name" />
                         <label class="floating-label">Your name</label>
@@ -87,18 +87,6 @@
                             formControlName="message"
                         ></textarea>
                         <label class="floating-label">Your message</label>
-                        <!-- <span
-                            [ngClass]="{
-                                visable:
-                                    contactForm
-                                        .get('message')
-                                        ?.hasError('required') &&
-                                    (contactForm.get('message').dirty ||
-                                        contactForm.get('message').touched)
-                            }"
-                            class="hidden"
-                            >Your message is empty</span
-                        > -->
                         <span
                             [ngClass]="{
                                 visable:

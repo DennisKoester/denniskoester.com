@@ -286,35 +286,6 @@
 }
 
 @media only screen and (hover: hover) and (pointer: fine) {
-    // .project-btns {
-    //     .button:not(:active) {
-    //         background: linear-gradient(
-    //                 to left,
-    //                 rgba(255, 255, 255, 0) 50%,
-    //                 #ff9900d3 80%
-    //             )
-    //             right;
-    //         background-size: 200%;
-    //         transition: 125ms ease-out;
-    //         &:hover {
-    //             background-position: left;
-    //         }
-    //     }
-    //     .button:nth-of-type(2n):not(:active) {
-    //         background: linear-gradient(
-    //                 to right,
-    //                 rgba(255, 255, 255, 0) 50%,
-    //                 var(--orange) 50%
-    //             )
-    //             left;
-    //         background-size: 200%;
-    //         transition: 125ms ease-out;
-    //         &:hover {
-    //             background-position: right;
-    //         }
-    //     }
-    // }
-
     .project-wrapper:hover .project-border {
         opacity: 1;
     }

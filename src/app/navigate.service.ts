@@ -9,7 +9,7 @@ export class NavigateService {
 
     constructor(private router: Router) {}
     /**
-     * Toggle burger menu and handle shadow for header
+     * Toggles burger menu and handles shadow for header
      */
     toggleMenu() {
         this.menuCollapsed = !this.menuCollapsed;
@@ -29,19 +29,22 @@ export class NavigateService {
     }
 
     /**
-     * Close the burger menu
+     * Closes the burger menu
      */
     closeMenu() {
         this.menuCollapsed = true;
     }
 
     /**
-     * Force the navigation to a fragment
+     * Forces the navigation to a fragment
      */
     forceNavigate(name: string) {
         this.router.navigate(['/'], { fragment: name });
     }
 
+    /**
+     * Refreshes the current page
+     */
     refreshPage() {
         window.location.reload();
     }

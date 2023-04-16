@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Skills } from 'src/app/skills';
+import { Skills } from 'src/app/mock-skills';
 
 @Component({
     selector: 'app-skill-section',

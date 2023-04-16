@@ -24,7 +24,10 @@ export class ContactSectionComponent {
         ],
     });
 
-    async commitForm() {
+    /**
+     * Sends email and handles the popup
+     */
+    sendEmail() {
         this.httpClient
             .post<any>(
                 'https://denniskoester.com/send_mail/send_mail.php',
@@ -44,6 +47,10 @@ export class ContactSectionComponent {
         this.contactForm.reset();
     }
 
+    /**
+     * Sets the form data
+     * @returns FormData of the contactForm
+     */
     setFormData() {
         const data = this.contactForm.value;
         const fd = new FormData();

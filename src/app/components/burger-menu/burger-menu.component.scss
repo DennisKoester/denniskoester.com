@@ -51,6 +51,17 @@ nav {
     }
 }
 
+@media only screen and (max-width: 300px) {
+    a {
+        font-size: 32px;
+    }
+
+    .navList li > :last-child:after {
+        bottom: -5px;
+        left: -15px;
+    }
+}
+
 @media only screen and (hover: hover) and (pointer: fine) {
     nav ul li a {
         &:hover {
@@ -89,15 +100,4 @@ nav {
 .navList li :hover:after {
     height: 0px;
     width: 110%;
-}
-
-@media only screen and (max-width: 300px) {
-    a {
-        font-size: 32px;
-    }
-
-    .navList li > :last-child:after {
-        bottom: -5px;
-        left: -15px;
-    }
 }

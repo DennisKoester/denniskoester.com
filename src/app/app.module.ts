@@ -50,7 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
     ],
     providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
     bootstrap: [AppComponent],
@@ -59,6 +59,9 @@ export class AppModule {
     scrollOffset: any;
 
     constructor(router: Router, viewportScroller: ViewportScroller) {
+        /**
+         * Help function to scroll to the correct position of the fragment
+         */
         if (innerWidth <= 480) {
             this.scrollOffset = [0, 80];
         } else {
@@ -69,19 +72,13 @@ export class AppModule {
         router.events
             .pipe(filter((e) => e instanceof Scroll))
             .subscribe((e: Scroll) => {
-                //a good solve but it still does not scroll to anchor element after second click on the same anchor
-                //one fix should be to set routing config option onSameUrlNavigation: 'reload',
                 if (e.anchor) {
-                    // anchor navigation
-                    /* setTimeout is the core line to solve the solution */
                     setTimeout(() => {
                         viewportScroller.scrollToAnchor(e.anchor);
                     });
                 } else if (e.position) {
-                    // backward navigation
                     viewportScroller.scrollToPosition(e.position);
                 } else {
-                    // forward navigation
                     viewportScroller.scrollToPosition([0, 0]);
                 }
             });
