@@ -23,9 +23,7 @@ export class AppComponent implements OnInit {
         this.isSafari = /^((?!chrome|android).)*safari/i.test(
             navigator.userAgent
         );
-        this.isChrome =
-            /Chrome/.test(navigator.userAgent) &&
-            /Google Inc/.test(navigator.vendor);
+        this.isChrome = /Chrome/.test(navigator.userAgent);
         // console.log(this.isSafari);
         // console.log(this.isChrome);
 
