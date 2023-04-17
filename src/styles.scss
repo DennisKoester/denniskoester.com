@@ -128,6 +128,15 @@ span {
     display: none; /* Safari and Chrome */
 }
 
+.showScrollbarSafari::-webkit-scrollbar {
+    display: unset !important;
+}
+
+.test{
+    background-color: red;
+
+}
+
 ::selection {
     background: var(--orange);
 }
