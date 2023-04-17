@@ -58,7 +58,10 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppModule {
     scrollOffset: any;
 
-    constructor(router: Router, viewportScroller: ViewportScroller) {
+    constructor(
+        private router: Router,
+        private viewportScroller: ViewportScroller
+    ) {
         /**
          * Help function to scroll to the correct position of the fragment
          */

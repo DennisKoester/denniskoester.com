@@ -18,6 +18,9 @@ export class NavigateService {
         document.documentElement.classList.toggle('preventScrolling');
     }
 
+    /**
+     * Handels the shadow od the header
+     */
     toggleShadow() {
         const header = document.getElementById('header') as HTMLDivElement;
         const verticalOffset: number =

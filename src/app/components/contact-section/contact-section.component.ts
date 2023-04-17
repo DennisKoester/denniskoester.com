@@ -41,10 +41,9 @@ export class ContactSectionComponent {
         this.isSubmitted = true;
 
         setTimeout(() => {
-            this.isSubmitted = false;
+            this.contactForm.reset();
         }, 2000);
-
-        this.contactForm.reset();
+        this.isSubmitted = false;
     }
 
     /**

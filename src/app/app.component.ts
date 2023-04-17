@@ -24,9 +24,6 @@ export class AppComponent implements OnInit {
             navigator.userAgent
         );
         this.isChrome = /Chrome/.test(navigator.userAgent);
-        // console.log(this.isSafari);
-        // console.log(this.isChrome);
-
         this.hideScrollbar();
     }
 
