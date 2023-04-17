@@ -7,7 +7,12 @@
                 <p>Say hello! Let's discuss your ideas and make it happen!</p>
                 <form [formGroup]="contactForm" (ngSubmit)="sendEmail()">
                     <div data-aos="fade-left" class="floating-label-group">
-                        <input type="text" id="name" formControlName="name" />
+                        <input
+                            type="text"
+                            id="name"
+                            formControlName="name"
+                            required
+                        />
                         <label class="floating-label">Your name</label>
                         <span
                             class="hidden"
@@ -42,7 +47,12 @@
                         />
                     </div>
                     <div data-aos="fade-right" class="floating-label-group">
-                        <input type="text" id="email" formControlName="email" />
+                        <input
+                            type="text"
+                            id="email"
+                            formControlName="email"
+                            required
+                        />
                         <label class="floating-label">Your email</label>
                         <span
                             [ngClass]="{
@@ -81,11 +91,11 @@
                     </div>
                     <div data-aos="fade-left" class="floating-label-group">
                         <textarea
-                            type="text"
                             id="message"
                             style="height: 200px"
                             autocomplete="off"
                             formControlName="message"
+                            required
                         ></textarea>
                         <label class="floating-label">Your message</label>
                         <span
