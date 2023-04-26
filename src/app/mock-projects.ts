@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
         id: 4,
         name: 'Doorstep Delivery',
         subheadline: 'JavaScript | HTML | CSS',
-        desc: 'Clone of Takeaway',
+        desc: 'Clone of Takeaway.',
         image: 'Doorstep_Delivery_template.png',
         URL: 'https://denniskoester.com/doorstep-delivery',
         gitHub: 'https://github.com/DennisKoester/doorstep-delivery',

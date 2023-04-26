@@ -39,7 +39,6 @@ export class HeaderComponent {
      */
     setsSection() {
         this.scrollService.currentSection.subscribe((res) => {
-            console.log('current section: ', res);
             this.section = res;
         });
     }
