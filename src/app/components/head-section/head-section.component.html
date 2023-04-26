@@ -5,7 +5,22 @@
             <h1>Developer</h1>
             <div class="subheadline">
                 <div class="underline"></div>
-                <p>Dennis Köster</p>
+                <!-- <p>Dennis Köster</p> -->
+                <ngx-typed-js
+                    [strings]="[
+                        'Welcome to..',
+                        'my portfolio!',
+                        'My name is..',
+                        'Dennis Köster'
+                    ]"
+                    [smartBackspace]="true"
+                    [startDelay]="1000"
+                    [typeSpeed]="100"
+                    [backSpeed]="50"
+                    [loop]="true"
+                >
+                    <span class="typing"></span>
+                </ngx-typed-js>
             </div>
         </div>
 
@@ -32,3 +47,4 @@
         </div>
     </div>
 </section>
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>

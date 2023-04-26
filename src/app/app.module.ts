@@ -26,6 +26,7 @@ import {
 import { filter } from 'rxjs';
 import { ProjectComponent } from './components/project/project.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 
 @NgModule({
     declarations: [
@@ -51,6 +52,7 @@ import { HttpClientModule } from '@angular/common/http';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
+        NgxTypedJsModule,
     ],
     providers: [{ provide: LocationStrategy, useClass: PathLocationStrategy }],
     bootstrap: [AppComponent],

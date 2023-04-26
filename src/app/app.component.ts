@@ -33,7 +33,6 @@ export class AppComponent implements OnInit {
     hideScrollbar() {
         if (this.isChrome) {
             document.body.classList.add('hideScrollbar');
-            console.log(this.isChrome);
         }
     }
 

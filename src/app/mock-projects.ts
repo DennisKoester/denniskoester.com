@@ -30,18 +30,18 @@ export const PROJECTS: Project[] = [
         URL: 'https://denniskoester.com/el-pollo-loco/',
         gitHub: 'https://github.com/DennisKoester/el-pollo-loco',
     },
-    {
-        id: 4,
-        name: 'Pokedex',
-        subheadline: 'Javascript | HTML | CSS | Rest API',
-        desc: 'Pokedex using Rest API',
-        image: 'Slack_Clone_template2.png',
-        URL: 'https://denniskoester.com/pokedex',
-        gitHub: 'https://github.com/DennisKoester/pokedex',
-    },
+    // {
+    //     id: 4,
+    //     name: 'Pokedex',
+    //     subheadline: 'Javascript | HTML | CSS | Rest API',
+    //     desc: 'Pokedex using Rest API',
+    //     image: 'Slack_Clone_template2.png',
+    //     URL: 'https://denniskoester.com/pokedex',
+    //     gitHub: 'https://github.com/DennisKoester/pokedex',
+    // },
 
     {
-        id: 5,
+        id: 4,
         name: 'Doorstep Delivery',
         subheadline: 'JavaScript | HTML | CSS',
         desc: 'Clone of Takeaway',
