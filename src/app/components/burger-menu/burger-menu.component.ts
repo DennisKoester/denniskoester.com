@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigateService } from 'src/app/navigate.service';
+import { NavigateService } from 'src/app/shared/services/navigate.service';
 
 @Component({
     selector: 'app-burger-menu',

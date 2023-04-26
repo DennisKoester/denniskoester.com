@@ -1,5 +1,5 @@
-<section>
-    <div id="portfolio">
+<section class="section" id="portfolio">
+    <div class="portfolio">
         <div class="headline-portfolio">
             <h2>Portfolio</h2>
             <p>
@@ -8,16 +8,16 @@
             </p>
         </div>
     </div>
-</section>
 
-<app-project
-    *ngFor="let project of projects; let i = index"
-    [index]="i"
-    [name]="project.name"
-    [subheadline]="project.subheadline"
-    [desc]="project.desc"
-    [image]="project.image"
-    [URL]="project.URL"
-    [gitHub]="project.gitHub"
-    [totalProjects]="projects.length"
-></app-project>
+    <app-project
+        *ngFor="let project of projects; let i = index"
+        [index]="i"
+        [name]="project.name"
+        [subheadline]="project.subheadline"
+        [desc]="project.desc"
+        [image]="project.image"
+        [URL]="project.URL"
+        [gitHub]="project.gitHub"
+        [totalProjects]="projects.length"
+    ></app-project>
+</section>

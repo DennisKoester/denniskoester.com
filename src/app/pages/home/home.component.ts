@@ -8,7 +8,7 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         console.log(
             '%cWelcome to my Portfolio',
-            'color: #ff9900; font-size: 30px;'
+            'color: #ff9900; font-size: 28px;'
         );
         console.log(
             '%cFeel free to check out my code on www.github.com/DennisKoester',

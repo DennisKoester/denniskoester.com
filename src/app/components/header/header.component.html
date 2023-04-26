@@ -10,17 +10,17 @@
                 <nav>
                     <ul>
                         <li>
-                            <a (click)="navigate.forceNavigate('about-me')"
+                            <a [ngStyle]="{'color':section === 'about-me' ? 'orange' : '' }" (click)="navigate.forceNavigate('about-me')"
                                 >About me</a
                             >
                         </li>
                         <li>
-                            <a (click)="navigate.forceNavigate('my-skills')"
+                            <a [ngStyle]="{'color':section === 'my-skills' ? 'orange' : '' }" (click)="navigate.forceNavigate('my-skills')"
                                 >My skills</a
                             >
                         </li>
                         <li>
-                            <a (click)="navigate.forceNavigate('portfolio')"
+                            <a [ngStyle]="{'color':section === 'portfolio' ? 'orange' : '' }" (click)="navigate.forceNavigate('portfolio')"
                                 >Portfolio</a
                             >
                         </li>

@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { NavigateService } from 'src/app/navigate.service';
+import { NavigateService } from 'src/app/shared/services/navigate.service';
+import { ScrollService } from 'src/app/shared/services/scroll.service';
 
 @Component({
     selector: 'app-header',
@@ -7,7 +8,14 @@ import { NavigateService } from 'src/app/navigate.service';
     styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-    constructor(public navigate: NavigateService) {}
+    section: any;
+
+    constructor(
+        public navigate: NavigateService,
+        private scrollService: ScrollService
+    ) {
+        this.setsSection();
+    }
 
     /**
      * Handles the visibility of the header shadow
@@ -24,5 +32,15 @@ export class HeaderComponent {
         } else {
             header.classList.remove('shadow');
         }
+    }
+
+    /**
+     * Sets the current section which is in view
+     */
+    setsSection() {
+        this.scrollService.currentSection.subscribe((res) => {
+            console.log('current section: ', res);
+            this.section = res;
+        });
     }
 }
