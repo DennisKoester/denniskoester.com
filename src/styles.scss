@@ -7,6 +7,8 @@
     --cream: #fffcf3;
     --orange: #ff9900;
     --red: #e61c40;
+    --dark-background: #1c1c1c;
+    --dark-color: var(--cream);
 
     // Scrollbar Firefox //
 
@@ -25,6 +27,11 @@ body {
     background-position: center;
     overflow-y: overlay;
     overflow-x: hidden;
+}
+
+.darkMode {
+    background-color: var(--dark-background) !important;
+    color: var(--dark-color) !important;
 }
 
 h1,

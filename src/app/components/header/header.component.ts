@@ -12,7 +12,7 @@ export class HeaderComponent {
 
     constructor(
         public navigate: NavigateService,
-        private scrollService: ScrollService
+        private scrollService: ScrollService,
     ) {
         this.setsSection();
     }

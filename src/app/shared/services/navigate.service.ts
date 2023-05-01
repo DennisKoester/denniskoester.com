@@ -1,14 +1,19 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
+import { DOCUMENT, Location } from '@angular/common';
 
 @Injectable({
     providedIn: 'root',
 })
 export class NavigateService {
     menuCollapsed: boolean = true;
+    darkModeOn: boolean = false;
 
-    constructor(private router: Router, private location: Location) {}
+    constructor(
+        private router: Router,
+        private location: Location,
+        @Inject(DOCUMENT) private document: Document
+    ) {}
     /**
      * Toggles burger menu and handles shadow for header
      */
@@ -41,6 +46,11 @@ export class NavigateService {
      */
     closeMenu() {
         this.menuCollapsed = true;
+    }
+
+    toggleDarkTheme(): void {
+        this.darkModeOn = !this.darkModeOn;
+        document.body.classList.toggle('darkMode');
     }
 
     /**

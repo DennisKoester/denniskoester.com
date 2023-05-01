@@ -27,6 +27,7 @@ import { filter } from 'rxjs';
 import { ProjectComponent } from './components/project/project.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode-toggle.component';
 
 @NgModule({
     declarations: [
@@ -45,6 +46,7 @@ import { NgxTypedJsModule } from 'ngx-typed-js';
         HomeComponent,
         BurgerMenuFooterComponent,
         ProjectComponent,
+        DarkModeToggleComponent,
     ],
     imports: [
         BrowserModule,

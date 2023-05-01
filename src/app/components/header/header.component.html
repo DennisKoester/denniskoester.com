@@ -1,5 +1,8 @@
 <header>
-    <div id="header" class="">
+    <div
+        id="header"
+        [ngClass]="{ darkMode: navigate.darkModeOn === true }"
+    >
         <div class="header-wrapper">
             <img
                 (click)="navigate.redirectToMainPage()"
@@ -10,23 +13,40 @@
                 <nav>
                     <ul>
                         <li>
-                            <a [ngStyle]="{'color':section === 'about-me' ? 'orange' : '' }" (click)="navigate.forceNavigate('about-me')"
+                            <a
+                                [ngStyle]="{
+                                    color:
+                                        section === 'about-me' ? 'orange' : ''
+                                }"
+                                (click)="navigate.forceNavigate('about-me')"
                                 >About me</a
                             >
                         </li>
                         <li>
-                            <a [ngStyle]="{'color':section === 'my-skills' ? 'orange' : '' }" (click)="navigate.forceNavigate('my-skills')"
+                            <a
+                                [ngStyle]="{
+                                    color:
+                                        section === 'my-skills' ? 'orange' : ''
+                                }"
+                                (click)="navigate.forceNavigate('my-skills')"
                                 >My skills</a
                             >
                         </li>
                         <li>
-                            <a [ngStyle]="{'color':section === 'portfolio' ? 'orange' : '' }" (click)="navigate.forceNavigate('portfolio')"
+                            <a
+                                [ngStyle]="{
+                                    color:
+                                        section === 'portfolio' ? 'orange' : ''
+                                }"
+                                (click)="navigate.forceNavigate('portfolio')"
                                 >Portfolio</a
                             >
                         </li>
                     </ul>
                 </nav>
             </div>
+
+            <app-dark-mode-toggle></app-dark-mode-toggle>
 
             <div class="burger-menu d-none">
                 <svg

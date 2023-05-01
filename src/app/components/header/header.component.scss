@@ -25,6 +25,7 @@ header {
 
     .normal-menu {
         width: 450px;
+        margin-left: auto;
     }
 
     .logo {
@@ -37,6 +38,8 @@ header {
     nav ul {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
+        float: right;
         list-style: none;
         font-size: 26px;
         white-space: nowrap;
@@ -105,7 +108,7 @@ header {
     stroke-dashoffset: -138px;
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 860px) {
     #header {
         .header-wrapper {
             width: 90%;
@@ -120,7 +123,7 @@ header {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
     .burger-menu {
         display: block !important;
     }
