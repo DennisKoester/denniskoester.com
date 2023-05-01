@@ -20,11 +20,18 @@ export class AppComponent implements OnInit {
             once: true,
         });
 
+        this.checkDevice();
+        this.hideScrollbar();
+    }
+
+    /**
+     * Checks the current used device.
+     */
+    checkDevice() {
         this.isSafari = /^((?!chrome|android).)*safari/i.test(
             navigator.userAgent
         );
         this.isChrome = /Chrome/.test(navigator.userAgent);
-        this.hideScrollbar();
     }
 
     /**
