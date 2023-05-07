@@ -12,6 +12,7 @@
     --color-text: black;
     --color-line: black;
     --color-button-active: black;
+    --color-shadow: rgba(57, 63, 72, 0.3);
 
     // Scrollbar Firefox //
 
@@ -24,6 +25,7 @@
     --color-text: var(--cream);
     --color-line: var(--cream);
     --color-button-active: var(--orange);
+    --color-shadow: rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -39,11 +41,6 @@ body {
     overflow-y: overlay;
     overflow-x: hidden;
 }
-
-// .darkMode {
-//     background-color: var(--dark-background) !important;
-//     color: var(--dark-color) !important;
-// }
 
 h1,
 h2,
