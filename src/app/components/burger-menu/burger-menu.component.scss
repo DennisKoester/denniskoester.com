@@ -5,7 +5,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--cream);
+    background-color: var(--color-background);
     z-index: 2;
     transition: all 125ms ease-in;
     opacity: 1;
@@ -79,7 +79,7 @@ nav {
     position: absolute;
     width: 15px;
     height: 20px;
-    border-color: black;
+    border-color: var(--color-line);
     border-style: solid;
     content: " ";
     transition: all 125ms ease-in-out;

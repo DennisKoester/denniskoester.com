@@ -9,7 +9,12 @@
                     data-aos-offset="0"
                     class="skill"
                 >
-                    <img src=" {{ skill.image }} " />
+                    <img
+                        [ngStyle]="{
+                            filter: darkMode.currentState ? 'invert(1)' : ''
+                        }"
+                        src=" {{ skill.image }} "
+                    />
                     <span>{{ skill.name }}</span>
                 </div>
             </div>

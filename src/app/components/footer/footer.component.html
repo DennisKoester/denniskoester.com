@@ -23,7 +23,11 @@
             </div>
             <div
                 [ngStyle]="{
-                    filter: this.router.url === '/imprint' ? 'invert(1)' : ''
+                    filter:
+                        this.router.url === '/imprint' &&
+                        darkMode.currentState === false
+                            ? 'invert(1)'
+                            : ''
                 }"
                 class="arrow-pageUp-container"
             >

@@ -46,7 +46,7 @@
 
     .underline {
         width: 100%;
-        border: 2px solid #000000;
+        border: 2px solid var( --color-line);
         margin-right: 15px;
     }
 }
@@ -70,7 +70,7 @@
     writing-mode: vertical-lr;
     text-orientation: mixed;
     text-decoration: none;
-    color: black;
+    color: var(--color-text);
     transition: 125ms;
     cursor: pointer;
 }

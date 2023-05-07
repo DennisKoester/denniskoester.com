@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { DarkModeService } from 'src/app/shared/services/dark-mode.service';
 import { NavigateService } from 'src/app/shared/services/navigate.service';
 import { ScrollService } from 'src/app/shared/services/scroll.service';
 
@@ -13,6 +14,7 @@ export class HeaderComponent {
     constructor(
         public navigate: NavigateService,
         private scrollService: ScrollService,
+        public darkMode: DarkModeService
     ) {
         this.setsSection();
     }

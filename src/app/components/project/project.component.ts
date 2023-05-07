@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Project } from 'src/app/project';
 import { PROJECTS } from 'src/app/mock-projects';
+import { DarkModeService } from 'src/app/shared/services/dark-mode.service';
 
 @Component({
     selector: 'app-project',
@@ -17,4 +18,6 @@ export class ProjectComponent {
     @Input() gitHub: string;
     @Input() totalProjects: number;
     project: Project[] = PROJECTS;
+
+    constructor(public darkMode: DarkModeService) {}
 }

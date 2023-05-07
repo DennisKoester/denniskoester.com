@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Skills } from 'src/app/mock-skills';
+import { DarkModeService } from 'src/app/shared/services/dark-mode.service';
 
 @Component({
     selector: 'app-skill-section',
@@ -7,5 +8,6 @@ import { Skills } from 'src/app/mock-skills';
     styleUrls: ['./skill-section.component.scss'],
 })
 export class SkillSectionComponent {
+    constructor(public darkMode: DarkModeService) {}
     skills: Array<any> = Skills;
 }

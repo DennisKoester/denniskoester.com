@@ -10,7 +10,7 @@ header {
 
 #header {
     height: 100%;
-    background-color: var(--cream);
+    background-color: var(--color-background);
 
     .header-wrapper {
         display: flex;
@@ -92,8 +92,12 @@ header {
     stroke-linecap: round;
 }
 
+.line-dark {
+    stroke: white;
+}
+
 .hamRotate.active .line {
-    stroke: var(--orange);
+    stroke: var(--orange) !important;
 }
 .ham1 .top {
     stroke-dasharray: 40 139;

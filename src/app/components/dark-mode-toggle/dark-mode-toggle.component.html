@@ -2,7 +2,7 @@
     (click)="darkMode.toogleDarkMode()"
     type="checkbox"
     id="darkmode-toggle"
-    ng-checked=".currentState"
+    [checked]="darkMode.currentState"
 />
 <label for="darkmode-toggle">
     <svg

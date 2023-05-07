@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DarkModeService } from 'src/app/shared/services/dark-mode.service';
 
 @Component({
     selector: 'app-footer',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class FooterComponent implements OnInit {
     currentYear: number;
 
-    constructor(public router: Router) {}
+    constructor(public router: Router, public darkMode: DarkModeService) {}
 
     ngOnInit() {
         this.generateDate();

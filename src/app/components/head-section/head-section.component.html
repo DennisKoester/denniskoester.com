@@ -39,7 +39,12 @@
             >
             <div class="scroll-down-container">
                 <div class="arrow-down">
-                    <img src="./assets/img/arrow_down.svg" />
+                    <img
+                        [ngStyle]="{
+                            filter: darkMode.currentState ? 'invert(1)' : ''
+                        }"
+                        src="./assets/img/arrow_down.svg"
+                    />
                 </div>
                 <p>Scroll</p>
                 <p>Down</p>

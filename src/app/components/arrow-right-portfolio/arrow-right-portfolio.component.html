@@ -1,3 +1,8 @@
 <div data-aos="fade-down-right" data-aos-delay="150" class="arrow-right">
-    <img src="./assets/img/arrow-left.svg" />
+    <img
+        [ngStyle]="{
+            filter: darkMode.currentState ? 'invert(1)' : ''
+        }"
+        src="./assets/img/arrow-left.svg"
+    />
 </div>
