@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavigateService } from 'src/app/shared/services/navigate.service';
 
 @Component({
-    selector: 'app-burger-menu',
-    templateUrl: './burger-menu.component.html',
-    styleUrls: ['./burger-menu.component.scss'],
+    selector: 'app-mobile-menu',
+    templateUrl: './mobile-menu.component.html',
+    styleUrls: ['./mobile-menu.component.scss'],
 })
-export class BurgerMenuComponent {
+export class MobileMenuComponent {
     constructor(public navigate: NavigateService) {}
 }

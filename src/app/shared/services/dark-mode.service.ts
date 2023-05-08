@@ -5,30 +5,56 @@ import { BehaviorSubject } from 'rxjs';
     providedIn: 'root',
 })
 export class DarkModeService {
-    constructor() {
-        this.darkModeState.subscribe((state: boolean) => {
-            this.currentState = state;
-            document.documentElement.setAttribute(
-                'data-theme',
-                this.currentState ? 'dark' : 'light'
-            );
-        });
-    }
-
-    private darkModeState: BehaviorSubject<boolean> = new BehaviorSubject(
+    currentState: boolean;
+    darkModeState: BehaviorSubject<boolean> = new BehaviorSubject(
         this.detectDarkMode()
     );
 
-    public currentState: boolean;
-
-    public toogleDarkMode(): void {
-        this.darkModeState.next(!this.currentState);
+    constructor() {
+        this.darkModeState.subscribe((state: boolean) => {
+            this.currentState = state;
+            this.setsTheme();
+        });
     }
 
-    private detectDarkMode(): boolean {
+    /**
+     * Toggles the state of the dark mode
+     */
+    toogleDarkMode(): void {
+        this.darkModeState.next(!this.currentState);
+        this.pushStateLocal();
+    }
+
+    /**
+     * Sets the dark or light mode
+     */
+    setsTheme() {
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.currentState ? 'dark' : 'light'
+        );
+    }
+
+    /**
+     * Checks if dark mode theme is enabled on users system
+     * @returns Boolean
+     */
+    detectDarkMode(): boolean {
         const mediaMatch = window.matchMedia(
             '(prefers-color-scheme: dark'
         ).matches;
         return typeof mediaMatch === 'boolean' ? mediaMatch : false;
+    }
+
+    pushStateLocal() {
+        localStorage.setItem('themeMode', JSON.stringify(this.currentState));
+        console.log('push', this.currentState);
+    }
+
+    getStateLocal() {
+        let localState = JSON.parse(localStorage.getItem('themeMode'));
+        this.currentState = localState;
+        console.log('get', this.currentState);
+        return this.currentState;
     }
 }

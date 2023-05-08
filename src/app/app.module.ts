@@ -15,8 +15,8 @@ import { ArrowLeftContactComponent } from './components/arrow-left-contact/arrow
 import { ArrowLeftSkillsComponent } from './components/arrow-left-skills/arrow-left-skills.component';
 import { ArrowRightPortfolioComponent } from './components/arrow-right-portfolio/arrow-right-portfolio.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BurgerMenuComponent } from './components/burger-menu/burger-menu.component';
-import { BurgerMenuFooterComponent } from './components/burger-menu-footer/burger-menu-footer.component';
+import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
+import { MobileMenuFooterComponent } from './components/mobile-menu-footer/mobile-menu-footer.component';
 import { Router, Scroll } from '@angular/router';
 import {
     ViewportScroller,
@@ -42,9 +42,9 @@ import { DarkModeToggleComponent } from './components/dark-mode-toggle/dark-mode
         ArrowLeftSkillsComponent,
         ArrowRightPortfolioComponent,
         FooterComponent,
-        BurgerMenuComponent,
+        MobileMenuComponent,
         HomeComponent,
-        BurgerMenuFooterComponent,
+        MobileMenuFooterComponent,
         ProjectComponent,
         DarkModeToggleComponent,
     ],

@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
         );
         console.log(
             '%cFeel free to check out my code on www.github.com/DennisKoester',
-            'color: #ff9900; font-size: 18px;'
+            'color: #ff9900; font-size: 16px;'
         );
     }
 }

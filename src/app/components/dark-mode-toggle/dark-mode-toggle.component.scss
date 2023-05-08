@@ -1,5 +1,6 @@
 * {
     display: flex;
+    user-select: none;
 }
 
 label {
@@ -17,11 +18,11 @@ label {
 
 label:after {
     content: "";
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 3px;
+    left: 4px;
     background: linear-gradient(180deg, #ffcc89, var(--orange));
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -54,19 +55,19 @@ input:checked + label + .background {
 
 label svg {
     position: absolute;
-    width: 20px;
+    width: 18px;
     top: 6px;
     z-index: 100;
 }
 
 label svg.sun {
-    left: 6px;
+    left: 7px;
     fill: #fff;
     transition: 0.3s;
 }
 
 label svg.moon {
-    left: 35px;
+    left: 34px;
     fill: #7e7e7e;
     transition: 0.3s;
 }

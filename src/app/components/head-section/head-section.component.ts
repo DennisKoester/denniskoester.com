@@ -8,5 +8,8 @@ import { NavigateService } from 'src/app/shared/services/navigate.service';
     styleUrls: ['./head-section.component.scss'],
 })
 export class HeadSectionComponent {
-    constructor(public navigate: NavigateService, public darkMode: DarkModeService) {}
+    constructor(
+        public navigate: NavigateService,
+        public darkMode: DarkModeService
+    ) {}
 }
