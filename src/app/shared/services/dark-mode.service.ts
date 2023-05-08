@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DarkModeService {
     currentState: boolean;
+    localState;
     darkModeState: BehaviorSubject<boolean> = new BehaviorSubject(
         this.detectDarkMode()
     );
@@ -29,10 +30,17 @@ export class DarkModeService {
      * Sets the dark or light mode
      */
     setsTheme() {
-        document.documentElement.setAttribute(
-            'data-theme',
-            this.currentState ? 'dark' : 'light'
-        );
+        this.getStateLocal();
+        if (this.getStateLocal() == !null) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            console.log('wroking');
+        } else {
+            document.documentElement.setAttribute(
+                'data-theme',
+                this.currentState ? 'dark' : 'light'
+            );
+            console.log('attribute');
+        }
     }
 
     /**
@@ -46,15 +54,20 @@ export class DarkModeService {
         return typeof mediaMatch === 'boolean' ? mediaMatch : false;
     }
 
+    /**
+     * Pushes the state to the localstorage
+     */
     pushStateLocal() {
         localStorage.setItem('themeMode', JSON.stringify(this.currentState));
         console.log('push', this.currentState);
     }
 
+    /**
+     * Get's the state from the localstorage
+     */
     getStateLocal() {
-        let localState = JSON.parse(localStorage.getItem('themeMode'));
-        this.currentState = localState;
-        console.log('get', this.currentState);
-        return this.currentState;
+        this.localState = JSON.parse(localStorage.getItem('themeMode'));
+        console.log('get', this.localState);
+        return this.localState;
     }
 }
