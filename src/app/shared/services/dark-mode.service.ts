@@ -30,17 +30,10 @@ export class DarkModeService {
      * Sets the dark or light mode
      */
     setsTheme() {
-        this.getStateLocal();
-        if (this.getStateLocal() == !null) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            console.log('wroking');
-        } else {
-            document.documentElement.setAttribute(
-                'data-theme',
-                this.currentState ? 'dark' : 'light'
-            );
-            console.log('attribute');
-        }
+        document.documentElement.setAttribute(
+            'data-theme',
+            this.currentState ? 'dark' : 'light'
+        );
     }
 
     /**
@@ -58,8 +51,11 @@ export class DarkModeService {
      * Pushes the state to the localstorage
      */
     pushStateLocal() {
-        localStorage.setItem('themeMode', JSON.stringify(this.currentState));
-        console.log('push', this.currentState);
+        this.localState = localStorage.setItem(
+            'themeMode',
+            JSON.stringify(this.currentState)
+        );
+        console.log('push', this.localState);
     }
 
     /**
@@ -68,6 +64,5 @@ export class DarkModeService {
     getStateLocal() {
         this.localState = JSON.parse(localStorage.getItem('themeMode'));
         console.log('get', this.localState);
-        return this.localState;
     }
 }
