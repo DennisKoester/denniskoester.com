@@ -55,7 +55,7 @@ export class DarkModeService {
             'themeMode',
             JSON.stringify(this.currentState)
         );
-        console.log('push', this.currentState);
+        // console.log('push', this.currentState);
     }
 
     /**
@@ -63,6 +63,6 @@ export class DarkModeService {
      */
     getStateLocal() {
         this.localState = JSON.parse(localStorage.getItem('themeMode'));
-        console.log('get', this.localState);
+        // console.log('get', this.localState);
     }
 }
