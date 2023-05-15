@@ -1,0 +1,103 @@
+.burger-menu {
+    position: fixed;
+    padding-top: var(--header-height-mobile);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-background);
+    z-index: 2;
+    transition: all 125ms ease-in;
+    opacity: 1;
+}
+
+.menu-hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+nav {
+    height: calc(100% - var(--burger-menu-footer-height-mobile));
+    font-family: Syne, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: -0.025em;
+}
+
+.navList {
+    font-family: Syne, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 100%;
+    letter-spacing: -0.025em;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: unset;
+        transition: 125ms;
+
+        &:active {
+            color: var(--orange);
+        }
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    a {
+        font-size: 32px;
+    }
+
+    .navList li > :last-child:after {
+        bottom: -5px;
+        left: -15px;
+    }
+}
+
+@media only screen and (hover: hover) and (pointer: fine) {
+    nav ul li a {
+        &:hover {
+            color: var(--orange);
+        }
+    }
+}
+
+.navList li {
+    position: relative;
+}
+
+.navList li:after,
+.navList li > :last-child:after {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    border-color: var(--color-line);
+    border-style: solid;
+    content: " ";
+    transition: all 125ms ease-in-out;
+}
+
+.navList li:after {
+    top: 20px;
+    right: 20px;
+    border-width: 0 0 0 0;
+}
+
+.navList li > :last-child:after {
+    bottom: -10px;
+    left: -15px;
+    border-width: 0 0 4px 4px;
+}
+
+.navList li :hover:after {
+    height: 0px;
+    width: 110%;
+}
