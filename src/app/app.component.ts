@@ -6,7 +6,6 @@ import * as AOS from 'aos';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-    title: string = 'denniskoester.com';
     timer: any;
     isSafari: boolean = false;
     isChrome: boolean = false;
